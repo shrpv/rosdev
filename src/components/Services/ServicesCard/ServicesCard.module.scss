@@ -1,0 +1,32 @@
+.servicesCard {
+    position: relative;
+
+    height: 200px;
+    padding: 16px;
+    overflow: hidden;
+
+    background-color: var(--color-bg--secondary);
+    border-radius: 5px;
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: var(--color-bg--tertiary);
+    }
+}
+
+.servicesCard__title {
+    margin: 0;
+
+    font-weight: 700;
+    // font-weight: 550;
+    font-size: inherit;
+    color: var(--color-text--primary);
+}
+
+.servicesCard__image {
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="189" height="173" fill="none">
+  <g stroke-width="38" opacity=".6">
+    <path stroke="url(#a)" stroke-opacity=".5" d="M66.5922 9.9288C52.855 32.4846 5.3979 45.3321 24.1473 73.7401 38.2957 95.1768 165.51 45.6068 169.673 87.6991 171.694 108.139 58.5076 155 58.5076 155"/>
+    <path stroke="url(#b)" stroke-opacity=".1" d="M66.5922 9.9288C52.855 32.4846 5.3979 45.3321 24.1473 73.7401 38.2957 95.1768 165.51 45.6068 169.673 87.6991 171.694 108.139 58.5076 155 58.5076 155" style="mix-blend-mode:overlay"/>
+  </g>
+  <defs>
+    <linearGradient id="a" x1="89.836" x2="68.4287" y1="10.9259" y2="159.071" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB96D"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <pattern id="b" width="13.6646" height="14.1172" patternContentUnits="objectBoundingBox">
+      <use xlink:href="#c" transform="scale(.007)"/>
+    </pattern>
+  </defs>
+</svg>

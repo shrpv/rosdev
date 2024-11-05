@@ -1,0 +1,12 @@
+.headerNavigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.headerNavigation__link {
+    display: block;
+    padding: 6px 12px;
+
+    color: var(--color-text--primary);
+    text-decoration: none;
+}

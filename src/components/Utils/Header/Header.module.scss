@@ -1,0 +1,18 @@
+.header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background-color: var(--color-bg--overlay-15);
+
+    backdrop-filter: blur(2px);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    display: block;
+    margin-right: 40px;
+}

@@ -1,0 +1,47 @@
+.platforms__banner {
+    position: relative;
+
+    padding: 60px 40px;
+    overflow: hidden;
+
+    background-color: var(--color-bg--secondary);
+    border-radius: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -132px;
+
+        width: 789px;
+        height: 789px;
+
+        background-color: var(--color-bg--tertiary);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        opacity: 0.8;
+        filter: blur(144px);
+    }
+}
+
+.platforms__content {
+    max-width: 513px;
+}
+
+.platforms__title {
+    margin-bottom: 20px;
+
+    em {
+        font-style: normal;
+    }
+}
+
+.platforms__description {
+    margin: 0;
+}
+
+.platforms__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

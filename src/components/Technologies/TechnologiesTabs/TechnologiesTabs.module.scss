@@ -1,0 +1,42 @@
+.technologiesTabs {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    column-gap: 16px;
+
+    border: none;
+}
+
+.technologiesTabs__item {
+    margin: 0;
+}
+
+.technologiesTabs__input {
+    &:checked + .technologiesTabs__label {
+        font-size: 24px;
+        color: var(--color-bg--tertiary);
+    }
+
+    &:focus-visible + .technologiesTabs__label {
+        border-radius: 2px;
+        outline: max(3px, 0.08em) solid var(--color-brand);
+        outline-offset: 2px;
+    }
+}
+
+.technologiesTabs__label {
+    display: block;
+    // font-weight: 550;
+
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--color-text--primary);
+
+    cursor: pointer;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+    transition-property: color, font-size;
+}

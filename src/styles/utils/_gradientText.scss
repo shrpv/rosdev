@@ -1,0 +1,9 @@
+.gradientText {
+    color: var(--color-brand);
+    font-style: normal;
+
+    background-image: var(--color-text--gradient);
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}

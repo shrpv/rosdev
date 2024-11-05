@@ -1,0 +1,73 @@
+@import "./fonts";
+
+@import "./utils";
+
+:root {
+    color-scheme: dark;
+
+    --color-bg--default: #0e0e0e;
+    --color-bg--overlay-15: rgb(0 0 0 / 15%);
+    --color-bg--overlay-80: rgb(21 21 21 / 80%);
+    --color-bg--secondary: #212121;
+    --color-bg--tertiary: #ff523a;
+    --color-border: #2d2d2d;
+    --color-brand: #ff1f00;
+    --color-illustration--gradient: linear-gradient(43.37deg, #ffb96d -67.95%, #ff523a 92.67%);
+    --color-illustration--gradient-hover: linear-gradient(43.37deg, #ffb96d -67.95%, #ff523a 92.67%);
+    --color-illustration--yellow: #ffb96d;
+    --color-text--gradient: linear-gradient(270deg, #ff523a 22.51%, #ff1f00 87.52%);
+    --color-text--primary: #ffffff;
+    --color-text--secondary: #c8b9b9;
+    --font-family--text: "ALS Sirius VF", sans-serif;
+    --font-size--normal: 16px;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:focus-visible {
+    border-radius: 2px;
+    outline: max(3px, 0.08em) solid var(--color-brand);
+    outline-offset: 2px;
+}
+
+.page {
+    height: 100%;
+
+    color: var(--color-text--secondary);
+
+    background-color: var(--color-bg--default);
+
+    overflow-wrap: anywhere;
+    scroll-behavior: smooth;
+}
+
+.page__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+
+    font-size: var(--font-size--normal);
+    line-height: 1.5;
+    font-family: var(--font-family--text);
+}
+
+.page__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+}
+
+.page__main {
+    flex-grow: 1;
+}
+
+.page__footer {
+}

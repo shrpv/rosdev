@@ -4,6 +4,7 @@ import { Advantages } from "../components/Advantages/Advantages";
 import { Platforms } from "../components/Platforms/Platforms";
 import { Services } from "../components/Services/Services";
 import { Technologies } from "../components/Technologies/Technologies";
+import { Clients } from "../components/Clients/Clients";
 import { Slogan } from "../components/Slogan/Slogan";
 
 export default function Page() {
@@ -18,6 +19,8 @@ export default function Page() {
             <Services className={styles.home__services} />
 
             <Technologies className={styles.home__technologies} />
+
+            <Clients className={styles.home__clients} />
 
             <Slogan className={styles.home__slogan} />
         </>

@@ -1,0 +1,12 @@
+.clients__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.clients__item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 256px;
+}

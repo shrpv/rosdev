@@ -1,0 +1,65 @@
+.reviewsCard {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    background-color: var(--color-bg--secondary);
+    border-radius: 10px;
+
+    row-gap: 12px;
+}
+
+.reviewsCard__quote {
+    margin: 0;
+    // font-weight: 550;
+
+    font-weight: 700;
+    color: var(--color-text--primary);
+    margin-bottom: auto;
+
+    &::before {
+        content: url("/img/reviews/quote.svg");
+
+        display: block;
+        width: 25px;
+        height: 23px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.reviewsCard__author {
+    display: flex;
+    align-items: center;
+
+    column-gap: 10px;
+}
+
+.reviewsCard__image {
+    border-radius: 50%;
+}
+
+.reviewsCard__info {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+
+    opacity: 0.8;
+
+    row-gap: 4px;
+}
+
+.reviewsCard__name {
+    margin: 0;
+
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.reviewsCard__position {
+    margin: 0;
+}

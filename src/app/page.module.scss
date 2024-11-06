@@ -7,21 +7,25 @@
 }
 
 .home__platforms {
-    margin-bottom: 160px;
+    margin-bottom: var(--section-spacing);
 }
 
 .home__services {
-    margin-bottom: 160px;
+    margin-bottom: var(--section-spacing);
 }
 
 .home__technologies {
-    margin-bottom: 160px;
+    margin-bottom: var(--section-spacing);
 }
 
 .home__clients {
-    margin-bottom: 160px;
+    margin-bottom: var(--section-spacing);
+}
+
+.home__reviews {
+    margin-bottom: var(--section-spacing);
 }
 
 .home__slogan {
-    margin-bottom: 160px;
+    margin-bottom: var(--section-spacing);
 }

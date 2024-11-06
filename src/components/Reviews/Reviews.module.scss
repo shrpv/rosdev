@@ -1,0 +1,17 @@
+div.reviews__slider {
+    padding-bottom: 30px;
+
+    --swiper-pagination-bottom: -6px;
+    --swiper-pagination-bullet-inactive-color: #8c7d7d;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-color: var(--color-bg--tertiary);
+}
+
+div.reviews__slide {
+    height: auto;
+}
+
+.reviews__card {
+    height: 100%;
+}

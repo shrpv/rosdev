@@ -1,0 +1,43 @@
+.about__container {
+    position: relative;
+
+    &::before {
+        content: url("/img/about/bg.svg");
+        position: absolute;
+        right: 0;
+        bottom: 40px;
+        z-index: -1;
+
+        width: 522px;
+        height: 780px;
+    }
+
+    &::after {
+        content: url("/img/about/rocket.svg");
+        position: absolute;
+        right: 245px;
+        bottom: 10px;
+
+        width: 331px;
+        height: 117px;
+    }
+}
+
+.about__title {
+    margin-bottom: 36px;
+}
+
+.about__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about__info {
+    flex-basis: 555px;
+    padding-top: 24px;
+}
+
+.about__statistics {
+    padding-right: 75px;
+}

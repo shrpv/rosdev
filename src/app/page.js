@@ -6,6 +6,7 @@ import { Services } from "../components/Services/Services";
 import { Technologies } from "../components/Technologies/Technologies";
 import { Clients } from "../components/Clients/Clients";
 import { Reviews } from "../components/Reviews/Reviews";
+import { About } from "../components/About/About";
 import { Slogan } from "../components/Slogan/Slogan";
 
 export default function Page() {
@@ -24,6 +25,8 @@ export default function Page() {
             <Clients className={styles.home__clients} />
 
             <Reviews className={styles.home__reviews} />
+
+            <About className={styles.home__about} />
 
             <Slogan className={styles.home__slogan} />
         </>

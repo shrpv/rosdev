@@ -1,0 +1,39 @@
+.aboutInfo {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 40px;
+}
+
+.aboutInfo__item {
+    display: flex;
+
+    column-gap: 20px;
+}
+
+.aboutInfo__icon {
+    display: block;
+    flex-shrink: 0;
+    box-sizing: content-box;
+    padding: 7px;
+
+    background-color: var(--color-bg--secondary);
+    border-radius: 5px;
+
+    fill: transparent;
+    stroke: var(--color-text--primary);
+}
+
+.aboutInfo__body {
+}
+
+.aboutInfo__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    color: var(--color-text--primary);
+}
+
+.aboutInfo__text {
+    margin: 0;
+}

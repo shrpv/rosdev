@@ -22,9 +22,9 @@
 .header__login {
     margin-left: auto;
 
-    @include media-down($tablet-breakpoint) {
-        margin-right: 16px;
-    }
+    // @include media-down($tablet-breakpoint) {
+    //     margin-right: 16px;
+    // }
 }
 
 .header__menu {

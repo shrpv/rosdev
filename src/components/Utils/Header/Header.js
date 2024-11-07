@@ -23,13 +23,18 @@ export const Header = ({ className }) => {
 
                 <HeaderNavigation className={styles.header__navigation} />
 
-                <button className={classNames(styles.header__login, "button")}>Войти</button>
+                <button
+                    className={classNames(styles.header__login, "button")}
+                    type="button"
+                >
+                    Войти
+                </button>
 
-                <HeaderMenu
+                {/* <HeaderMenu
                     className={styles.header__menu}
                     onClick={() => setIsMenuOpened(prev => !prev)}
                     opened={isMenuOpened}
-                />
+                /> */}
             </div>
         </header>
     );

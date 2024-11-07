@@ -1,5 +1,7 @@
 @import "./fonts";
 
+@import "./mixins";
+
 @import "./utils";
 
 :root {
@@ -36,7 +38,8 @@
 }
 
 .page {
-    height: 100%;
+    min-width: 375px;
+    min-height: 100%;
 
     color: var(--color-text--secondary);
 

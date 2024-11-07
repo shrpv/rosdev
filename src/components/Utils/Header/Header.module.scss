@@ -1,3 +1,5 @@
+@import "/src/styles/mixins";
+
 .header {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -15,4 +17,18 @@
 .header__logo {
     display: block;
     margin-right: 40px;
+}
+
+.header__login {
+    margin-left: auto;
+
+    @include media-down($tablet-breakpoint) {
+        margin-right: 16px;
+    }
+}
+
+.header__menu {
+    @include media-down($tablet-breakpoint) {
+        margin-right: -4px;
+    }
 }

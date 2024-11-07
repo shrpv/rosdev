@@ -1,0 +1,33 @@
+.headerMenu {
+    padding: 4px;
+
+    color: var(--color-text--primary);
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &[aria-expanded="true"] {
+        .headerMenu__open {
+            display: none;
+        }
+
+        .headerMenu__close {
+            display: block;
+        }
+    }
+}
+
+.headerMenu__icon {
+    display: block;
+
+    stroke: currentColor;
+}
+
+.headerMenu__open {
+    display: block;
+}
+
+.headerMenu__close {
+    display: none;
+}

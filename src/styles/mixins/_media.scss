@@ -1,0 +1,48 @@
+// Media breakpoints
+
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1440px;
+
+@mixin media-up($value) {
+    @media (min-width: $value) {
+        @content;
+    }
+}
+
+@mixin media-down($value) {
+    @media (max-width: #{$value - 1}) {
+        @content;
+    }
+}
+
+@mixin media-between($from, $to) {
+    @media (min-width: $from) and (max-width: #{$to - 1}) {
+        @content;
+    }
+}
+
+@mixin media-height-up($value) {
+    @media (min-height: $value) {
+        @content;
+    }
+}
+
+@mixin media-height-down($value) {
+    @media (max-height: #{$value - 1}) {
+        @content;
+    }
+}
+
+@mixin media-height-between($from, $to) {
+    @media (min-height: $from) and (max-height: #{$to - 1}) {
+        @content;
+    }
+}
+
+// Media touch detect
+
+@mixin media-is-touch {
+    @media (hover: none) and (pointer: coarse) {
+        @content;
+    }
+}

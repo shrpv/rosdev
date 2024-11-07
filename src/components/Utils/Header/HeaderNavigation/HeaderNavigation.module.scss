@@ -9,4 +9,11 @@
 
     color: var(--color-text--primary);
     text-decoration: none;
+    transition-duration: 0.5s;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+        color: var(--color-brand);
+    }
 }

@@ -1,22 +1,37 @@
 .technologiesTabs {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin: 0;
     padding: 0;
 
-    column-gap: 16px;
+    column-gap: 32px;
 
     border: none;
 }
 
 .technologiesTabs__item {
     margin: 0;
+
+    &:first-of-type {
+        .technologiesTabs__label {
+            transform: scale(1) translateY(0);
+            transform-origin: 0 25%;
+        }
+    }
+
+    &:last-of-type {
+        .technologiesTabs__label {
+            transform: scale(1) translateY(6px);
+            transform-origin: 50% 75%;
+        }
+    }
 }
 
 .technologiesTabs__input {
     &:checked + .technologiesTabs__label {
-        font-size: 24px;
         color: var(--color-bg--tertiary);
+
+        transform: scale(1.5) translateY(0);
     }
 
     &:focus-visible + .technologiesTabs__label {
@@ -31,12 +46,11 @@
     // font-weight: 550;
 
     font-weight: 700;
-    line-height: 40px;
     color: var(--color-text--primary);
 
     cursor: pointer;
 
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
-    transition-property: color, font-size;
+    transition-property: color, transform;
 }

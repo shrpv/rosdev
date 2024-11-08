@@ -1,48 +1,39 @@
 import classNames from "classnames";
 import styles from "./TechnologiesTabs.module.scss";
+import { TECHNOLOGIES } from "/src/consts/Technologies.js";
 
 export const TechnologiesTabs = ({ className, currentTab, onChange }) => {
     return (
         <fieldset className={classNames(className, styles.technologiesTabs)}>
             <legend className="visuallyHidden">Направление</legend>
 
-            <p className={styles.technologiesTabs__item}>
-                <input
-                    className={classNames(styles.technologiesTabs__input, "visuallyHidden")}
-                    id="technologies-web"
-                    type="radio"
-                    name="technologies"
-                    value="web"
-                    checked={currentTab === "web"}
-                    onChange={() => onChange("web")}
-                />
+            {Object.keys(TECHNOLOGIES).map(technology => {
+                const id = `technologies-${technology}`;
 
-                <label
-                    className={styles.technologiesTabs__label}
-                    htmlFor="technologies-web"
-                >
-                    Web
-                </label>
-            </p>
+                return (
+                    <p
+                        className={styles.technologiesTabs__item}
+                        key={technology}
+                    >
+                        <input
+                            className={classNames(styles.technologiesTabs__input, "visuallyHidden")}
+                            id={id}
+                            type="radio"
+                            name="technologies"
+                            value={technology}
+                            checked={technology === currentTab}
+                            onChange={() => onChange(technology)}
+                        />
 
-            <p className={styles.technologiesTabs__item}>
-                <input
-                    className={classNames(styles.technologiesTabs__input, "visuallyHidden")}
-                    id="technologies-mobile"
-                    type="radio"
-                    name="technologies"
-                    value="mobile"
-                    checked={currentTab === "mobile"}
-                    onChange={() => onChange("mobile")}
-                />
-
-                <label
-                    className={styles.technologiesTabs__label}
-                    htmlFor="technologies-mobile"
-                >
-                    Mobile
-                </label>
-            </p>
+                        <label
+                            className={styles.technologiesTabs__label}
+                            htmlFor={id}
+                        >
+                            {technology}
+                        </label>
+                    </p>
+                );
+            })}
         </fieldset>
     );
 };

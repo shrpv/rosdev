@@ -1,0 +1,60 @@
+.technologiesCategory {
+    --border-width: 2px;
+    --border-color: var(--color-bg--tertiary);
+    --background-color: #ec503b;
+
+    position: relative;
+
+    height: 0;
+    padding-bottom: 173.3333%;
+
+    color: var(--color-text--primary);
+
+    background-image: linear-gradient(
+        180deg,
+        var(--border-color) 0,
+        var(--border-color) var(--border-width),
+        var(--background-color) var(--border-width),
+        var(--background-color) calc(100% - var(--border-width)),
+        var(--border-color) calc(100% - var(--border-width)),
+        var(--border-color) 100%
+    );
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        background-image: inherit;
+    }
+
+    &::before {
+        transform: rotate(-60deg);
+    }
+
+    &::after {
+        transform: rotate(60deg);
+    }
+}
+
+.technologiesCategory__title {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    // font-weight: 550;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+
+    inset: 0;
+}

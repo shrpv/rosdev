@@ -36,10 +36,7 @@ export const Technologies = ({ className }) => {
                             key={category}
                         >
                             <ul className={classNames(styles.technologies__list, "listReset")}>
-                                <li
-                                    className={styles.technologies__item}
-                                    data-number="0"
-                                >
+                                <li className={styles.technologies__item}>
                                     <TechnologiesCategory category={category} />
                                 </li>
 
@@ -52,6 +49,19 @@ export const Technologies = ({ className }) => {
                                         <TechnologiesCard technology={technology} />
                                     </li>
                                 ))}
+
+                                <li
+                                    className={styles.technologies__empty}
+                                    data-number="1"
+                                />
+                                <li
+                                    className={styles.technologies__empty}
+                                    data-number="2"
+                                />
+                                <li
+                                    className={styles.technologies__empty}
+                                    data-number="3"
+                                />
                             </ul>
                         </SwiperSlide>
                     ))}

@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./TechnologiesTabs.module.scss";
-import { TECHNOLOGIES } from "/src/consts/Technologies.js";
+import { TECHNOLOGIES } from "@/consts/Technologies.js";
 
 export const TechnologiesTabs = ({ className, currentTab, onChange }) => {
     return (

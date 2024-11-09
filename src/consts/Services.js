@@ -114,7 +114,7 @@ export const SERVICES = [
                 style: {
                     left: 43,
                     bottom: 64,
-                    borderRadius: 6.4,
+                    borderRadius: 6,
                     width: 68,
                     height: 68
                 },
@@ -200,7 +200,118 @@ export const SERVICES = [
         ]
     },
     {
-        title: "Backend разработка"
+        title: "Backend разработка",
+        images: [
+            {
+                style: {
+                    left: 23,
+                    top: 72,
+                    backgroundImage: "url('/img/services/backend/bg.svg')",
+                    transformOrigin: "0 0",
+                    width: 216,
+                    height: 148
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: 0
+                    },
+                    hover: {
+                        x: -25,
+                        y: 11,
+                        rotate: -11
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 11,
+                    bottom: 14,
+                    borderRadius: 6,
+                    width: 70,
+                    height: 70
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: -17.65,
+                        backgroundImage: "var(--color-illustration--gradient)"
+                    },
+                    hover: {
+                        x: 9,
+                        y: -11,
+                        rotate: 30.5,
+                        backgroundImage: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 22,
+                    bottom: 25,
+                    backgroundImage: "url('/img/services/backend/database-zap.svg')",
+                    width: 48,
+                    height: 48
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: 0
+                    },
+                    hover: {
+                        x: 9,
+                        y: -11,
+                        rotate: 17
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 69,
+                    top: 59,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%"
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        width: 52,
+                        height: 52
+                    },
+                    hover: {
+                        x: 7,
+                        y: 5,
+                        width: 48,
+                        height: 48
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 79,
+                    top: 69,
+                    backgroundImage: "url('/img/services/backend/hard-drive.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: 0
+                    },
+                    hover: {
+                        x: 6,
+                        y: 3,
+                        rotate: 27
+                    }
+                }
+            }
+        ]
     },
     {
         title: "UX/Ui дизайн"

@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./Clients.module.scss";
-import { CLIENTS } from "/src/consts/Clients.js";
+import { CLIENTS } from "@/consts/Clients.js";
 import { ClientsCard } from "./ClientsCard/ClientsCard";
 
 export const Clients = ({ className }) => {

@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./FooterContacts.module.scss";
-import { FOOTER_CONTACTS } from "/src/consts/FooterContacts.js";
+import { FOOTER_CONTACTS } from "@/consts/FooterContacts.js";
 
 export const FooterContacts = ({ className }) => {
     if (!FOOTER_CONTACTS?.length) return null;

@@ -1,5 +1,5 @@
 import "../styles/app.scss";
-import { ORGANIZER } from "/src/consts/Organizer.js";
+import { ORGANIZER } from "@/consts/Organizer.js";
 import { Favicon } from "../components/Utils/Favicon/Favicon";
 import { Header } from "../components/Utils/Header/Header";
 import { Main } from "../components/Utils/Main/Main";

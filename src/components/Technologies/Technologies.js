@@ -3,14 +3,13 @@
 import classNames from "classnames";
 import styles from "./Technologies.module.scss";
 import { useState } from "react";
-import { TECHNOLOGIES } from "/src/consts/Technologies.js";
+import { TECHNOLOGIES } from "@/consts/Technologies.js";
 import { TechnologiesTabs } from "./TechnologiesTabs/TechnologiesTabs";
+import { TechnologiesCategory } from "./TechnologiesCategory/TechnologiesCategory";
 import { TechnologiesCard } from "./TechnologiesCard/TechnologiesCard";
 
 export const Technologies = ({ className }) => {
-    const [currentTab, setCurrentTab] = useState("web");
-
-    if (!TECHNOLOGIES?.length) return null;
+    const [currentTab, setCurrentTab] = useState("Web");
 
     return (
         <section className={className}>
@@ -23,19 +22,42 @@ export const Technologies = ({ className }) => {
                     onChange={setCurrentTab}
                 />
 
-                <ul className={classNames(styles.technologies__list, "listReset")}>
-                    {TECHNOLOGIES.map((technology, index) => (
-                        <li
-                            className={styles.technologies__item}
-                            key={index}
+                <div
+                    className={styles.technologies__slider}
+                    data-selected={currentTab}
+                >
+                    {Object.entries(TECHNOLOGIES).map(([category, technologies]) => (
+                        <ul
+                            className={classNames(styles.technologies__list, "listReset")}
+                            key={category}
                         >
-                            <TechnologiesCard
-                                className={styles.technologies__card}
-                                technology={technology}
-                            />
-                        </li>
+                            <li
+                                className={styles.technologies__item}
+                                data-number="0"
+                            >
+                                <TechnologiesCategory category={category} />
+                            </li>
+
+                            {technologies.map((technology, index) => (
+                                <li
+                                    className={styles.technologies__item}
+                                    key={index}
+                                    data-number={index + 1}
+                                >
+                                    <TechnologiesCard technology={technology} />
+                                </li>
+                            ))}
+
+                            {[1, 2, 3].map(item => (
+                                <li
+                                    className={styles.technologies__empty}
+                                    key={item}
+                                    data-number={item}
+                                />
+                            ))}
+                        </ul>
                     ))}
-                </ul>
+                </div>
             </div>
         </section>
     );

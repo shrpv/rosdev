@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./Footer.module.scss";
-import { ORGANIZER } from "/src/consts/Organizer.js";
+import { ORGANIZER } from "@/consts/Organizer.js";
 import { FooterContacts } from "./FooterContacts/FooterContacts";
 
 export const Footer = ({ className }) => {

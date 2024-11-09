@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./AboutInfo.module.scss";
-import { ABOUT_INFO } from "/src/consts/About.js";
+import { ABOUT_INFO } from "@/consts/About.js";
 
 export const AboutInfo = ({ className }) => {
     if (!ABOUT_INFO?.length) return null;

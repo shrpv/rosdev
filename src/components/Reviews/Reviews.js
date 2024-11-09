@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import { Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { REVIEWS } from "/src/consts/Reviews.js";
+import { REVIEWS } from "@/consts/Reviews.js";
 import { ReviewsCard } from "./ReviewsCard/ReviewsCard";
 
 export const Reviews = ({ className }) => {

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./Advantages.module.scss";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ADVANTAGES } from "/src/consts/Advantages.js";
+import { ADVANTAGES } from "@/consts/Advantages.js";
 
 export const Advantages = ({ className }) => {
     const [currentNumber, setCurrentNumber] = useState(0);

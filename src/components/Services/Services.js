@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./Services.module.scss";
-import { SERVICES } from "/src/consts/Services.js";
+import { SERVICES } from "@/consts/Services.js";
 import { ServicesCard } from "./ServicesCard/ServicesCard";
 
 export const Services = ({ className }) => {

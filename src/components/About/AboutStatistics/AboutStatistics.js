@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./AboutStatistics.module.scss";
-import { ABOUT_STATISTICS } from "/src/consts/About.js";
+import { ABOUT_STATISTICS } from "@/consts/About.js";
 
 export const AboutStatistics = ({ className }) => {
     if (!ABOUT_STATISTICS?.length) return null;

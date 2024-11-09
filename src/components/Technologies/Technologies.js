@@ -3,10 +3,7 @@
 import classNames from "classnames";
 import styles from "./Technologies.module.scss";
 import { useState } from "react";
-import "swiper/css";
-import { A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { TECHNOLOGIES } from "/src/consts/Technologies.js";
+import { TECHNOLOGIES } from "@/consts/Technologies.js";
 import { TechnologiesTabs } from "./TechnologiesTabs/TechnologiesTabs";
 import { TechnologiesCategory } from "./TechnologiesCategory/TechnologiesCategory";
 import { TechnologiesCard } from "./TechnologiesCard/TechnologiesCard";
@@ -25,47 +22,42 @@ export const Technologies = ({ className }) => {
                     onChange={setCurrentTab}
                 />
 
-                <Swiper
+                <div
                     className={styles.technologies__slider}
-                    modules={[A11y]}
-                    scrollbar={{ draggable: true }}
+                    data-selected={currentTab}
                 >
                     {Object.entries(TECHNOLOGIES).map(([category, technologies]) => (
-                        <SwiperSlide
-                            className={styles.reviews__slide}
+                        <ul
+                            className={classNames(styles.technologies__list, "listReset")}
                             key={category}
                         >
-                            <ul className={classNames(styles.technologies__list, "listReset")}>
-                                <li className={styles.technologies__item}>
-                                    <TechnologiesCategory category={category} />
+                            <li
+                                className={styles.technologies__item}
+                                data-number="0"
+                            >
+                                <TechnologiesCategory category={category} />
+                            </li>
+
+                            {technologies.map((technology, index) => (
+                                <li
+                                    className={styles.technologies__item}
+                                    key={index}
+                                    data-number={index + 1}
+                                >
+                                    <TechnologiesCard technology={technology} />
                                 </li>
+                            ))}
 
-                                {technologies.map((technology, index) => (
-                                    <li
-                                        className={styles.technologies__item}
-                                        key={index}
-                                        data-number={index + 1}
-                                    >
-                                        <TechnologiesCard technology={technology} />
-                                    </li>
-                                ))}
-
+                            {[1, 2, 3].map(item => (
                                 <li
                                     className={styles.technologies__empty}
-                                    data-number="1"
+                                    key={item}
+                                    data-number={item}
                                 />
-                                <li
-                                    className={styles.technologies__empty}
-                                    data-number="2"
-                                />
-                                <li
-                                    className={styles.technologies__empty}
-                                    data-number="3"
-                                />
-                            </ul>
-                        </SwiperSlide>
+                            ))}
+                        </ul>
                     ))}
-                </Swiper>
+                </div>
             </div>
         </section>
     );

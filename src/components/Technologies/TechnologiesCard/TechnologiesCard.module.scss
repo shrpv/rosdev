@@ -86,7 +86,7 @@
 
         inset: calc(-1 * var(--border-width)) -50%;
 
-        @include transition("opacity, transform");
+        @include transition($property: "opacity, transform", $duration: 0.4s);
     }
 }
 

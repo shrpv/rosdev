@@ -436,7 +436,112 @@ export const SERVICES = [
         ]
     },
     {
-        title: "DevOps"
+        title: "DevOps",
+        images: [
+            {
+                style: {
+                    left: -108,
+                    top: 171,
+                    backgroundImage: "url('/img/services/devoops/bg.svg')",
+                    transformOrigin: "100% 100%",
+                    width: 293,
+                    height: 164
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: 38.89
+                    },
+                    hover: {
+                        x: 8,
+                        y: -6,
+                        rotate: 41.89
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 51,
+                    top: 99,
+                    borderRadius: "50%"
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        backgroundImage: "var(--color-illustration--gradient)",
+                        width: 62,
+                        height: 62
+                    },
+                    hover: {
+                        x: 19,
+                        y: -2,
+                        width: 48,
+                        height: 48,
+                        backgroundImage: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 61,
+                    top: 109,
+                    backgroundImage: "url('/img/services/devoops/brain.svg')",
+                    width: 42,
+                    height: 42
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: 12,
+                        y: -9
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 141,
+                    top: 124,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%",
+                    width: 43,
+                    height: 43
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: 14,
+                        y: -10
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 147,
+                    top: 128,
+                    backgroundImage: "url('/img/services/devoops/bot.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: 14,
+                        y: -10
+                    }
+                }
+            }
+        ]
     },
     {
         title: "Web3 / Blockchain"

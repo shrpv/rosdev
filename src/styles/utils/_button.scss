@@ -1,3 +1,5 @@
+@import "@/styles/mixins";
+
 .button {
     --border-radius: 200px;
 
@@ -12,9 +14,7 @@
     border-radius: var(--border-radius);
     cursor: pointer;
 
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.5s;
-    transition-property: color;
+    @include transition("color");
 
     &:focus-visible {
         border-radius: var(--border-radius);

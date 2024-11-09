@@ -1,8 +1,8 @@
+@import "@/styles/mixins";
+
 .technologiesCard {
     --border-width: 2px;
     --border-color: rgba(255, 82, 58, 0.4);
-    --transition-timing-function: ease-in-out;
-    --transition-duration: 0.5s;
     --logo-size: 48px;
     --row-gap: 10px;
 
@@ -19,9 +19,7 @@
         border-top: var(--border-width) solid var(--border-color);
         border-bottom: var(--border-width) solid var(--border-color);
 
-        transition-timing-function: var(--transition-timing-function);
-        transition-duration: var(--transition-duration);
-        transition-property: border-color;
+        @include transition("border-color");
     }
 
     &::before,
@@ -84,13 +82,11 @@
         transform: scale(0.4);
         opacity: 0;
 
-        transition-timing-function: var(--transition-timing-function);
-        transition-duration: var(--transition-duration);
-        transition-property: opacity, transform;
-
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 
         inset: calc(-1 * var(--border-width)) -50%;
+
+        @include transition("opacity, transform");
     }
 }
 
@@ -104,9 +100,7 @@
     transform: translateY(50%);
     opacity: 0;
 
-    transition-timing-function: var(--transition-timing-function);
-    transition-duration: var(--transition-duration);
-    transition-property: opacity, transform;
+    @include transition("opacity, transform");
 }
 
 .technologiesCard__title {
@@ -119,7 +113,5 @@
 
     transform: translateY(calc(-1 * ((var(--logo-size) + var(--row-gap)) / 2)));
 
-    transition-timing-function: var(--transition-timing-function);
-    transition-duration: var(--transition-duration);
-    transition-property: transform;
+    @include transition("transform");
 }

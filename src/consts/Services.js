@@ -544,7 +544,122 @@ export const SERVICES = [
         ]
     },
     {
-        title: "Web3 / Blockchain"
+        title: "Web3 / Blockchain",
+        images: [
+            {
+                style: {
+                    left: 53,
+                    top: 150,
+                    backgroundImage: "url('/img/services/blockchain/bg.svg')",
+                    transformOrigin: "100% 0",
+                    width: 157,
+                    height: 186
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: 44.88
+                    },
+                    hover: {
+                        x: -7,
+                        y: 15,
+                        rotate: 62
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 93,
+                    top: 56,
+                    borderRadius: 5
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: 14.11,
+                        width: 60,
+                        height: 60,
+                        background: "var(--color-bg--tertiary)"
+                    },
+                    hover: {
+                        x: 18,
+                        y: -4,
+                        rotate: -16,
+                        width: 52,
+                        height: 52,
+                        background: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 102,
+                    top: 65,
+                    backgroundImage: "url('/img/services/blockchain/circuit-board.svg')",
+                    width: 42,
+                    height: 42
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: -13.28
+                    },
+                    hover: {
+                        x: 14,
+                        y: -7,
+                        rotate: -25
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 57,
+                    top: 145,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%"
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: 0,
+                        width: 42,
+                        height: 42
+                    },
+                    hover: {
+                        x: -9,
+                        y: -26,
+                        rotate: 0,
+                        width: 46,
+                        height: 46
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 62,
+                    top: 150,
+                    backgroundImage: "url('/img/services/blockchain/boxes.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        rotate: -13.28
+                    },
+                    hover: {
+                        x: -7,
+                        y: -24,
+                        rotate: 4
+                    }
+                }
+            }
+        ]
     },
     {
         title: "Внедрение и сопровождение 1С"

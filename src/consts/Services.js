@@ -314,7 +314,126 @@ export const SERVICES = [
         ]
     },
     {
-        title: "UX/Ui дизайн"
+        title: "UX/Ui дизайн",
+        images: [
+            {
+                style: {
+                    left: 26,
+                    top: 105,
+                    backgroundImage: "url('/img/services/design/bg_1.svg')",
+                    width: 54,
+                    height: 165
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: -6,
+                        y: -4
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 114,
+                    top: 70,
+                    backgroundImage: "url('/img/services/design/bg_2.svg')",
+                    width: 26,
+                    height: 143
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: -6,
+                        y: 27
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 23,
+                    top: 74,
+                    borderRadius: "50%",
+                    width: 60,
+                    height: 60
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0,
+                        backgroundImage: "var(--color-illustration--gradient)"
+                    },
+                    hover: {
+                        x: -6,
+                        y: -4,
+                        backgroundImage: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 29,
+                    top: 80,
+                    backgroundImage: "url('/img/services/design/figma.svg')",
+                    width: 48,
+                    height: 48
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: -6,
+                        y: -4
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 103,
+                    top: 50,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%",
+                    width: 44,
+                    height: 44
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: -4,
+                        y: 27
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 109,
+                    top: 56,
+                    backgroundImage: "url('/img/services/design/pen-tool.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 0,
+                        y: 0
+                    },
+                    hover: {
+                        x: -4,
+                        y: 27
+                    }
+                }
+            }
+        ]
     },
     {
         title: "DevOps"

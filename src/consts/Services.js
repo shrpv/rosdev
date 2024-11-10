@@ -1114,6 +1114,130 @@ export const SERVICES = [
         ]
     },
     {
-        title: "Продуктовая аналитика"
+        title: "Продуктовая аналитика",
+        images: [
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/analytics/bg_1.svg')",
+                    width: 242,
+                    height: 241,
+                    rotate: 20.09
+                },
+                variants: {
+                    start: {
+                        x: -40,
+                        y: 6
+                    },
+                    hover: {
+                        x: -32,
+                        y: -10
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/analytics/bg_2.svg')",
+                    width: 165,
+                    height: 163,
+                    rotate: 20.09
+                },
+                variants: {
+                    start: {
+                        x: 91,
+                        y: 75
+                    },
+                    hover: {
+                        x: 99,
+                        y: 59
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    borderRadius: "50%",
+                    width: 58,
+                    height: 58,
+                    rotate: 6.57
+                },
+                variants: {
+                    start: {
+                        x: 9,
+                        y: 121,
+                        backgroundImage: "var(--color-illustration--gradient)"
+                    },
+                    hover: {
+                        x: 65,
+                        y: 77,
+                        backgroundImage: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/analytics/chart-pie.svg')",
+                    width: 42,
+                    height: 42
+                },
+                variants: {
+                    start: {
+                        x: 17,
+                        y: 129
+                    },
+                    hover: {
+                        x: 74,
+                        y: 86
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%"
+                },
+                variants: {
+                    start: {
+                        x: 115,
+                        y: 139,
+                        width: 50,
+                        height: 50
+                    },
+                    hover: {
+                        x: 160,
+                        y: 108,
+                        width: 53,
+                        height: 53
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/analytics/chart-spline.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 125,
+                        y: 147
+                    },
+                    hover: {
+                        x: 170,
+                        y: 119
+                    }
+                }
+            }
+        ]
     }
 ];

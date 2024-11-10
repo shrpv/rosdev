@@ -6,193 +6,211 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: -31,
-                    bottom: -53,
-                    rotate: 2.69,
                     backgroundImage: "url('/img/services/web/bg_1.svg')",
                     width: 163,
-                    height: 163
-                }
-            },
-            {
-                style: {
-                    right: 18,
-                    bottom: -53,
-                    backgroundImage: "url('/img/services/web/bg_2.svg')",
-                    width: 129,
-                    height: 127
-                }
-            },
-            {
-                style: {
-                    right: 16,
-                    bottom: 31,
-                    rotate: -56.51,
-                    backgroundColor: "var(--color-illustration--yellow)",
-                    borderRadius: "50%",
-                    width: 44,
-                    height: 44
-                }
-            },
-            {
-                style: {
-                    right: 22,
-                    bottom: 38,
-                    rotate: 15,
-                    backgroundImage: "url('/img/services/web/binary.svg')",
-                    width: 32,
-                    height: 32
-                }
-            },
-            {
-                style: {
-                    left: 89,
-                    bottom: 61,
-                    rotate: 9.07,
-                    width: 62,
-                    height: 62,
-                    borderRadius: "50%"
+                    height: 163,
+                    rotate: 2.69
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        x: -31,
+                        y: 90
                     },
                     hover: {
-                        x: -5,
-                        y: -21,
-                        backgroundImage: GRADIENT_HOVER
+                        x: -36,
+                        y: 69
                     }
                 }
             },
             {
                 style: {
-                    left: 99,
-                    top: 87,
-                    rotate: -30,
+                    backgroundImage: "url('/img/services/web/bg_2.svg')",
+                    width: 129,
+                    height: 127
+                },
+                variants: {
+                    start: {
+                        x: 70,
+                        y: 126
+                    },
+                    hover: {
+                        x: 65,
+                        y: 105
+                    }
+                }
+            },
+            {
+                style: {
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    rotate: -56.51
+                },
+                variants: {
+                    start: {
+                        x: 157,
+                        y: 125
+                    },
+                    hover: {
+                        x: 152,
+                        y: 104
+                    }
+                }
+            },
+            {
+                style: {
+                    backgroundImage: "url('/img/services/web/binary.svg')",
+                    width: 32,
+                    height: 32,
+                    rotate: 15
+                },
+                variants: {
+                    start: {
+                        x: 163,
+                        y: 130
+                    },
+                    hover: {
+                        x: 158,
+                        y: 109
+                    }
+                }
+            },
+            {
+                style: {
+                    width: 62,
+                    height: 62,
+                    borderRadius: "50%",
+                    rotate: 9.07
+                },
+                variants: {
+                    start: {
+                        backgroundImage: "var(--color-illustration--gradient)",
+                        x: 89,
+                        y: 77
+                    },
+                    hover: {
+                        backgroundImage: GRADIENT_HOVER,
+                        x: 84,
+                        y: 56
+                    }
+                }
+            },
+            {
+                style: {
                     backgroundImage: "url('/img/services/web/folder-code.svg')",
                     width: 42,
-                    height: 42
+                    height: 42,
+                    rotate: -30
+                },
+                variants: {
+                    start: {
+                        x: 99,
+                        y: 87
+                    },
+                    hover: {
+                        x: 94,
+                        y: 66
+                    }
                 }
             }
-        ],
-        variants: {
-            start: {
-                x: 0,
-                y: 0
-            },
-            hover: {
-                x: -5,
-                y: -21
-            }
-        }
+        ]
     },
     {
         title: "Mobile разработка",
         images: [
             {
                 style: {
-                    left: 24,
-                    bottom: -47,
                     backgroundImage: "url('/img/services/mobile/bg.svg')",
                     width: 189,
                     height: 173
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 24,
+                        y: 74
                     },
                     hover: {
-                        x: -7,
-                        y: -11
+                        x: 17,
+                        y: 63
                     }
                 }
             },
             {
                 style: {
-                    left: 43,
-                    bottom: 64,
-                    borderRadius: 6,
                     width: 68,
-                    height: 68
+                    height: 68,
+                    borderRadius: 6
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
-                        rotate: -20.95,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        backgroundImage: "var(--color-illustration--gradient)",
+                        x: 43,
+                        y: 68,
+                        rotate: -20.95
                     },
                     hover: {
-                        x: -5,
-                        y: -21,
-                        rotate: 15,
-                        backgroundImage: GRADIENT_HOVER
+                        backgroundImage: GRADIENT_HOVER,
+                        x: 38,
+                        y: 47,
+                        rotate: 15
                     }
                 }
             },
             {
                 style: {
-                    left: 54,
-                    bottom: 73,
                     backgroundImage: "url('/img/services/mobile/smartphone.svg')",
                     width: 48,
                     height: 48
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 54,
+                        y: 79,
                         rotate: 0
                     },
                     hover: {
-                        x: -7,
-                        y: -22,
+                        x: 47,
+                        y: 57,
                         rotate: 36
                     }
                 }
             },
             {
                 style: {
-                    right: 12,
-                    bottom: 40,
+                    backgroundColor: "var(--color-illustration--yellow)",
                     width: 43,
                     height: 43,
-                    backgroundColor: "var(--color-illustration--yellow)",
                     borderRadius: 5
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 161,
+                        y: 117,
                         rotate: 36.36
                     },
                     hover: {
-                        x: -6,
-                        y: -21,
+                        x: 155,
+                        y: 96,
                         rotate: 0
                     }
                 }
             },
             {
                 style: {
-                    right: 18,
-                    bottom: 46,
                     backgroundImage: "url('/img/services/mobile/code-xml.svg')",
                     width: 32,
                     height: 32
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 167,
+                        y: 122,
                         rotate: 0
                     },
                     hover: {
-                        x: -6,
-                        y: -21,
+                        x: 161,
+                        y: 99,
                         rotate: -35
                     }
                 }
@@ -204,109 +222,99 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 23,
-                    top: 72,
                     backgroundImage: "url('/img/services/backend/bg.svg')",
-                    transformOrigin: "0 0",
                     width: 216,
-                    height: 148
+                    height: 148,
+                    transformOrigin: "0 0"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 23,
+                        y: 72,
                         rotate: 0
                     },
                     hover: {
-                        x: -25,
-                        y: 11,
+                        x: -2,
+                        y: 83,
                         rotate: -11
                     }
                 }
             },
             {
                 style: {
-                    left: 11,
-                    bottom: 14,
-                    borderRadius: 6,
                     width: 70,
-                    height: 70
+                    height: 70,
+                    borderRadius: 6
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
-                        rotate: -17.65,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        backgroundImage: "var(--color-illustration--gradient)",
+                        x: 11,
+                        y: 116,
+                        rotate: -17.65
                     },
                     hover: {
-                        x: 9,
-                        y: -11,
-                        rotate: 30.5,
-                        backgroundImage: GRADIENT_HOVER
+                        backgroundImage: GRADIENT_HOVER,
+                        x: 20,
+                        y: 105,
+                        rotate: 30.5
                     }
                 }
             },
             {
                 style: {
-                    left: 22,
-                    bottom: 25,
                     backgroundImage: "url('/img/services/backend/database-zap.svg')",
                     width: 48,
                     height: 48
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 22,
+                        y: 127,
                         rotate: 0
                     },
                     hover: {
-                        x: 9,
-                        y: -11,
+                        x: 31,
+                        y: 116,
                         rotate: 17
                     }
                 }
             },
             {
                 style: {
-                    left: 69,
-                    top: 59,
                     backgroundColor: "var(--color-illustration--yellow)",
                     borderRadius: "50%"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
                         width: 52,
-                        height: 52
+                        height: 52,
+                        x: 69,
+                        y: 59
                     },
                     hover: {
-                        x: 7,
-                        y: 5,
                         width: 48,
-                        height: 48
+                        height: 48,
+                        x: 76,
+                        y: 64
                     }
                 }
             },
             {
                 style: {
-                    left: 79,
-                    top: 69,
                     backgroundImage: "url('/img/services/backend/hard-drive.svg')",
                     width: 32,
                     height: 32
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 79,
+                        y: 69,
                         rotate: 0
                     },
                     hover: {
-                        x: 6,
-                        y: 3,
+                        x: 85,
+                        y: 72,
                         rotate: 27
                     }
                 }
@@ -318,118 +326,106 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 26,
-                    top: 105,
                     backgroundImage: "url('/img/services/design/bg_1.svg')",
                     width: 54,
                     height: 165
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 26,
+                        y: 105
                     },
                     hover: {
-                        x: -6,
-                        y: -4
+                        x: 20,
+                        y: 101
                     }
                 }
             },
             {
                 style: {
-                    left: 114,
-                    top: 70,
                     backgroundImage: "url('/img/services/design/bg_2.svg')",
                     width: 26,
                     height: 143
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 114,
+                        y: 70
                     },
                     hover: {
-                        x: -6,
-                        y: 27
+                        x: 108,
+                        y: 97
                     }
                 }
             },
             {
                 style: {
-                    left: 23,
-                    top: 74,
                     borderRadius: "50%",
                     width: 60,
                     height: 60
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        backgroundImage: "var(--color-illustration--gradient)",
+                        x: 23,
+                        y: 74
                     },
                     hover: {
-                        x: -6,
-                        y: -4,
-                        backgroundImage: GRADIENT_HOVER
+                        backgroundImage: GRADIENT_HOVER,
+                        x: 17,
+                        y: 70
                     }
                 }
             },
             {
                 style: {
-                    left: 29,
-                    top: 80,
                     backgroundImage: "url('/img/services/design/figma.svg')",
                     width: 48,
                     height: 48
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 29,
+                        y: 80
                     },
                     hover: {
-                        x: -6,
-                        y: -4
+                        x: 23,
+                        y: 76
                     }
                 }
             },
             {
                 style: {
-                    left: 103,
-                    top: 50,
                     backgroundColor: "var(--color-illustration--yellow)",
-                    borderRadius: "50%",
                     width: 44,
-                    height: 44
+                    height: 44,
+                    borderRadius: "50%"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 103,
+                        y: 50
                     },
                     hover: {
-                        x: -4,
-                        y: 27
+                        x: 99,
+                        y: 77
                     }
                 }
             },
             {
                 style: {
-                    left: 109,
-                    top: 56,
                     backgroundImage: "url('/img/services/design/pen-tool.svg')",
                     width: 32,
                     height: 32
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 109,
+                        y: 56
                     },
                     hover: {
-                        x: -4,
-                        y: 27
+                        x: 105,
+                        y: 83
                     }
                 }
             }
@@ -440,104 +436,94 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: -108,
-                    top: 171,
                     backgroundImage: "url('/img/services/devoops/bg.svg')",
-                    transformOrigin: "100% 100%",
                     width: 293,
-                    height: 164
+                    height: 164,
+                    transformOrigin: "100% 100%"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: -108,
+                        y: 171,
                         rotate: 38.89
                     },
                     hover: {
-                        x: 8,
-                        y: -6,
+                        x: -100,
+                        y: 165,
                         rotate: 41.89
                     }
                 }
             },
             {
                 style: {
-                    left: 51,
-                    top: 99,
                     borderRadius: "50%"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
                         backgroundImage: "var(--color-illustration--gradient)",
                         width: 62,
-                        height: 62
+                        height: 62,
+                        x: 51,
+                        y: 99
                     },
                     hover: {
-                        x: 19,
-                        y: -2,
+                        backgroundImage: GRADIENT_HOVER,
                         width: 48,
                         height: 48,
-                        backgroundImage: GRADIENT_HOVER
+                        x: 70,
+                        y: 97
                     }
                 }
             },
             {
                 style: {
-                    left: 61,
-                    top: 109,
                     backgroundImage: "url('/img/services/devoops/brain.svg')",
                     width: 42,
                     height: 42
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 61,
+                        y: 109
                     },
                     hover: {
-                        x: 12,
-                        y: -9
+                        x: 73,
+                        y: 100
                     }
                 }
             },
             {
                 style: {
-                    left: 141,
-                    top: 124,
                     backgroundColor: "var(--color-illustration--yellow)",
-                    borderRadius: "50%",
                     width: 43,
-                    height: 43
+                    height: 43,
+                    borderRadius: "50%"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 141,
+                        y: 124
                     },
                     hover: {
-                        x: 14,
-                        y: -10
+                        x: 155,
+                        y: 114
                     }
                 }
             },
             {
                 style: {
-                    left: 147,
-                    top: 128,
                     backgroundImage: "url('/img/services/devoops/bot.svg')",
                     width: 32,
                     height: 32
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0
+                        x: 147,
+                        y: 128
                     },
                     hover: {
-                        x: 14,
-                        y: -10
+                        x: 161,
+                        y: 118
                     }
                 }
             }
@@ -548,113 +534,101 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 53,
-                    top: 150,
                     backgroundImage: "url('/img/services/blockchain/bg.svg')",
-                    transformOrigin: "100% 0",
                     width: 157,
-                    height: 186
+                    height: 186,
+                    transformOrigin: "100% 0"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 53,
+                        y: 150,
                         rotate: 44.88
                     },
                     hover: {
-                        x: -7,
-                        y: 15,
+                        x: 46,
+                        y: 165,
                         rotate: 62
                     }
                 }
             },
             {
                 style: {
-                    left: 93,
-                    top: 56,
                     borderRadius: 5
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
-                        rotate: 14.11,
+                        background: "var(--color-bg--tertiary)",
                         width: 60,
                         height: 60,
-                        background: "var(--color-bg--tertiary)"
+                        x: 93,
+                        y: 56,
+                        rotate: 14.11
                     },
                     hover: {
-                        x: 18,
-                        y: -4,
-                        rotate: -16,
+                        background: GRADIENT_HOVER,
                         width: 52,
                         height: 52,
-                        background: GRADIENT_HOVER
+                        x: 111,
+                        y: 52,
+                        rotate: -16
                     }
                 }
             },
             {
                 style: {
-                    left: 102,
-                    top: 65,
                     backgroundImage: "url('/img/services/blockchain/circuit-board.svg')",
                     width: 42,
                     height: 42
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 102,
+                        y: 65,
                         rotate: -13.28
                     },
                     hover: {
-                        x: 14,
-                        y: -7,
+                        x: 116,
+                        y: 58,
                         rotate: -25
                     }
                 }
             },
             {
                 style: {
-                    left: 57,
-                    top: 145,
                     backgroundColor: "var(--color-illustration--yellow)",
                     borderRadius: "50%"
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
-                        rotate: 0,
                         width: 42,
-                        height: 42
+                        height: 42,
+                        x: 57,
+                        y: 145
                     },
                     hover: {
-                        x: -9,
-                        y: -26,
-                        rotate: 0,
                         width: 46,
-                        height: 46
+                        height: 46,
+                        x: 48,
+                        y: 119
                     }
                 }
             },
             {
                 style: {
-                    left: 62,
-                    top: 150,
                     backgroundImage: "url('/img/services/blockchain/boxes.svg')",
                     width: 32,
                     height: 32
                 },
                 variants: {
                     start: {
-                        x: 0,
-                        y: 0,
+                        x: 62,
+                        y: 150,
                         rotate: -13.28
                     },
                     hover: {
-                        x: -7,
-                        y: -24,
+                        x: 55,
+                        y: 126,
                         rotate: 4
                     }
                 }
@@ -666,8 +640,6 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/1c/bg_1.svg')",
                     width: 242,
                     height: 241,
@@ -686,8 +658,6 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/1c/bg_2.svg')",
                     width: 165,
                     height: 163,
@@ -706,30 +676,26 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
-                    borderRadius: "50%",
                     width: 58,
                     height: 58,
+                    borderRadius: "50%",
                     rotate: 6.57
                 },
                 variants: {
                     start: {
+                        backgroundImage: "var(--color-illustration--gradient)",
                         x: 17,
-                        y: 118,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        y: 118
                     },
                     hover: {
+                        backgroundImage: GRADIENT_HOVER,
                         x: 118,
-                        y: 68,
-                        backgroundImage: GRADIENT_HOVER
+                        y: 68
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/1c/git-fork.svg')",
                     width: 42,
                     height: 42
@@ -747,31 +713,27 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundColor: "var(--color-illustration--yellow)",
                     borderRadius: "50%",
                     rotate: 20.09
                 },
                 variants: {
                     start: {
-                        x: 133,
-                        y: 142,
                         width: 47,
-                        height: 47
+                        height: 47,
+                        x: 133,
+                        y: 142
                     },
                     hover: {
-                        x: 105,
-                        y: 142,
                         width: 53,
-                        height: 53
+                        height: 53,
+                        x: 105,
+                        y: 142
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/1c/settings.svg')",
                     width: 32,
                     height: 32,
@@ -795,8 +757,6 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/import/bg.svg')",
                     width: 156,
                     height: 155
@@ -814,29 +774,25 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     borderRadius: "50%",
                     width: 40,
                     height: 40
                 },
                 variants: {
                     start: {
+                        background: "var(--color-bg--tertiary)",
                         x: 43,
-                        y: 96,
-                        background: "var(--color-bg--tertiary)"
+                        y: 96
                     },
                     hover: {
+                        background: GRADIENT_HOVER,
                         x: 79,
-                        y: 54,
-                        background: GRADIENT_HOVER
+                        y: 54
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/import/orbit.svg')",
                     width: 32,
                     height: 32
@@ -854,12 +810,10 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundColor: "var(--color-illustration--yellow)",
-                    borderRadius: "50%",
                     width: 54,
-                    height: 54
+                    height: 54,
+                    borderRadius: "50%"
                 },
                 variants: {
                     start: {
@@ -874,8 +828,6 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/import/replace.svg')",
                     width: 42,
                     height: 42
@@ -898,8 +850,6 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/audit/bg.svg')",
                     width: 340,
                     height: 215
@@ -917,29 +867,25 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
-                    borderRadius: 6,
                     width: 40,
-                    height: 40
+                    height: 40,
+                    borderRadius: 6
                 },
                 variants: {
                     start: {
+                        backgroundImage: "var(--color-illustration--gradient)",
                         x: 26,
-                        y: 66,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        y: 66
                     },
                     hover: {
+                        backgroundImage: GRADIENT_HOVER,
                         x: 15,
-                        y: 116,
-                        backgroundImage: GRADIENT_HOVER
+                        y: 116
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/audit/scale.svg')",
                     width: 32,
                     height: 32
@@ -957,12 +903,10 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundColor: "var(--color-illustration--yellow)",
-                    borderRadius: "50%",
                     width: 54,
-                    height: 54
+                    height: 54,
+                    borderRadius: "50%"
                 },
                 variants: {
                     start: {
@@ -977,8 +921,6 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/audit/chart-network.svg')",
                     width: 42,
                     height: 42
@@ -1001,12 +943,10 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/testing/bg.svg')",
-                    transformOrigin: "100% 100%",
                     width: 217,
-                    height: 173
+                    height: 173,
+                    transformOrigin: "100% 100%"
                 },
                 variants: {
                     start: {
@@ -1023,33 +963,29 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     borderRadius: 6
                 },
                 variants: {
                     start: {
-                        x: 163,
-                        y: 105,
+                        backgroundImage: "var(--color-illustration--gradient)",
                         width: 63,
                         height: 63,
-                        rotate: -17.65,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        x: 163,
+                        y: 105,
+                        rotate: -17.65
                     },
                     hover: {
-                        x: 185,
-                        y: 94,
+                        backgroundImage: GRADIENT_HOVER,
                         width: 61,
                         height: 61,
-                        rotate: 0,
-                        backgroundImage: GRADIENT_HOVER
+                        x: 185,
+                        y: 94,
+                        rotate: 0
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/testing/whole-word.svg')",
                     width: 42,
                     height: 42
@@ -1069,31 +1005,27 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundColor: "var(--color-illustration--yellow)",
                     borderRadius: "50%",
                     rotate: 23.37
                 },
                 variants: {
                     start: {
-                        x: 62,
-                        y: 131,
                         width: 52,
-                        height: 52
+                        height: 52,
+                        x: 62,
+                        y: 131
                     },
                     hover: {
-                        x: 122,
-                        y: 139,
                         width: 47,
-                        height: 47
+                        height: 47,
+                        x: 122,
+                        y: 139
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/testing/rocket.svg')",
                     width: 32,
                     height: 32
@@ -1118,8 +1050,6 @@ export const SERVICES = [
         images: [
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/analytics/bg_1.svg')",
                     width: 242,
                     height: 241,
@@ -1138,8 +1068,6 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/analytics/bg_2.svg')",
                     width: 165,
                     height: 163,
@@ -1158,30 +1086,26 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
-                    borderRadius: "50%",
                     width: 58,
                     height: 58,
+                    borderRadius: "50%",
                     rotate: 6.57
                 },
                 variants: {
                     start: {
+                        backgroundImage: "var(--color-illustration--gradient)",
                         x: 9,
-                        y: 121,
-                        backgroundImage: "var(--color-illustration--gradient)"
+                        y: 121
                     },
                     hover: {
+                        backgroundImage: GRADIENT_HOVER,
                         x: 65,
-                        y: 77,
-                        backgroundImage: GRADIENT_HOVER
+                        y: 77
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/analytics/chart-pie.svg')",
                     width: 42,
                     height: 42
@@ -1199,30 +1123,26 @@ export const SERVICES = [
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundColor: "var(--color-illustration--yellow)",
                     borderRadius: "50%"
                 },
                 variants: {
                     start: {
-                        x: 115,
-                        y: 139,
                         width: 50,
-                        height: 50
+                        height: 50,
+                        x: 115,
+                        y: 139
                     },
                     hover: {
-                        x: 160,
-                        y: 108,
                         width: 53,
-                        height: 53
+                        height: 53,
+                        x: 160,
+                        y: 108
                     }
                 }
             },
             {
                 style: {
-                    left: 0,
-                    top: 0,
                     backgroundImage: "url('/img/services/analytics/chart-spline.svg')",
                     width: 32,
                     height: 32

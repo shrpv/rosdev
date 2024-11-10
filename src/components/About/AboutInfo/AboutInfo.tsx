@@ -1,8 +1,13 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./AboutInfo.module.scss";
-import { ABOUT_INFO } from "@/consts/About.js";
+import { ABOUT_INFO } from "@/consts/About";
 
-export const AboutInfo = ({ className }) => {
+interface AboutInfoProps {
+    className?: string;
+}
+
+export const AboutInfo: FC<AboutInfoProps> = ({ className }) => {
     if (!ABOUT_INFO?.length) return null;
 
     return (

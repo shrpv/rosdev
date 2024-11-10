@@ -1,4 +1,16 @@
-export const TECHNOLOGIES = {
+export type TechnologyCategory = "Web" | "Mobile";
+
+export type Technology = {
+    title: string;
+    logo?: {
+        src: string;
+        srcSet: string;
+    };
+};
+
+export type Technologies = Record<TechnologyCategory, Technology[]>;
+
+export const TECHNOLOGIES: Technologies = {
     Web: [
         {
             title: "Flask"

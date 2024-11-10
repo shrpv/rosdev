@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./HeaderNavigation.module.scss";
-import { HEADER_NAVIGATION } from "@/consts/HeaderNavigation.js";
+import { HEADER_NAVIGATION } from "@/consts/HeaderNavigation";
 
 export const HeaderNavigation = ({ className }) => {
     return (

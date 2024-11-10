@@ -1,4 +1,13 @@
-export const CLIENTS = [
+export type Client = {
+    title: string;
+    logo: {
+        url: string;
+        width: string;
+        height: string;
+    };
+};
+
+export const CLIENTS: Client[] = [
     {
         title: "МЕДМА",
         logo: {

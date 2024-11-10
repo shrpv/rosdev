@@ -1,9 +1,14 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./Footer.module.scss";
-import { ORGANIZER } from "@/consts/Organizer.js";
+import { ORGANIZER } from "@/consts/Organizer";
 import { FooterContacts } from "./FooterContacts/FooterContacts";
 
-export const Footer = ({ className }) => {
+interface FooterProps {
+    className?: string;
+}
+
+export const Footer: FC<FooterProps> = ({ className }) => {
     const currentYear = new Date().getFullYear();
 
     return (

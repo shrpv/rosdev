@@ -1,7 +1,14 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./TechnologiesCard.module.scss";
+import { Technology } from "@/consts/Technologies";
 
-export const TechnologiesCard = ({ className, technology }) => {
+interface TechnologiesCardProps {
+    className?: string;
+    technology: Technology;
+}
+
+export const TechnologiesCard: FC<TechnologiesCardProps> = ({ className, technology }) => {
     return (
         <article className={classNames(className, styles.technologiesCard)}>
             <div className={styles.technologiesCard__content}>

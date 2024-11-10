@@ -1,9 +1,14 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./Clients.module.scss";
-import { CLIENTS } from "@/consts/Clients.js";
+import { CLIENTS } from "@/consts/Clients";
 import { ClientsCard } from "./ClientsCard/ClientsCard";
 
-export const Clients = ({ className }) => {
+interface ClientsProps {
+    className?: string;
+}
+
+export const Clients: FC<ClientsProps> = ({ className }) => {
     if (!CLIENTS?.length) return null;
 
     return (

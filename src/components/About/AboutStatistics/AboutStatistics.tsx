@@ -1,8 +1,13 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./AboutStatistics.module.scss";
-import { ABOUT_STATISTICS } from "@/consts/About.js";
+import { ABOUT_STATISTICS } from "@/consts/About";
 
-export const AboutStatistics = ({ className }) => {
+interface AboutStatisticsProps {
+    className?: string;
+}
+
+export const AboutStatistics: FC<AboutStatisticsProps> = ({ className }) => {
     if (!ABOUT_STATISTICS?.length) return null;
 
     return (

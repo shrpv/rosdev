@@ -1,7 +1,12 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./Slogan.module.scss";
 
-export const Slogan = ({ className }) => {
+interface SloganProps {
+    className?: string;
+}
+
+export const Slogan: FC<SloganProps> = ({ className }) => {
     return (
         <section className={className}>
             <div className="container">

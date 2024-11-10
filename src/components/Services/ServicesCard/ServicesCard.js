@@ -18,7 +18,7 @@ export const ServicesCard = ({ className, service }) => {
                     className={styles.servicesCard__image}
                     key={index}
                     style={image.style}
-                    variants={image.variants ?? service.variants}
+                    variants={image.variants}
                     transition={{
                         duration: 0.2,
                         ease: "easeOut"

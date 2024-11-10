@@ -28,7 +28,11 @@
 
 .servicesCard__image {
     position: absolute;
+    top: 0;
+    left: 0;
 
     background-repeat: no-repeat;
     background-position: center;
+
+    will-change: transform, width, height;
 }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="156" height="155" fill="none">
+  <circle cx="77.7887" cy="77.5" r="67.5" stroke="url(#a)" stroke-width="20"/>
+  <circle cx="77.7887" cy="77.5" r="67.5" stroke="url(#b)" stroke-opacity=".1" stroke-width="20" style="mix-blend-mode:overlay"/>
+  <defs>
+    <linearGradient id="a" x1="146.035" x2="26.3276" y1="-11.6105" y2="133.525" gradientUnits="userSpaceOnUse">
+      <stop offset=".0224" stop-color="#FFB96D" stop-opacity=".64"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="b" width="13.2129" height="13.2129" patternContentUnits="objectBoundingBox">
+      <use xlink:href="#c" transform="scale(.006)"/>
+    </pattern>
+  </defs>
+</svg>

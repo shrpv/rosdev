@@ -791,7 +791,107 @@ export const SERVICES = [
         ]
     },
     {
-        title: "Импортозамещение"
+        title: "Импортозамещение",
+        images: [
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/import/bg.svg')",
+                    width: 156,
+                    height: 155
+                },
+                variants: {
+                    start: {
+                        x: 48,
+                        y: 54
+                    },
+                    hover: {
+                        x: 38,
+                        y: 59
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    borderRadius: "50%",
+                    width: 40,
+                    height: 40
+                },
+                variants: {
+                    start: {
+                        x: 43,
+                        y: 96,
+                        background: "var(--color-bg--tertiary)"
+                    },
+                    hover: {
+                        x: 79,
+                        y: 54,
+                        background: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/import/orbit.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 47,
+                        y: 100
+                    },
+                    hover: {
+                        x: 84,
+                        y: 58
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%",
+                    width: 54,
+                    height: 54
+                },
+                variants: {
+                    start: {
+                        x: 97,
+                        y: 104
+                    },
+                    hover: {
+                        x: 87,
+                        y: 109
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/import/replace.svg')",
+                    width: 42,
+                    height: 42
+                },
+                variants: {
+                    start: {
+                        x: 103,
+                        y: 110
+                    },
+                    hover: {
+                        x: 94,
+                        y: 115
+                    }
+                }
+            }
+        ]
     },
     {
         title: "Аудит и консалтинг"

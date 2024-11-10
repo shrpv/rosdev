@@ -662,7 +662,133 @@ export const SERVICES = [
         ]
     },
     {
-        title: "Внедрение и сопровождение 1С"
+        title: "Внедрение и сопровождение 1С",
+        images: [
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/1c/bg_1.svg')",
+                    width: 242,
+                    height: 241,
+                    rotate: 20.09
+                },
+                variants: {
+                    start: {
+                        x: 3,
+                        y: -9
+                    },
+                    hover: {
+                        x: 7,
+                        y: -13
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/1c/bg_2.svg')",
+                    width: 165,
+                    height: 163,
+                    rotate: 20.09
+                },
+                variants: {
+                    start: {
+                        x: 45,
+                        y: 98
+                    },
+                    hover: {
+                        x: 48,
+                        y: 84
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    borderRadius: "50%",
+                    width: 58,
+                    height: 58,
+                    rotate: 6.57
+                },
+                variants: {
+                    start: {
+                        x: 17,
+                        y: 118,
+                        backgroundImage: "var(--color-illustration--gradient)"
+                    },
+                    hover: {
+                        x: 118,
+                        y: 68,
+                        backgroundImage: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/1c/git-fork.svg')",
+                    width: 42,
+                    height: 42
+                },
+                variants: {
+                    start: {
+                        x: 25,
+                        y: 126
+                    },
+                    hover: {
+                        x: 126,
+                        y: 77
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%",
+                    rotate: 20.09
+                },
+                variants: {
+                    start: {
+                        x: 133,
+                        y: 142,
+                        width: 47,
+                        height: 47
+                    },
+                    hover: {
+                        x: 105,
+                        y: 142,
+                        width: 53,
+                        height: 53
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/1c/settings.svg')",
+                    width: 32,
+                    height: 32,
+                    rotate: 6.57
+                },
+                variants: {
+                    start: {
+                        x: 140,
+                        y: 150
+                    },
+                    hover: {
+                        x: 115,
+                        y: 153
+                    }
+                }
+            }
+        ]
     },
     {
         title: "Импортозамещение"

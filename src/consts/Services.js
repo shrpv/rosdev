@@ -894,10 +894,224 @@ export const SERVICES = [
         ]
     },
     {
-        title: "Аудит и консалтинг"
+        title: "Аудит и консалтинг",
+        images: [
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/audit/bg.svg')",
+                    width: 340,
+                    height: 215
+                },
+                variants: {
+                    start: {
+                        x: -38,
+                        y: -6
+                    },
+                    hover: {
+                        x: 2,
+                        y: 8
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    borderRadius: 6,
+                    width: 40,
+                    height: 40
+                },
+                variants: {
+                    start: {
+                        x: 26,
+                        y: 66,
+                        backgroundImage: "var(--color-illustration--gradient)"
+                    },
+                    hover: {
+                        x: 15,
+                        y: 116,
+                        backgroundImage: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/audit/scale.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 30,
+                        y: 70
+                    },
+                    hover: {
+                        x: 19,
+                        y: 120
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%",
+                    width: 54,
+                    height: 54
+                },
+                variants: {
+                    start: {
+                        x: 95,
+                        y: 123
+                    },
+                    hover: {
+                        x: 90,
+                        y: 82
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/audit/chart-network.svg')",
+                    width: 42,
+                    height: 42
+                },
+                variants: {
+                    start: {
+                        x: 101,
+                        y: 129
+                    },
+                    hover: {
+                        x: 96,
+                        y: 88
+                    }
+                }
+            }
+        ]
     },
     {
-        title: "Тестирование"
+        title: "Тестирование",
+        images: [
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/testing/bg.svg')",
+                    transformOrigin: "100% 100%",
+                    width: 217,
+                    height: 173
+                },
+                variants: {
+                    start: {
+                        x: 6,
+                        y: -18,
+                        rotate: -16.34
+                    },
+                    hover: {
+                        x: 1,
+                        y: -20,
+                        rotate: -20
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    borderRadius: 6
+                },
+                variants: {
+                    start: {
+                        x: 163,
+                        y: 105,
+                        width: 63,
+                        height: 63,
+                        rotate: -17.65,
+                        backgroundImage: "var(--color-illustration--gradient)"
+                    },
+                    hover: {
+                        x: 185,
+                        y: 94,
+                        width: 61,
+                        height: 61,
+                        rotate: 0,
+                        backgroundImage: GRADIENT_HOVER
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/testing/whole-word.svg')",
+                    width: 42,
+                    height: 42
+                },
+                variants: {
+                    start: {
+                        x: 174,
+                        y: 116,
+                        rotate: 0
+                    },
+                    hover: {
+                        x: 195,
+                        y: 104,
+                        rotate: -15
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundColor: "var(--color-illustration--yellow)",
+                    borderRadius: "50%",
+                    rotate: 23.37
+                },
+                variants: {
+                    start: {
+                        x: 62,
+                        y: 131,
+                        width: 52,
+                        height: 52
+                    },
+                    hover: {
+                        x: 122,
+                        y: 139,
+                        width: 47,
+                        height: 47
+                    }
+                }
+            },
+            {
+                style: {
+                    left: 0,
+                    top: 0,
+                    backgroundImage: "url('/img/services/testing/rocket.svg')",
+                    width: 32,
+                    height: 32
+                },
+                variants: {
+                    start: {
+                        x: 72,
+                        y: 140,
+                        rotate: 0
+                    },
+                    hover: {
+                        x: 131,
+                        y: 145,
+                        rotate: -15
+                    }
+                }
+            }
+        ]
     },
     {
         title: "Продуктовая аналитика"

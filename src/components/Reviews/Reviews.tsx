@@ -1,15 +1,18 @@
 "use client";
-
+import { FC } from "react";
 import styles from "./Reviews.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import { REVIEWS } from "@/consts/Reviews.js";
+import { REVIEWS } from "@/consts/Reviews";
 import { ReviewsCard } from "./ReviewsCard/ReviewsCard";
 
-export const Reviews = ({ className }) => {
+interface ReviewsProps {
+    className?: string;
+}
+
+export const Reviews: FC<ReviewsProps> = ({ className }) => {
     if (!REVIEWS?.length) return null;
 
     return (

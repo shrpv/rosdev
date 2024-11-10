@@ -1,4 +1,14 @@
-export const REVIEWS = [
+export type Review = {
+    text: string;
+    author: {
+        src: string;
+        srcSet: string;
+        name: string;
+        position?: string;
+    };
+};
+
+export const REVIEWS: Review[] = [
     {
         text: "Высокий уровень обслуживания и экспертизы. Решили все наши задачи по разработке и поддержке. Очень довольны результатом!",
         author: {

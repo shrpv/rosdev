@@ -1,11 +1,15 @@
 "use client";
+import { FC, useEffect, useState } from "react";
 import classNames from "classnames";
 import styles from "./Advantages.module.scss";
-import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ADVANTAGES } from "@/consts/Advantages.js";
+import { ADVANTAGES } from "@/consts/Advantages";
 
-export const Advantages = ({ className }) => {
+interface AdvantagesProps {
+    className?: string;
+}
+
+export const Advantages: FC<AdvantagesProps> = ({ className }) => {
     const [currentNumber, setCurrentNumber] = useState(0);
 
     const DELAY = 2000;

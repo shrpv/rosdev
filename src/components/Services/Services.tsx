@@ -1,9 +1,14 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./Services.module.scss";
-import { SERVICES } from "@/consts/Services.js";
+import { SERVICES } from "@/consts/Services";
 import { ServicesCard } from "./ServicesCard/ServicesCard";
 
-export const Services = ({ className }) => {
+interface ServicesProps {
+    className?: string;
+}
+
+export const Services: FC<ServicesProps> = ({ className }) => {
     if (!SERVICES?.length) return null;
 
     return (

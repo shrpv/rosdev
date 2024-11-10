@@ -1,11 +1,14 @@
 "use client";
-
+import { FC, useEffect, useState } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
-import { useEffect, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-export const Hero = ({ className }) => {
+interface HeroProps {
+    className?: string;
+}
+
+export const Hero: FC<HeroProps> = ({ className }) => {
     const [layers, setLayers] = useState([]);
 
     useEffect(() => {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import classNames from "classnames";
 import styles from "./Header.module.scss";
-import { ORGANIZER } from "@/consts/Organizer.js";
+import { ORGANIZER } from "@/consts/Organizer";
 import { HeaderNavigation } from "./HeaderNavigation/HeaderNavigation";
 import { HeaderMenu } from "./HeaderMenu/HeaderMenu";
 

@@ -1,13 +1,20 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./TechnologiesTabs.module.scss";
-import { TECHNOLOGIES } from "@/consts/Technologies.js";
+import { TECHNOLOGIES, TechnologyCategory } from "@/consts/Technologies";
 
-export const TechnologiesTabs = ({ className, currentTab, onChange }) => {
+interface TechnologiesCategoryProps {
+    className?: string;
+    currentTab: TechnologyCategory;
+    onChange: (category: TechnologyCategory) => void;
+}
+
+export const TechnologiesTabs: FC<TechnologiesCategoryProps> = ({ className, currentTab, onChange }) => {
     return (
         <fieldset className={classNames(className, styles.technologiesTabs)}>
             <legend className="visuallyHidden">Направление</legend>
 
-            {Object.keys(TECHNOLOGIES).map(technology => {
+            {Object.keys(TECHNOLOGIES).map((technology: TechnologyCategory) => {
                 const id = `technologies-${technology}`;
 
                 return (

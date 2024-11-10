@@ -1,6 +1,16 @@
+import { MotionStyle, Variants } from "framer-motion";
+
 const GRADIENT_HOVER = "linear-gradient(43.37deg, #FFB96D 0%, #FFB96D 100%)";
 
-export const SERVICES = [
+export type Service = {
+    title: string;
+    images: {
+        style: MotionStyle;
+        variants?: Variants;
+    }[];
+};
+
+export const SERVICES: Service[] = [
     {
         title: "Web разработка",
         images: [

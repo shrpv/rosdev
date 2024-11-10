@@ -1,7 +1,12 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./Platforms.module.scss";
 
-export const Platforms = ({ className }) => {
+interface PlatformsProps {
+    className?: string;
+}
+
+export const Platforms: FC<PlatformsProps> = ({ className }) => {
     return (
         <section className={className}>
             <div className="container">

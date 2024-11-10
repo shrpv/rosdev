@@ -1,9 +1,16 @@
 "use client";
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./ServicesCard.module.scss";
 import { motion } from "framer-motion";
+import { Service } from "@/consts/Services";
 
-export const ServicesCard = ({ className, service }) => {
+interface ServicesCardProps {
+    className?: string;
+    service: Service;
+}
+
+export const ServicesCard: FC<ServicesCardProps> = ({ className, service }) => {
     return (
         <motion.article
             className={classNames(className, styles.servicesCard)}

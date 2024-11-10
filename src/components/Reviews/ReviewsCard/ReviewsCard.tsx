@@ -1,8 +1,15 @@
 "use client";
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./ReviewsCard.module.scss";
+import { Review } from "@/consts/Reviews";
 
-export const ReviewsCard = ({ className, review }) => {
+interface ReviewsCardProps {
+    className?: string;
+    review: Review;
+}
+
+export const ReviewsCard: FC<ReviewsCardProps> = ({ className, review }) => {
     return (
         <article className={classNames(className, styles.reviewsCard)}>
             <blockquote className={styles.reviewsCard__quote}>

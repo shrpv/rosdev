@@ -1,9 +1,14 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./About.module.scss";
 import { AboutInfo } from "./AboutInfo/AboutInfo";
 import { AboutStatistics } from "./AboutStatistics/AboutStatistics";
 
-export const About = ({ className }) => {
+interface AboutProps {
+    className?: string;
+}
+
+export const About: FC<AboutProps> = ({ className }) => {
     return (
         <section className={className}>
             <div className={classNames(styles.about__container, "container")}>

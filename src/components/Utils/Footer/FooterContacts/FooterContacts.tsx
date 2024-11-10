@@ -1,8 +1,13 @@
+import { FC } from "react";
 import classNames from "classnames";
 import styles from "./FooterContacts.module.scss";
-import { FOOTER_CONTACTS } from "@/consts/FooterContacts.js";
+import { FOOTER_CONTACTS } from "@/consts/FooterContacts";
 
-export const FooterContacts = ({ className }) => {
+interface FooterContactsProps {
+    className?: string;
+}
+
+export const FooterContacts: FC<FooterContactsProps> = ({ className }) => {
     if (!FOOTER_CONTACTS?.length) return null;
 
     return (

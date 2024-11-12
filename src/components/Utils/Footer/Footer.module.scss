@@ -1,17 +1,41 @@
+@import "@/styles/mixins";
+
 .footer {
-    padding-bottom: 60px;
+    @include media-down($tablet-breakpoint) {
+        padding-bottom: 30px;
+    }
+    @include media-up($tablet-breakpoint) {
+        padding-bottom: 60px;
+    }
 }
 
 .footer__body {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 60px;
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 16px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 30px;
 
-    column-gap: 60px;
+        column-gap: 40px;
+    }
+    @include media-up($tablet-breakpoint) {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 60px;
+
+        column-gap: 60px;
+    }
 }
 
 .footer__content {
-    flex-grow: 1;
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 16px;
+    }
+    @include media-up($mobile-breakpoint) {
+        flex-grow: 1;
+    }
 }
 
 .footer__logo {
@@ -24,33 +48,65 @@
 
     font-weight: 700;
     // font-weight: 550;
-    font-size: 62px;
-    line-height: 80px;
     color: var(--color-text--primary);
 
     em {
         font-style: normal;
     }
+
+    @include media-down($mobile-breakpoint) {
+        font-size: 24px;
+        line-height: 60px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        font-size: 40px;
+        line-height: 80px;
+    }
+    @include media-up($tablet-breakpoint) {
+        font-size: 62px;
+        line-height: 80px;
+    }
 }
 
 .footer__contacts {
-    flex-basis: 439px;
+    @include media-down($mobile-breakpoint) {
+        font-size: 20px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        flex-basis: 260px;
 
-    font-size: 24px;
+        font-size: 20px;
+    }
+    @include media-up($tablet-breakpoint) {
+        flex-basis: 439px;
+
+        font-size: 24px;
+    }
 }
 
 .footer__info {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-
     font-size: 14px;
     line-height: 21px;
-    column-gap: 32px;
 
     border-top: 1px solid var(--color-border);
+
+    @include media-down($mobile-breakpoint) {
+        padding-top: 16px;
+    }
+    @include media-up($mobile-breakpoint) {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+
+        column-gap: 32px;
+    }
 }
 
 .footer__copyright {
-    flex-grow: 1;
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 16px;
+    }
+    @include media-up($mobile-breakpoint) {
+        flex-grow: 1;
+    }
 }

@@ -1,0 +1,33 @@
+.headerMenuToggle {
+    padding: 4px;
+
+    color: var(--color-text--primary);
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &[aria-expanded="true"] {
+        .headerMenuToggle__open {
+            display: none;
+        }
+
+        .headerMenuToggle__close {
+            display: block;
+        }
+    }
+}
+
+.headerMenuToggle__icon {
+    display: block;
+
+    stroke: currentColor;
+}
+
+.headerMenuToggle__open {
+    display: block;
+}
+
+.headerMenuToggle__close {
+    display: none;
+}

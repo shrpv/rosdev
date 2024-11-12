@@ -1,17 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { FC, useState } from "react";
 import classNames from "classnames";
 import styles from "./Header.module.scss";
 import { ORGANIZER } from "@/consts/Organizer";
 import { HeaderNavigation } from "./HeaderNavigation/HeaderNavigation";
 import { HeaderMenu } from "./HeaderMenu/HeaderMenu";
 
-export const Header = ({ className }) => {
-    const [isMenuOpened, setIsMenuOpened] = useState(false);
+interface HeaderProps {
+    className?: string;
+}
+
+export const Header: FC<HeaderProps> = ({ className }) => {
+    const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 
     return (
-        <header className={classNames(className, styles.header)}>
+        <header
+            className={classNames(className, styles.header, {
+                [styles.header__opened]: isMenuOpened
+            })}
+        >
             <div className={classNames(styles.header__container, "container")}>
                 <img
                     className={styles.header__logo}
@@ -30,11 +38,11 @@ export const Header = ({ className }) => {
                     Войти
                 </button>
 
-                {/* <HeaderMenu
+                <HeaderMenu
                     className={styles.header__menu}
                     onClick={() => setIsMenuOpened(prev => !prev)}
                     opened={isMenuOpened}
-                /> */}
+                />
             </div>
         </header>
     );

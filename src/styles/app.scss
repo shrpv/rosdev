@@ -38,8 +38,7 @@
 }
 
 .page {
-    // min-width: 375px;
-    min-width: 1440px;
+    min-width: 375px;
     min-height: 100%;
 
     color: var(--color-text--secondary);
@@ -68,11 +67,10 @@
     z-index: 100;
 
     width: 100%;
+
+    min-width: 320px;
 }
 
 .page__main {
     flex-grow: 1;
-}
-
-.page__footer {
 }

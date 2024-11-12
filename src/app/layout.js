@@ -22,7 +22,7 @@ export default function Layout({ children }) {
 
                 <Main className="page__main">{children}</Main>
 
-                <Footer className="page__footer" />
+                <Footer />
             </body>
         </html>
     );

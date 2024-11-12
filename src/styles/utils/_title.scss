@@ -3,7 +3,13 @@
     // font-weight: 550;
 
     font-weight: 700;
-    font-size: 40px;
-    line-height: 1.25;
+    line-height: 50px;
     color: var(--color-text--primary);
+
+    @include media-down($tablet-breakpoint) {
+        font-size: 32px;
+    }
+    @include media-up($tablet-breakpoint) {
+        font-size: 40px;
+    }
 }

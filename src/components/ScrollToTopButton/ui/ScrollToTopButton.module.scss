@@ -1,0 +1,40 @@
+@media (min-width: 1200px) {
+  .scrollButton {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 100;
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 62px;
+    height: 62px;
+
+    text-indent: 500%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    border: none;
+    background-color: #FFFFFF1A;
+    background-image: url("/img/common/up.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    cursor: pointer;
+
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-radius: 50%;
+    }
+  }
+
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .backdrop-blur {
+      background-color: #FFFFFF1A;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+  }
+}

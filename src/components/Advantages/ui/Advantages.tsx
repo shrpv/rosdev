@@ -19,7 +19,7 @@ export const Advantages = ({ className }) => {
     }, []);
 
     return (
-        <section className={classNames(className, styles.advantages)}>
+        <section className={classNames(className, styles.advantages)} id="content">
             <span className={styles.advantages__static}>Мы знаем как сделать</span>
 
             <span className={styles.advantages__dynamic}>

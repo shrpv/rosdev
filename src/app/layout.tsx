@@ -1,9 +1,8 @@
 import "../styles/app.scss";
 import { ORGANIZER } from "/src/consts/Organizer.js";
-import { Favicon } from "../components/Utils/Favicon/Favicon";
-import { Header } from "../components/Utils/Header/Header";
-import { Main } from "../components/Utils/Main/Main";
-import { Footer } from "../components/Utils/Footer/Footer";
+import { Favicon } from "@/components/Utils/Favicon/Favicon";
+import SmoothScrollLayout from "../components/SmoothScroll/ui/SmoothScrollLayout";
+import Main from "../components/Utils/Main";
 
 export default function Layout({ children }) {
     return (
@@ -18,11 +17,11 @@ export default function Layout({ children }) {
             </head>
 
             <body className="page__body">
-                <Header className="page__header" />
-
-                <Main className="page__main">{children}</Main>
-
-                <Footer className="page__footer" />
+                <SmoothScrollLayout>
+                    <Main className="page__main">
+                        {children}
+                    </Main>
+                </SmoothScrollLayout>
             </body>
         </html>
     );

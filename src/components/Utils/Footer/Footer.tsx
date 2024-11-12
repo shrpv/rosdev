@@ -2,15 +2,15 @@ import { FC } from "react";
 import classNames from "classnames";
 import styles from "./Footer.module.scss";
 import { ORGANIZER } from "@/consts/Organizer";
-import { FooterContacts } from "./FooterContacts/FooterContacts";
+import { Contacts } from "../Contacts/Contacts";
+import { Copyright } from "../Copyright/Copyright";
+import { Location } from "../Location/Location";
 
 interface FooterProps {
     className?: string;
 }
 
 export const Footer: FC<FooterProps> = ({ className }) => {
-    const currentYear = new Date().getFullYear();
-
     return (
         <footer className={classNames(className, styles.footer)}>
             <div className="container">
@@ -29,19 +29,13 @@ export const Footer: FC<FooterProps> = ({ className }) => {
                         </p>
                     </div>
 
-                    <address className={styles.footer__contacts}>
-                        <FooterContacts />
-                    </address>
+                    <Contacts className={styles.footer__contacts} />
                 </div>
 
                 <div className={styles.footer__info}>
-                    <div className={styles.footer__copyright}>
-                        &copy; {ORGANIZER} {currentYear}
-                    </div>
+                    <Copyright className={styles.footer__copyright} />
 
-                    <address className={styles.footer__location}>
-                        Санкт-Петербург, Невский проспект, д. 28 офис 312
-                    </address>
+                    <Location />
                 </div>
             </div>
         </footer>

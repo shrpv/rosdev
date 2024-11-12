@@ -18,6 +18,7 @@
 
 .contacts__icon {
     display: block;
+    flex-shrink: 0;
 
     background-color: var(--color-bg--secondary);
     border-radius: 50%;

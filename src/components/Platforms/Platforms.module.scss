@@ -1,47 +1,141 @@
+@import "@/styles/mixins";
+
 .platforms__banner {
     position: relative;
 
-    padding: 60px 40px;
     overflow: hidden;
 
     background-color: var(--color-bg--secondary);
     border-radius: 10px;
 
+    @include media-down($mobile-breakpoint) {
+        padding: 24px 16px;
+        padding-bottom: 239px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        padding: 30px 20px;
+    }
+    @include media-up($tablet-breakpoint) {
+        padding: 60px 40px;
+    }
+
     &::before {
         content: "";
         position: absolute;
-        top: 50%;
-        right: -132px;
 
-        width: 789px;
-        height: 789px;
+        width: var(--size);
+        height: var(--size);
 
         background-color: var(--color-bg--tertiary);
         border-radius: 50%;
-        transform: translateY(-50%);
         opacity: 0.8;
-        filter: blur(144px);
+        filter: blur(var(--blur));
+
+        @include media-down($mobile-breakpoint) {
+            bottom: -54px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            --blur: 77px;
+            --size: 286px;
+        }
+        @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+            top: 50%;
+            right: -70px;
+
+            transform: translateY(-50%);
+
+            --blur: 77px;
+            --size: 422px;
+        }
+        @include media-up($tablet-breakpoint) {
+            top: 50%;
+            right: -132px;
+
+            transform: translateY(-50%);
+
+            --blur: 144px;
+            --size: 789px;
+        }
     }
 }
 
 .platforms__content {
-    max-width: 513px;
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        max-width: 360px;
+    }
+    @include media-up($tablet-breakpoint) {
+        max-width: 513px;
+    }
 }
 
 .platforms__title {
-    margin-bottom: 20px;
+    margin: 0;
+    // font-weight: 550;
+
+    font-weight: 700;
+    color: var(--color-text--primary);
 
     em {
         font-style: normal;
+    }
+
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 16px;
+    }
+    @include media-up($mobile-breakpoint) {
+        margin-bottom: 20px;
+    }
+    @include media-down($mobile-breakpoint) {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    @include media-up($tablet-breakpoint) {
+        font-size: 40px;
+        line-height: 1.25;
     }
 }
 
 .platforms__description {
     margin: 0;
+
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 6px;
+
+        font-size: 14px;
+    }
 }
 
 .platforms__image {
+    --transform: rotate(7.09deg);
+
     position: absolute;
-    top: 0;
-    right: 0;
+
+    transform: var(--transform);
+
+    @include media-down($mobile-breakpoint) {
+        bottom: -45px;
+        left: 50%;
+
+        width: 449px;
+        height: auto;
+
+        transform: var(--transform) translateX(-43%);
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        right: -88px;
+        bottom: -5px;
+
+        width: 449px;
+        height: auto;
+    }
+    @include media-up($tablet-breakpoint) {
+        right: -66px;
+        bottom: -69px;
+    }
 }

@@ -14,7 +14,7 @@ export const Platforms: FC<PlatformsProps> = ({ className }) => {
 
                 <div className={styles.platforms__banner}>
                     <div className={styles.platforms__content}>
-                        <p className={classNames(styles.platforms__title, "title")}>
+                        <p className={styles.platforms__title}>
                             Передовые платформы для <em className="gradientText">вашего бизнеса</em>
                         </p>
 
@@ -40,8 +40,8 @@ export const Platforms: FC<PlatformsProps> = ({ className }) => {
                             srcSet="/img/platforms/image@2x.png 2x"
                             src="/img/platforms/image.png"
                             alt=""
-                            width="796"
-                            height="312"
+                            width="840"
+                            height="435"
                             loading="lazy"
                         />
                     </picture>

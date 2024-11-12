@@ -1,33 +1,41 @@
-import classNames from "classnames";
+import { FC, MouseEventHandler } from "react";
 import styles from "./HeaderMenu.module.scss";
+import { HeaderNavigation } from "../HeaderNavigation/HeaderNavigation";
+import { HeaderMenuToggle } from "./HeaderMenuToggle/HeaderMenuToggle";
+import { Contacts } from "../../Contacts/Contacts";
+import { Copyright } from "../../Copyright/Copyright";
+import { Location } from "../../Location/Location";
 
-export const HeaderMenu = ({ className, controlsId, opened, onClick }) => {
+interface HeaderMenuProps {
+    className?: string;
+    opened: boolean;
+    onClick: MouseEventHandler<HTMLButtonElement>;
+}
+
+export const HeaderMenu: FC<HeaderMenuProps> = ({ className, opened, onClick }) => {
+    const id = "header-menu";
+
     return (
-        <button
-            className={classNames(className, styles.headerMenu)}
-            type="button"
-            onClick={onClick}
-            aria-controls={controlsId}
-            aria-expanded={opened}
-            aria-label="Меню"
-        >
-            <svg
-                className={styles.headerMenu__icon}
-                width="24"
-                height="24"
-                focusable="false"
-                aria-hidden="true"
-            >
-                <use
-                    className={styles.headerMenu__open}
-                    href="/img/sprite.svg#menu"
-                />
+        <div className={className}>
+            <HeaderMenuToggle
+                className={styles.headerMenu__toggle}
+                onClick={onClick}
+                opened={opened}
+                controlsId={id}
+            />
 
-                <use
-                    className={styles.headerMenu__close}
-                    href="/img/sprite.svg#close"
-                />
-            </svg>
-        </button>
+            <div
+                className={styles.headerMenu__content}
+                id={id}
+            >
+                <HeaderNavigation className={styles.headerMenu__navigation} />
+
+                <Contacts className={styles.headerMenu__contacts} />
+
+                <Copyright className={styles.headerMenu__copyright} />
+
+                <Location className={styles.headerMenu__location} />
+            </div>
+        </div>
     );
 };

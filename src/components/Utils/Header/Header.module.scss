@@ -1,34 +1,56 @@
 @import "@/styles/mixins";
 
 .header {
-    padding-top: 12px;
-    padding-bottom: 12px;
-
     background-color: var(--color-bg--overlay-15);
 
     backdrop-filter: blur(2px);
 }
 
+.header__opened {
+    @include media-down($tablet-breakpoint) {
+        .header__login {
+            display: none;
+        }
+    }
+}
+
 .header__container {
     display: flex;
     align-items: center;
+    min-height: 60px;
 }
 
 .header__logo {
     display: block;
-    margin-right: 40px;
+
+    @include media-down($tablet-breakpoint) {
+        margin-right: auto;
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-right: 40px;
+    }
+}
+
+.header__navigation {
+    @include media-down($tablet-breakpoint) {
+        display: none;
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-right: auto;
+    }
 }
 
 .header__login {
-    margin-left: auto;
-
-    // @include media-down($tablet-breakpoint) {
-    //     margin-right: 16px;
-    // }
+    @include media-down($tablet-breakpoint) {
+        margin-right: 16px;
+    }
 }
 
 .header__menu {
     @include media-down($tablet-breakpoint) {
         margin-right: -4px;
+    }
+    @include media-up($tablet-breakpoint) {
+        display: none;
     }
 }

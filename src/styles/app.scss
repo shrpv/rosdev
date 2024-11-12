@@ -22,7 +22,16 @@
     --color-text--secondary: #c8b9b9;
     --font-family--text: "ALS Sirius VF", sans-serif;
     --font-size--normal: 16px;
-    --section-spacing: 160px;
+
+    @include media-down($mobile-breakpoint) {
+        --section-spacing: 60px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        --section-spacing: 100px;
+    }
+    @include media-up($tablet-breakpoint) {
+        --section-spacing: 160px;
+    }
 }
 
 *,

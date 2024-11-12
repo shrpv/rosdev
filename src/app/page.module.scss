@@ -1,9 +1,16 @@
+@import "@/styles/mixins";
+
 .home__hero {
     margin-bottom: 110px;
 }
 
 .home__advantages {
-    margin-bottom: 120px;
+    @include media-down($tablet-breakpoint) {
+        margin-bottom: var(--section-spacing);
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-bottom: 120px;
+    }
 }
 
 .home__platforms {

@@ -12,7 +12,7 @@ import { Slogan } from "../components/Slogan/Slogan";
 export default function Page() {
     return (
         <>
-            <Hero className={styles.home__hero} />
+            {/* <Hero className={styles.home__hero} /> */}
 
             <Advantages className={styles.home__advantages} />
 

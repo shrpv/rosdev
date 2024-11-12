@@ -24,33 +24,35 @@ export const Advantages: FC<AdvantagesProps> = ({ className }) => {
 
     return (
         <section className={classNames(className, styles.advantages)}>
-            <span className={styles.advantages__static}>Мы знаем как сделать</span>
+            <div className="container">
+                <span className={styles.advantages__static}>Мы знаем как сделать</span>
 
-            <span className={styles.advantages__dynamic}>
-                <AnimatePresence initial={false}>
-                    <motion.em
-                        className="gradientText"
-                        key={currentNumber}
-                        initial={{
-                            opacity: 0.2,
-                            y: "-50%"
-                        }}
-                        animate={{
-                            opacity: 1,
-                            y: 0
-                        }}
-                        exit={{
-                            opacity: 0,
-                            y: "50%"
-                        }}
-                        transition={{
-                            duration: 0.3
-                        }}
-                    >
-                        {ADVANTAGES[currentNumber]}
-                    </motion.em>
-                </AnimatePresence>
-            </span>
+                <span className={styles.advantages__dynamic}>
+                    <AnimatePresence initial={false}>
+                        <motion.em
+                            className="gradientText"
+                            key={currentNumber}
+                            initial={{
+                                opacity: 0.2,
+                                y: "-50%"
+                            }}
+                            animate={{
+                                opacity: 1,
+                                y: 0
+                            }}
+                            exit={{
+                                opacity: 0,
+                                y: "50%"
+                            }}
+                            transition={{
+                                duration: 0.3
+                            }}
+                        >
+                            {ADVANTAGES[currentNumber]}
+                        </motion.em>
+                    </AnimatePresence>
+                </span>
+            </div>
         </section>
     );
 };

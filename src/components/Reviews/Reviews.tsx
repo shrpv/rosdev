@@ -1,5 +1,6 @@
 "use client";
 import { FC } from "react";
+import classNames from "classnames";
 import styles from "./Reviews.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,14 +18,13 @@ export const Reviews: FC<ReviewsProps> = ({ className }) => {
 
     return (
         <section className={className}>
-            <div className="container">
+            <div className={styles.reviews__container}>
                 <h2 className="visuallyHidden">Отзывы</h2>
 
                 <Swiper
                     className={styles.reviews__slider}
                     modules={[Pagination, A11y]}
-                    spaceBetween={20}
-                    slidesPerView={4}
+                    slidesPerView={"auto"}
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
                 >

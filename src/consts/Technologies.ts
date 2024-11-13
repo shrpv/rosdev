@@ -53,7 +53,7 @@ export const TECHNOLOGIES: Technologies = {
         },
         {
             title: "Magento 2+",
-            logo: "/img/technologies/magneto.svg"
+            logo: "/img/technologies/magento.svg"
         },
         {
             title: "HTML5",

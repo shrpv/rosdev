@@ -19,6 +19,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
             className={classNames(className, styles.header, {
                 [styles.header__opened]: isMenuOpened
             })}
+            id="header"
         >
             <div className={classNames(styles.header__container, "container")}>
                 <img

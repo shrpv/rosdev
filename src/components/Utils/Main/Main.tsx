@@ -8,5 +8,12 @@ interface MainProps {
 }
 
 export const Main: FC<MainProps> = ({ className, children }) => {
-    return <main className={classNames(className, styles.main)}>{children}</main>;
+    return (
+        <main
+            className={classNames(className, styles.main)}
+            id="main"
+        >
+            {children}
+        </main>
+    );
 };

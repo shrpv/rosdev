@@ -1,34 +1,91 @@
+@import "@/styles/mixins";
+
 .slogan__banner {
     position: relative;
 
-    padding: 120px 40px;
     overflow: hidden;
 
     background-color: var(--color-bg--secondary);
     border-radius: 10px;
 
+    @include media-down($mobile-breakpoint) {
+        padding: 24px 16px;
+        padding-bottom: 246px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        padding: 30px 20px;
+    }
+    @include media-up($tablet-breakpoint) {
+        padding: 120px 40px;
+    }
+
     &::before {
         content: "";
         position: absolute;
-        top: 15px;
-        right: -27px;
 
-        width: 589px;
-        height: 589px;
+        width: var(--size);
+        height: var(--size);
 
         background-image: var(--color-illustration--gradient);
         border-radius: 50%;
         opacity: 0.5;
-        filter: blur(144px);
+        filter: blur(var(--blur));
+
+        @include media-down($mobile-breakpoint) {
+            bottom: -61px;
+            left: calc(50% - 113px);
+
+            --blur: 77.35px;
+            --size: 291px;
+        }
+        @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+            right: -14px;
+            bottom: -68px;
+
+            --blur: 77.35px;
+            --size: 316px;
+        }
+        @include media-up($tablet-breakpoint) {
+            top: 15px;
+            right: -27px;
+
+            --blur: 144px;
+            --size: 589px;
+        }
     }
 }
 
 .slogan__content {
-    max-width: 745px;
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        max-width: 358px;
+    }
+    @include media-up($tablet-breakpoint) {
+        max-width: 745px;
+    }
 }
 
 .slogan__title {
-    margin-bottom: 20px;
+    font-weight: 700;
+    // font-weight: 550;
+
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 16px;
+
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        margin-bottom: 20px;
+
+        font-size: 28px;
+        line-height: 30px;
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-bottom: 20px;
+
+        font-size: 40px;
+        line-height: 50px;
+    }
 
     em {
         font-style: normal;
@@ -37,10 +94,33 @@
 
 .slogan__description {
     margin: 0;
+
+    @include media-down($mobile-breakpoint) {
+        font-size: 14px;
+    }
 }
 
 .slogan__image {
     position: absolute;
-    right: 0;
-    bottom: 0;
+
+    @include media-down($mobile-breakpoint) {
+        bottom: 0;
+        left: 50%;
+
+        width: 335px;
+        height: 166px;
+
+        transform: translateX(-50%);
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        right: -8px;
+        bottom: 0;
+
+        width: 347px;
+        height: 172px;
+    }
+    @include media-up($tablet-breakpoint) {
+        right: -15px;
+        bottom: 0;
+    }
 }

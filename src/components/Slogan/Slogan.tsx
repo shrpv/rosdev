@@ -28,7 +28,7 @@ export const Slogan: FC<SloganProps> = ({ className }) => {
                         className={styles.slogan__image}
                         src="/img/slogan/image.svg"
                         alt=""
-                        width="633"
+                        width="649"
                         height="321"
                         loading="lazy"
                     />

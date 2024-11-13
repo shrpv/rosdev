@@ -20,6 +20,7 @@
     --color-text--gradient: linear-gradient(270deg, #ff523a 22.51%, #ff1f00 87.52%);
     --color-text--primary: #ffffff;
     --color-text--secondary: #c8b9b9;
+    --container-max-width: 1440px;
     --font-family--text: "ALS Sirius VF", sans-serif;
     --font-size--normal: 16px;
 
@@ -76,7 +77,6 @@
     z-index: 100;
 
     width: 100%;
-
     min-width: 320px;
 }
 

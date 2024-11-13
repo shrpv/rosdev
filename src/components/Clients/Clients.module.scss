@@ -1,3 +1,5 @@
+@import "@/styles/mixins";
+
 .clients__list {
     display: flex;
     flex-wrap: wrap;
@@ -9,4 +11,14 @@
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 256px;
+
+    @include media-down($mobile-breakpoint) {
+        flex-basis: 40%;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        flex-basis: 20%;
+    }
+    @include media-up($tablet-breakpoint) {
+        flex-basis: 256px;
+    }
 }

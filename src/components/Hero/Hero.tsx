@@ -83,11 +83,11 @@ export const Hero = ({ className }) => {
             ))}
 
             <img
-                src="/img/hero/rocket.png"
+                className={classNames(styles.hero__img, styles.rocket)}
+                src="/img/hero/rocket.svg"
                 alt="Взлетающая ракета"
                 loading="lazy"
                 ref={target}
-                className={classNames(styles.hero__img, styles.rocket)}
             />
         </section>
     );

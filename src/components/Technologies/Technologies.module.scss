@@ -1,11 +1,24 @@
 @import "@/styles/mixins";
 
 .technologies__title {
-    margin-bottom: 60px;
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 20px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        margin-bottom: 30px;
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-bottom: 60px;
+    }
 }
 
 fieldset.technologies__tabs {
-    margin-bottom: 24px;
+    @include media-down($tablet-breakpoint) {
+        margin-bottom: 16px;
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-bottom: 24px;
+    }
 }
 
 .technologies__slider {
@@ -20,9 +33,6 @@ fieldset.technologies__tabs {
 }
 
 .technologies__list {
-    --grid-columns-count: 8;
-    --grid-columns-width: 8.06%;
-
     display: grid;
     justify-content: space-evenly;
     padding: 2px;
@@ -33,6 +43,17 @@ fieldset.technologies__tabs {
     flex-shrink: 0;
 
     @include transition("transform");
+
+    @include media-down($mobile-breakpoint) {
+        --grid-columns-count: 3;
+        --grid-columns-width: 20.12%;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    }
+    @include media-up($tablet-breakpoint) {
+        --grid-columns-count: 8;
+        --grid-columns-width: 8.06%;
+    }
 }
 
 .technologies__item {
@@ -41,60 +62,77 @@ fieldset.technologies__tabs {
     display: block;
     margin-bottom: -2px;
 
-    &:nth-child(-n + 6):nth-child(even),
-    &:nth-child(7),
-    &:nth-child(n + 7):nth-child(-n + 17):nth-child(even),
-    &:nth-child(20),
-    &:nth-child(n + 20):nth-child(even) {
-        transform: translateY(50%);
-    }
-
     &[data-number="0"] {
         grid-column: var(--grid-columns-count);
         grid-row: -1;
     }
 
-    &[data-number="2"] {
-        article {
-            border-top-color: transparent;
+    @include media-down($mobile-breakpoint) {
+        &:nth-child(3),
+        &:nth-child(3n + 5) {
+            transform: translateY(50%);
+        }
+
+        &[data-number="15"],
+        &[data-number="18"] {
+            article::after {
+                border-bottom-color: transparent;
+            }
         }
     }
-
-    &[data-number="4"] {
-        article::before {
-            border-top-color: transparent;
+    @include media-up($tablet-breakpoint) {
+        &:nth-child(-n + 6):nth-child(even),
+        &:nth-child(7),
+        &:nth-child(n + 7):nth-child(-n + 17):nth-child(even),
+        &:nth-child(20),
+        &:nth-child(n + 20):nth-child(even) {
+            transform: translateY(50%);
         }
-    }
 
-    &[data-number="7"],
-    &[data-number="15"],
-    &[data-number="17"] {
-        article::after {
-            border-bottom-color: transparent;
+        &[data-number="2"] {
+            article {
+                border-top-color: transparent;
+            }
         }
-    }
 
-    &[data-number="19"],
-    &[data-number="20"] {
-        article::before {
-            border-bottom-color: transparent;
+        &[data-number="4"] {
+            article::before {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="7"],
+        &[data-number="15"],
+        &[data-number="17"] {
+            article::after {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &[data-number="19"],
+        &[data-number="20"] {
+            article::before {
+                border-bottom-color: transparent;
+            }
         }
     }
 }
 
 .technologies__empty {
-    &[data-number="1"] {
-        grid-column: 6;
-        grid-row: -1;
-    }
+    @include media-up($tablet-breakpoint) {
+        &[data-number="1"] {
+            grid-column: 6;
+            grid-row: -1;
+        }
 
-    &[data-number="2"] {
-        grid-column: 3;
-        grid-row: 3;
-    }
+        &[data-number="2"] {
+            grid-column: 3;
+            grid-row: 3;
+        }
 
-    &[data-number="3"] {
-        grid-column: 5;
-        grid-row: 3;
+        &[data-number="3"] {
+            grid-column: 5;
+            grid-row: 3;
+        }
     }
 }

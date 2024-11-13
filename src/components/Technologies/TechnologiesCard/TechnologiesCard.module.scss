@@ -3,8 +3,7 @@
 .technologiesCard {
     --border-width: 2px;
     --border-color: rgba(255, 82, 58, 0.4);
-    --logo-size: 54px;
-    --row-gap: 8px;
+    --row-gap: 10px;
 
     position: relative;
 
@@ -56,6 +55,13 @@
         .technologiesCard__title {
             transform: translateY(0);
         }
+    }
+
+    @include media-down($mobile-breakpoint) {
+        --logo-size: 32px;
+    }
+    @include media-up($tablet-breakpoint) {
+        --logo-size: 54px;
     }
 }
 
@@ -112,10 +118,18 @@
     // font-weight: 550;
 
     font-weight: 700;
-    font-size: 16px;
     text-align: center;
 
     transform: translateY(calc(-1 * ((var(--logo-size) + var(--row-gap)) / 2)));
 
     @include transition("transform");
+    @include media-down($mobile-breakpoint) {
+        margin-right: -10%;
+        margin-left: -10%;
+
+        font-size: 14px;
+    }
+    @include media-up($mobile-breakpoint) {
+        font-size: 16px;
+    }
 }

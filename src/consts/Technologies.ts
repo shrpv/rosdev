@@ -2,10 +2,7 @@ export type TechnologyCategory = "Web" | "Mobile";
 
 export type Technology = {
     title: string;
-    logo?: {
-        src: string;
-        srcSet: string;
-    };
+    logo?: string;
 };
 
 export type Technologies = Record<TechnologyCategory, Technology[]>;
@@ -13,16 +10,20 @@ export type Technologies = Record<TechnologyCategory, Technology[]>;
 export const TECHNOLOGIES: Technologies = {
     Web: [
         {
-            title: "Flask"
+            title: "Flask",
+            logo: "/img/technologies/flask.svg"
         },
         {
-            title: "Ruby"
+            title: "Ruby",
+            logo: "/img/technologies/ruby.svg"
         },
         {
-            title: "Koa.js2"
+            title: "Koa.js2",
+            logo: "/img/technologies/koa.svg"
         },
         {
-            title: "Socket.io"
+            title: "Socket.io",
+            logo: "/img/technologies/socket.svg"
         },
         {
             title: "Frontend"
@@ -31,25 +32,32 @@ export const TECHNOLOGIES: Technologies = {
             title: "CSS, SASS, SCSS, LESS"
         },
         {
-            title: "PHP"
+            title: "PHP",
+            logo: "/img/technologies/php.svg"
         },
         {
-            title: "Golang"
+            title: "Golang",
+            logo: "/img/technologies/golang.svg"
         },
         {
-            title: "Redux + Redux Saga"
+            title: "Redux + Redux Saga",
+            logo: "/img/technologies/redux.svg"
         },
         {
-            title: "JS"
+            title: "JS",
+            logo: "/img/technologies/javascript.svg"
         },
         {
-            title: "Python"
+            title: "Python",
+            logo: "/img/technologies/python.svg"
         },
         {
-            title: "Magento 2+"
+            title: "Magento 2+",
+            logo: "/img/technologies/magento.svg"
         },
         {
-            title: "HTML5"
+            title: "HTML5",
+            logo: "/img/technologies/html5.svg"
         },
         {
             title: "Backend"
@@ -58,19 +66,24 @@ export const TECHNOLOGIES: Technologies = {
             title: "Express"
         },
         {
-            title: "React"
+            title: "React",
+            logo: "/img/technologies/react.svg"
         },
         {
-            title: "Laravel 5+"
+            title: "Laravel 5+",
+            logo: "/img/technologies/laravel.svg"
         },
         {
-            title: "D3.js"
+            title: "D3.js",
+            logo: "/img/technologies/d3.svg"
         },
         {
-            title: "Angular 2+"
+            title: "Angular 2+",
+            logo: "/img/technologies/angular.svg"
         },
         {
-            title: "Vue.js + Vuex"
+            title: "Vue.js + Vuex",
+            logo: "/img/technologies/vue.svg"
         }
     ],
     Mobile: [

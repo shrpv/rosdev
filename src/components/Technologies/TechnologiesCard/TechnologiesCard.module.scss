@@ -3,8 +3,8 @@
 .technologiesCard {
     --border-width: 2px;
     --border-color: rgba(255, 82, 58, 0.4);
-    --logo-size: 48px;
-    --row-gap: 10px;
+    --logo-size: 54px;
+    --row-gap: 8px;
 
     position: relative;
 
@@ -96,7 +96,11 @@
     height: var(--logo-size);
 
     background-color: currentColor;
-    border-radius: 10px;
+    background-color: #f9f9f9;
+    background-image: var(--technology-logo);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 8px;
     transform: translateY(50%);
     opacity: 0;
 

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import classNames from "classnames";
 import styles from "./TechnologiesCard.module.scss";
 import { Technology } from "@/consts/Technologies";
@@ -12,7 +12,14 @@ export const TechnologiesCard: FC<TechnologiesCardProps> = ({ className, technol
     return (
         <article className={classNames(className, styles.technologiesCard)}>
             <div className={styles.technologiesCard__content}>
-                <span className={styles.technologiesCard__logo} />
+                <span
+                    className={styles.technologiesCard__logo}
+                    style={
+                        {
+                            "--technology-logo": technology.logo ? `url(${technology.logo})` : null
+                        } as CSSProperties
+                    }
+                />
 
                 <h3 className={styles.technologiesCard__title}>{technology.title}</h3>
             </div>

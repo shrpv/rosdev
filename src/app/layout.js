@@ -1,9 +1,7 @@
 import "../styles/app.scss";
 import { ORGANIZER } from "@/consts/Organizer";
-import { Favicon } from "../components/Utils/Favicon/Favicon";
-import { Header } from "../components/Utils/Header/Header";
-import { Main } from "../components/Utils/Main/Main";
-import { Footer } from "../components/Utils/Footer/Footer";
+import { SmoothScrollLayout } from "@/components/SmoothScrollLayout/SmoothScrollLayout";
+import { Favicon } from "@/components/Utils/Favicon/Favicon";
 
 export default function Layout({ children }) {
     return (
@@ -18,11 +16,7 @@ export default function Layout({ children }) {
             </head>
 
             <body className="page__body">
-                <Header className="page__header" />
-
-                <Main className="page__main">{children}</Main>
-
-                <Footer />
+                <SmoothScrollLayout>{children}</SmoothScrollLayout>
             </body>
         </html>
     );

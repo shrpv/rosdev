@@ -1,11 +1,23 @@
+@import "@/styles/mixins";
+
 .aboutStatistics {
     display: grid;
-    align-items: end;
 
-    column-gap: 20px;
+    @include media-down($mobile-breakpoint) {
+        row-gap: 20px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-up($tablet-breakpoint) {
+        align-items: end;
 
-    grid-template-columns: repeat(2, 250px);
-    row-gap: 32px;
+        column-gap: 20px;
+
+        grid-template-columns: repeat(2, 250px);
+        row-gap: 32px;
+    }
 }
 
 .aboutStatistics__item {
@@ -20,12 +32,21 @@
     background: var(--color-bg--overlay-80);
     border-radius: 10px;
 
+    @include media-down($mobile-breakpoint) {
+        min-height: 166px;
+
+        &:nth-child(3) {
+            grid-row: 2;
+        }
+    }
+    @include media-up($tablet-breakpoint) {
+        &:nth-child(odd) {
+            transform: translateY(50px);
+        }
+    }
+
     backdrop-filter: blur(15px);
     row-gap: 10px;
-
-    &:nth-child(odd) {
-        transform: translateY(50px);
-    }
 }
 
 .aboutStatistics__title {

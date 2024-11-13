@@ -10,7 +10,7 @@ interface AboutProps {
 
 export const About: FC<AboutProps> = ({ className }) => {
     return (
-        <section className={className}>
+        <section className={classNames(className, styles.about)}>
             <div className={classNames(styles.about__container, "container")}>
                 <h2 className={classNames(styles.about__title, "title")}>О нас</h2>
 

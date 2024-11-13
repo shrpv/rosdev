@@ -1,5 +1,4 @@
 import { FC } from "react";
-import classNames from "classnames";
 import styles from "./Platforms.module.scss";
 
 interface PlatformsProps {

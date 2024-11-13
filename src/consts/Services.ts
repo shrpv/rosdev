@@ -1079,18 +1079,18 @@ export const SERVICES: Service[] = [
             {
                 style: {
                     backgroundImage: "url('/img/services/analytics/bg_2.svg')",
-                    width: 165,
-                    height: 163,
+                    width: 216,
+                    height: 216,
                     rotate: 20.09
                 },
                 variants: {
                     start: {
-                        x: 91,
-                        y: 75
+                        x: 40,
+                        y: 58
                     },
                     hover: {
-                        x: 99,
-                        y: 59
+                        x: 48,
+                        y: 43
                     }
                 }
             },

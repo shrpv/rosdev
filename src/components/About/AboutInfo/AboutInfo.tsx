@@ -27,7 +27,7 @@ export const AboutInfo: FC<AboutInfoProps> = ({ className }) => {
                         <use href={`/img/sprite.svg#${icon}`} />
                     </svg>
 
-                    <div className={styles.aboutInfo__body}>
+                    <div>
                         <p className={styles.aboutInfo__title}>{title}</p>
 
                         <p className={styles.aboutInfo__text}>{text}</p>

@@ -26,7 +26,7 @@ export default function Page() {
 
             <Reviews className={styles.home__reviews} />
 
-            <About className={styles.home__about} />
+            <About />
 
             <Slogan className={styles.home__slogan} />
         </>

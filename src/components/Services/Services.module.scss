@@ -1,16 +1,33 @@
+@import "@/styles/mixins";
+
 .services__title {
-    margin-bottom: 60px;
+    @include media-down($tablet-breakpoint) {
+        margin-bottom: 30px;
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-bottom: 60px;
+    }
 }
 
 .services__list {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 12px;
+    @include media-down($mobile-breakpoint) {
+        column-gap: 8px;
+        row-gap: 10px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        column-gap: 12px;
+        row-gap: 10px;
+    }
+    @include media-up($tablet-breakpoint) {
+        gap: 12px;
+    }
 }
 
 .services__item {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 200px;
+    flex-basis: 216px;
 }

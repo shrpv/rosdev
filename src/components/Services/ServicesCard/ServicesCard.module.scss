@@ -4,13 +4,22 @@
     position: relative;
 
     height: 200px;
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     overflow: hidden;
 
     background-color: var(--color-bg--secondary);
     border-radius: 5px;
 
     @include transition($property: "background-color", $duration: 0.2s);
+    @include media-down($mobile-breakpoint) {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    @include media-up($mobile-breakpoint) {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
 
     &:hover {
         background-color: var(--color-bg--tertiary);
@@ -24,6 +33,10 @@
     // font-weight: 550;
     font-size: inherit;
     color: var(--color-text--primary);
+
+    @include media-down($mobile-breakpoint) {
+        font-size: 14px;
+    }
 }
 
 .servicesCard__image {

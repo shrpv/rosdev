@@ -24,13 +24,13 @@
     --font-family--text: "ALS Sirius VF", sans-serif;
     --font-size--normal: 16px;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         --section-spacing: 60px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         --section-spacing: 100px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         --section-spacing: 160px;
     }
 }

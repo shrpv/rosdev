@@ -1,10 +1,10 @@
 @import "@/styles/mixins";
 
 .services__title {
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         margin-bottom: 60px;
     }
 }
@@ -13,15 +13,15 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         column-gap: 8px;
         row-gap: 10px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         column-gap: 12px;
         row-gap: 10px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         gap: 12px;
     }
 }

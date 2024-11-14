@@ -1,7 +1,7 @@
 @import "@/styles/mixins";
 
 .reviews__container {
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         max-width: var(--container-max-width);
         margin-right: auto;
         margin-left: auto;
@@ -33,10 +33,10 @@ div.reviews__slide {
 .reviews__card {
     height: 100%;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         width: 286px;
     }
-    @include media-up($mobile-breakpoint) {
+    @include media-up($breakpoint--md) {
         width: 325px;
     }
 }

@@ -8,14 +8,14 @@
     background-color: var(--color-bg--secondary);
     border-radius: 10px;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         padding: 24px 16px;
         padding-bottom: 246px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         padding: 30px 20px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         padding: 120px 40px;
     }
 
@@ -31,35 +31,41 @@
         opacity: 0.5;
         filter: blur(var(--blur));
 
-        @include media-down($mobile-breakpoint) {
-            bottom: -61px;
-            left: calc(50% - 113px);
-
-            --blur: 77.35px;
+        @include media-down($breakpoint--xl) {
+            --blur: 77px;
+        }
+        @include media-up($breakpoint--xl) {
+            --blur: 144px;
+        }
+        @include media-down($breakpoint--md) {
             --size: 291px;
         }
-        @include media-between($mobile-breakpoint, $tablet-breakpoint) {
-            right: -14px;
-            bottom: -68px;
-
-            --blur: 77.35px;
+        @include media-between($breakpoint--md, $breakpoint--xl) {
             --size: 316px;
         }
-        @include media-up($tablet-breakpoint) {
+        @include media-up($breakpoint--xl) {
+            --size: 589px;
+        }
+        @include media-down($breakpoint--md) {
+            bottom: -61px;
+            left: calc(50% - 113px);
+        }
+        @include media-between($breakpoint--md, $breakpoint--xl) {
+            right: -14px;
+            bottom: -68px;
+        }
+        @include media-up($breakpoint--xl) {
             top: 15px;
             right: -27px;
-
-            --blur: 144px;
-            --size: 589px;
         }
     }
 }
 
 .slogan__content {
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xxl) {
         max-width: 358px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xxl) {
         max-width: 745px;
     }
 }
@@ -68,19 +74,19 @@
     font-weight: 700;
     // font-weight: 550;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         margin-bottom: 16px;
 
         font-size: 24px;
         line-height: 30px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xxl) {
         margin-bottom: 20px;
 
         font-size: 28px;
         line-height: 30px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xxl) {
         margin-bottom: 20px;
 
         font-size: 40px;
@@ -95,32 +101,36 @@
 .slogan__description {
     margin: 0;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         font-size: 14px;
     }
 }
 
 .slogan__image {
     position: absolute;
+    bottom: 0;
 
-    @include media-down($mobile-breakpoint) {
-        bottom: 0;
+    @include media-down($breakpoint--xl) {
+        height: auto;
+    }
+    @include media-down($breakpoint--md) {
         left: 50%;
 
         width: 335px;
-        height: 166px;
 
         transform: translateX(-50%);
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--lg) {
         right: -8px;
-        bottom: 0;
 
         width: 347px;
-        height: 172px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-between($breakpoint--lg, $breakpoint--xl) {
+        right: -8px;
+
+        width: 400px;
+    }
+    @include media-up($breakpoint--xl) {
         right: -15px;
-        bottom: 0;
     }
 }

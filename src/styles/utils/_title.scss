@@ -6,10 +6,10 @@
     line-height: 50px;
     color: var(--color-text--primary);
 
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         font-size: 32px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         font-size: 40px;
     }
 }

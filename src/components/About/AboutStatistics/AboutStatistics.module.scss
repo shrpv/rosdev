@@ -3,14 +3,14 @@
 .aboutStatistics {
     display: grid;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         row-gap: 20px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         gap: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         align-items: end;
 
         column-gap: 20px;
@@ -32,14 +32,14 @@
     background: var(--color-bg--overlay-80);
     border-radius: 10px;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         min-height: 166px;
 
         &:nth-child(3) {
             grid-row: 2;
         }
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         &:nth-child(odd) {
             transform: translateY(50px);
         }

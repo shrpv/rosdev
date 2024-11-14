@@ -7,7 +7,7 @@
 }
 
 .header__opened {
-    @include media-down($breakpoint--xl) {
+    @include media-down($breakpoint--md) {
         .header__login {
             display: none;
         }
@@ -23,34 +23,34 @@
 .header__logo {
     display: block;
 
-    @include media-down($breakpoint--xl) {
+    @include media-down($breakpoint--md) {
         margin-right: auto;
     }
-    @include media-up($breakpoint--xl) {
+    @include media-up($breakpoint--md) {
         margin-right: 40px;
     }
 }
 
 .header__navigation {
-    @include media-down($breakpoint--xl) {
+    @include media-down($breakpoint--md) {
         display: none;
     }
-    @include media-up($breakpoint--xl) {
+    @include media-up($breakpoint--md) {
         margin-right: auto;
     }
 }
 
 .header__login {
-    @include media-down($breakpoint--xl) {
+    @include media-down($breakpoint--md) {
         margin-right: 16px;
     }
 }
 
 .header__menu {
-    @include media-down($breakpoint--xl) {
+    @include media-down($breakpoint--md) {
         margin-right: -4px;
     }
-    @include media-up($breakpoint--xl) {
+    @include media-up($breakpoint--md) {
         display: none;
     }
 }

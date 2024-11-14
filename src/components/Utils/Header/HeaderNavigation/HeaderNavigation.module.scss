@@ -3,11 +3,11 @@
 .headerNavigation__list {
     display: flex;
 
-    @include media-down($breakpoint--xl) {
+    @include media-down($breakpoint--md) {
         flex-direction: column;
         row-gap: 20px;
     }
-    @include media-up($breakpoint--xl) {
+    @include media-up($breakpoint--md) {
         align-items: center;
     }
 }
@@ -26,7 +26,7 @@
 
     @include transition("color");
 
-    @include media-up($breakpoint--xl) {
+    @include media-up($breakpoint--md) {
         padding-right: 12px;
         padding-left: 12px;
     }

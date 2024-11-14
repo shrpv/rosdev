@@ -16,6 +16,8 @@
     background-size: 100% auto, auto;
     border-bottom: 1px solid var(--color-bg--tertiary);
     border-radius: 0 0 24px 24px;
+
+    will-change: transform;
 }
 
 .headerMenu__navigation {

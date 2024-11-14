@@ -3,7 +3,6 @@
 .servicesCard {
     position: relative;
 
-    height: 200px;
     padding-top: 16px;
     padding-bottom: 16px;
     overflow: hidden;
@@ -12,11 +11,13 @@
     border-radius: 5px;
 
     @include transition($property: "background-color", $duration: 0.2s);
-    @include media-down($breakpoint--md) {
+    @include media-down($breakpoint--sm) {
+        height: 150px;
         padding-right: 10px;
         padding-left: 10px;
     }
-    @include media-up($breakpoint--md) {
+    @include media-up($breakpoint--sm) {
+        height: 200px;
         padding-right: 16px;
         padding-left: 16px;
     }
@@ -27,6 +28,8 @@
 }
 
 .servicesCard__title {
+    position: relative;
+
     margin: 0;
 
     font-weight: 700;
@@ -34,9 +37,20 @@
     font-size: inherit;
     color: var(--color-text--primary);
 
-    @include media-down($breakpoint--md) {
+    @include media-down($breakpoint--sm) {
         font-size: 14px;
     }
+}
+
+.servicesCard__pictures {
+    position: absolute;
+
+    @include media-down($breakpoint--sm) {
+        transform: scale(0.66);
+        transform-origin: 0 40%;
+    }
+
+    inset: 0;
 }
 
 .servicesCard__image {

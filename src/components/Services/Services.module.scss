@@ -13,12 +13,14 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include media-down($breakpoint--md) {
+    @include media-down($breakpoint--sm) {
         column-gap: 8px;
+
         row-gap: 10px;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include media-between($breakpoint--sm, $breakpoint--xl) {
         column-gap: 12px;
+
         row-gap: 10px;
     }
     @include media-up($breakpoint--xl) {
@@ -29,5 +31,11 @@
 .services__item {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 216px;
+
+    @include media-down($breakpoint--sm) {
+        flex-basis: 162px;
+    }
+    @include media-up($breakpoint--sm) {
+        flex-basis: 216px;
+    }
 }

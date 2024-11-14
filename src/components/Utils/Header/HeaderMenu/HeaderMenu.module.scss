@@ -1,20 +1,11 @@
 @import "@/styles/mixins";
 
-.headerMenu__toggle {
-    &[aria-expanded="true"] {
-        & + .headerMenu__content {
-            display: block;
-        }
-    }
-}
-
 .headerMenu__content {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
 
-    display: none;
     width: 100%;
     padding: 78px 20px 40px;
 

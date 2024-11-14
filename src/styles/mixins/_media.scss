@@ -1,7 +1,9 @@
 // Media breakpoints
 
+$mobile-breakpoint--xs: 576px;
 $mobile-breakpoint: 768px;
-$tablet-breakpoint: 1440px;
+$tablet-breakpoint--xs: 992px;
+$tablet-breakpoint: 1200px;
 
 @mixin media-up($value) {
     @media (min-width: $value) {

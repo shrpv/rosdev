@@ -32,7 +32,7 @@
         margin: 0;
     }
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         font-size: 14px;
     }
 }

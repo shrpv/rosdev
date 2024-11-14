@@ -5,10 +5,10 @@
 }
 
 .home__advantages {
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         margin-bottom: var(--section-spacing);
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         margin-bottom: 120px;
     }
 }

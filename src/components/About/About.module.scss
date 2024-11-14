@@ -1,7 +1,7 @@
 @import "@/styles/mixins";
 
 .about {
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         overflow: hidden;
     }
 }
@@ -20,21 +20,21 @@
         background-repeat: no-repeat;
         background-size: contain;
 
-        @include media-down($mobile-breakpoint) {
+        @include media-down($breakpoint--md) {
             bottom: 42px;
             left: calc(50% - 98px);
 
             width: 333px;
             height: 499px;
         }
-        @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        @include media-between($breakpoint--md, $breakpoint--xl) {
             bottom: 89px;
             left: calc(50% - 133px);
 
             width: 522px;
             height: 780px;
         }
-        @include media-up($tablet-breakpoint) {
+        @include media-up($breakpoint--xl) {
             right: 0;
             bottom: 204px;
 
@@ -51,23 +51,21 @@
         background-repeat: no-repeat;
         background-size: contain;
 
-        @include media-down($mobile-breakpoint) {
+        @include media-down($breakpoint--md) {
             bottom: 24px;
             left: calc(50% - 132px);
-            z-index: -1;
 
             width: 213px;
             height: 76px;
         }
-        @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        @include media-between($breakpoint--md, $breakpoint--xl) {
             bottom: 49px;
             left: calc(50% - 231px);
-            z-index: -1;
 
             width: 331px;
             height: 117px;
         }
-        @include media-up($tablet-breakpoint) {
+        @include media-up($breakpoint--xl) {
             right: 243px;
             bottom: 175px;
 
@@ -78,34 +76,37 @@
 }
 
 .about__title {
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         margin-bottom: 36px;
     }
 }
 
 .about__content {
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: flex-end;
+
+        column-gap: 60px;
     }
 }
 
 .about__info {
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         flex-basis: 555px;
         padding-top: 24px;
     }
 }
 
 .about__statistics {
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         padding-right: 75px;
+        padding-bottom: 116px;
     }
 }

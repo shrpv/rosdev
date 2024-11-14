@@ -12,13 +12,13 @@
     flex-shrink: 0;
     flex-basis: 256px;
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         flex-basis: 40%;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         flex-basis: 20%;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         flex-basis: 256px;
     }
 }

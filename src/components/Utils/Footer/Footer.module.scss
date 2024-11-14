@@ -1,26 +1,26 @@
 @import "@/styles/mixins";
 
 .footer {
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         padding-bottom: 30px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         padding-bottom: 60px;
     }
 }
 
 .footer__body {
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         margin-bottom: 16px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         display: flex;
         align-items: flex-end;
         margin-bottom: 30px;
 
         column-gap: 40px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         display: flex;
         align-items: flex-end;
         margin-bottom: 60px;
@@ -30,11 +30,12 @@
 }
 
 .footer__content {
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         margin-bottom: 16px;
     }
-    @include media-up($mobile-breakpoint) {
+    @include media-up($breakpoint--md) {
         flex-grow: 1;
+        flex-shrink: 0;
     }
 }
 
@@ -50,37 +51,37 @@
     // font-weight: 550;
     color: var(--color-text--primary);
 
-    em {
-        font-style: normal;
-    }
-
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         font-size: 24px;
         line-height: 60px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         font-size: 40px;
         line-height: 80px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         font-size: 62px;
         line-height: 80px;
+    }
+
+    em {
+        font-style: normal;
     }
 }
 
 .footer__contacts {
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--xl) {
         font-size: 20px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
-        flex-basis: 260px;
-
-        font-size: 20px;
-    }
-    @include media-up($tablet-breakpoint) {
-        flex-basis: 439px;
-
+    @include media-up($breakpoint--xl) {
         font-size: 24px;
+    }
+    @include media-between($breakpoint--md, $breakpoint--xl) {
+        flex-basis: 260px;
+    }
+    @include media-up($breakpoint--xl) {
+        flex-shrink: 1;
+        flex-basis: 439px;
     }
 }
 
@@ -90,10 +91,10 @@
 
     border-top: 1px solid var(--color-border);
 
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         padding-top: 16px;
     }
-    @include media-up($mobile-breakpoint) {
+    @include media-up($breakpoint--md) {
         display: flex;
         align-items: center;
         padding-top: 32px;
@@ -103,10 +104,10 @@
 }
 
 .footer__copyright {
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         margin-bottom: 16px;
     }
-    @include media-up($mobile-breakpoint) {
+    @include media-up($breakpoint--md) {
         flex-grow: 1;
     }
 }

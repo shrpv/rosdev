@@ -46,11 +46,11 @@
         @include media-up($breakpoint--xl) {
             --size: 789px;
         }
-        @include media-down($breakpoint--xs) {
+        @include media-down($breakpoint--sm) {
             right: 24px;
             bottom: -54px;
         }
-        @include media-between($breakpoint--xs, $breakpoint--md) {
+        @include media-between($breakpoint--sm, $breakpoint--md) {
             right: 84px;
             bottom: -54px;
         }
@@ -131,13 +131,13 @@
     @include media-down($breakpoint--xl) {
         height: auto;
     }
-    @include media-down($breakpoint--xs) {
+    @include media-down($breakpoint--sm) {
         right: -90px;
         bottom: -45px;
 
         width: 449px;
     }
-    @include media-between($breakpoint--xs, $breakpoint--md) {
+    @include media-between($breakpoint--sm, $breakpoint--md) {
         right: -30px;
         bottom: -45px;
 

@@ -1,6 +1,6 @@
 @import "@/styles/mixins";
 
-.advantages {
+.advantagesDynamic {
     padding-top: var(--advantages-padding);
     padding-bottom: var(--advantages-padding);
 
@@ -33,25 +33,48 @@
     }
 }
 
-.advantages__text {
-    margin: 0;
+.advantagesDynamic__static {
+    display: block;
+
+    @include media-down($mobile-breakpoint) {
+        margin-bottom: 8px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        margin-bottom: 6px;
+    }
+    @include media-up($tablet-breakpoint) {
+        margin-bottom: 20px;
+    }
+}
+
+.advantagesDynamic__dynamic {
+    position: relative;
+
+    display: block;
 
     em {
+        position: absolute;
+        top: 0;
+        left: 0;
+
         display: block;
+        width: 100%;
         // font-weight: 550;
 
         font-weight: 700;
         text-align: center;
         font-style: normal;
 
-        @include media-down($mobile-breakpoint) {
-            padding-top: 8px;
-        }
-        @include media-between($mobile-breakpoint, $tablet-breakpoint) {
-            padding-top: 6px;
-        }
-        @include media-up($tablet-breakpoint) {
-            padding-top: 20px;
-        }
+        will-change: transform, opacity;
+    }
+
+    @include media-down($mobile-breakpoint) {
+        min-height: 32px;
+    }
+    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+        min-height: 52px;
+    }
+    @include media-up($tablet-breakpoint) {
+        min-height: 80px;
     }
 }

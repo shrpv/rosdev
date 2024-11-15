@@ -51,10 +51,10 @@
 
     inset: 0;
 
-    @include media-down($tablet-breakpoint) {
+    @include media-down($breakpoint--xl) {
         font-size: 20px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         font-size: 24px;
     }
 }

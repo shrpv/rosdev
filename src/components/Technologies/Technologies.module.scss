@@ -1,29 +1,25 @@
 @import "@/styles/mixins";
 
 .technologies__title {
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         margin-bottom: 20px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         margin-bottom: 60px;
     }
 }
 
 fieldset.technologies__tabs {
-    @include media-down($tablet-breakpoint) {
-        margin-bottom: 16px;
-    }
-    @include media-up($tablet-breakpoint) {
-        margin-bottom: 24px;
-    }
+    margin-bottom: 24px;
 }
 
 .technologies__slider {
     overflow: hidden;
     display: flex;
+    align-items: flex-start;
 
     &[data-selected="Mobile"] {
         .technologies__list {
@@ -34,23 +30,24 @@ fieldset.technologies__tabs {
 
 .technologies__list {
     display: grid;
+    flex-shrink: 0;
+    flex-basis: 100%;
     justify-content: space-evenly;
     padding: 2px;
     padding-bottom: calc((var(--grid-columns-width) * 1.7 / 2) + 4px);
 
     grid-template-columns: repeat(var(--grid-columns-count), var(--grid-columns-width));
-    flex-basis: 100%;
-    flex-shrink: 0;
 
     @include transition("transform");
-
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         --grid-columns-count: 3;
         --grid-columns-width: 20.12%;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
+        --grid-columns-count: 6;
+        --grid-columns-width: 10.65%;
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-up($breakpoint--xl) {
         --grid-columns-count: 8;
         --grid-columns-width: 8.06%;
     }
@@ -62,15 +59,16 @@ fieldset.technologies__tabs {
     display: block;
     margin-bottom: -2px;
 
-    &[data-number="0"] {
-        grid-column: var(--grid-columns-count);
-        grid-row: -1;
-    }
-
-    @include media-down($mobile-breakpoint) {
+    @include media-down($breakpoint--md) {
         &:nth-child(3),
         &:nth-child(3n + 5) {
             transform: translateY(50%);
+        }
+
+        &[data-number="1"] {
+            article::before {
+                border-top-color: transparent;
+            }
         }
 
         &[data-number="15"],
@@ -80,7 +78,39 @@ fieldset.technologies__tabs {
             }
         }
     }
-    @include media-up($tablet-breakpoint) {
+    @include media-between($breakpoint--md, $breakpoint--xl) {
+        &:nth-child(-n + 6):nth-child(even),
+        &:nth-child(n + 7):nth-child(-n + 18):nth-child(odd),
+        &:nth-child(n + 19):nth-child(even) {
+            transform: translateY(50%);
+        }
+
+        &[data-number="2"] {
+            article {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="4"] {
+            article::before {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="6"],
+        &[data-number="12"] {
+            article::after {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &[data-number="19"] {
+            article::before {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+    @include media-up($breakpoint--xl) {
         &:nth-child(-n + 6):nth-child(even),
         &:nth-child(7),
         &:nth-child(n + 7):nth-child(-n + 17):nth-child(even),
@@ -116,10 +146,34 @@ fieldset.technologies__tabs {
             }
         }
     }
+
+    &[data-number="0"] {
+        grid-column: var(--grid-columns-count);
+        grid-row: -1;
+    }
 }
 
 .technologies__empty {
-    @include media-up($tablet-breakpoint) {
+    @include media-down($breakpoint--md) {
+        display: none;
+    }
+    @include media-between($breakpoint--md, $breakpoint--xl) {
+        &[data-number="1"] {
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+        &[data-number="2"] {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        &[data-number="3"] {
+            grid-column: 3;
+            grid-row: 4;
+        }
+    }
+    @include media-up($breakpoint--xl) {
         &[data-number="1"] {
             grid-column: 6;
             grid-row: -1;

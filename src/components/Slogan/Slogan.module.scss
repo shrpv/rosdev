@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .slogan__banner {
     position: relative;
@@ -8,14 +8,14 @@
     background-color: var(--color-bg--secondary);
     border-radius: 10px;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         padding: 24px 16px;
         padding-bottom: 246px;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         padding: 30px 20px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         padding: 120px 40px;
     }
 
@@ -31,30 +31,30 @@
         opacity: 0.5;
         filter: blur(var(--blur));
 
-        @include media-down($breakpoint--xl) {
+        @include mixins.media-down(mixins.$breakpoint--xl) {
             --blur: 77px;
         }
-        @include media-up($breakpoint--xl) {
+        @include mixins.media-up(mixins.$breakpoint--xl) {
             --blur: 144px;
         }
-        @include media-down($breakpoint--md) {
+        @include mixins.media-down(mixins.$breakpoint--md) {
             --size: 291px;
         }
-        @include media-between($breakpoint--md, $breakpoint--xl) {
+        @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
             --size: 316px;
         }
-        @include media-up($breakpoint--xl) {
+        @include mixins.media-up(mixins.$breakpoint--xl) {
             --size: 589px;
         }
-        @include media-down($breakpoint--md) {
+        @include mixins.media-down(mixins.$breakpoint--md) {
             bottom: -61px;
             left: calc(50% - 113px);
         }
-        @include media-between($breakpoint--md, $breakpoint--xl) {
+        @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
             right: -14px;
             bottom: -68px;
         }
-        @include media-up($breakpoint--xl) {
+        @include mixins.media-up(mixins.$breakpoint--xl) {
             top: 15px;
             right: -27px;
         }
@@ -62,10 +62,10 @@
 }
 
 .slogan__content {
-    @include media-between($breakpoint--md, $breakpoint--xxl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xxl) {
         max-width: 358px;
     }
-    @include media-up($breakpoint--xxl) {
+    @include mixins.media-up(mixins.$breakpoint--xxl) {
         max-width: 745px;
     }
 }
@@ -74,19 +74,19 @@
     font-weight: 700;
     // font-weight: 550;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         margin-bottom: 16px;
 
         font-size: 24px;
         line-height: 30px;
     }
-    @include media-between($breakpoint--md, $breakpoint--xxl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xxl) {
         margin-bottom: 20px;
 
         font-size: 28px;
         line-height: 30px;
     }
-    @include media-up($breakpoint--xxl) {
+    @include mixins.media-up(mixins.$breakpoint--xxl) {
         margin-bottom: 20px;
 
         font-size: 40px;
@@ -101,7 +101,7 @@
 .slogan__description {
     margin: 0;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         font-size: 14px;
     }
 }
@@ -110,27 +110,27 @@
     position: absolute;
     bottom: 0;
 
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         height: auto;
     }
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         left: 50%;
 
         width: 335px;
 
         transform: translateX(-50%);
     }
-    @include media-between($breakpoint--md, $breakpoint--lg) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--lg) {
         right: -8px;
 
         width: 347px;
     }
-    @include media-between($breakpoint--lg, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--lg, mixins.$breakpoint--xl) {
         right: -8px;
 
         width: 400px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         right: -15px;
     }
 }

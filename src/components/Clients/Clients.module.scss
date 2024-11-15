@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .clients__list {
     display: flex;
@@ -12,13 +12,13 @@
     flex-shrink: 0;
     flex-basis: 256px;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         flex-basis: 40%;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         flex-basis: 20%;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         flex-basis: 256px;
     }
 }

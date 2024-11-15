@@ -1,14 +1,14 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .home__hero {
     margin-bottom: 110px;
 }
 
 .home__advantages {
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         margin-bottom: var(--section-spacing);
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         margin-bottom: 120px;
     }
 }

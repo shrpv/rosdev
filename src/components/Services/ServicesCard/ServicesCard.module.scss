@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .servicesCard {
     position: relative;
@@ -10,13 +10,13 @@
     background-color: var(--color-bg--secondary);
     border-radius: 5px;
 
-    @include transition($property: "background-color", $duration: 0.2s);
-    @include media-down($breakpoint--sm) {
+    @include mixins.transition($property: "background-color", $duration: 0.2s);
+    @include mixins.media-down(mixins.$breakpoint--sm) {
         height: 150px;
         padding-right: 10px;
         padding-left: 10px;
     }
-    @include media-up($breakpoint--sm) {
+    @include mixins.media-up(mixins.$breakpoint--sm) {
         height: 200px;
         padding-right: 16px;
         padding-left: 16px;
@@ -37,20 +37,19 @@
     font-size: inherit;
     color: var(--color-text--primary);
 
-    @include media-down($breakpoint--sm) {
+    @include mixins.media-down(mixins.$breakpoint--sm) {
         font-size: 14px;
     }
 }
 
 .servicesCard__pictures {
     position: absolute;
+    inset: 0;
 
-    @include media-down($breakpoint--sm) {
+    @include mixins.media-down(mixins.$breakpoint--sm) {
         transform: scale(0.66);
         transform-origin: 0 40%;
     }
-
-    inset: 0;
 }
 
 .servicesCard__image {

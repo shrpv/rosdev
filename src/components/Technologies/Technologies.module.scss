@@ -1,13 +1,13 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .technologies__title {
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         margin-bottom: 20px;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         margin-bottom: 60px;
     }
 }
@@ -38,16 +38,16 @@ fieldset.technologies__tabs {
 
     grid-template-columns: repeat(var(--grid-columns-count), var(--grid-columns-width));
 
-    @include transition("transform");
-    @include media-down($breakpoint--md) {
+    @include mixins.transition("transform");
+    @include mixins.media-down(mixins.$breakpoint--md) {
         --grid-columns-count: 3;
         --grid-columns-width: 20.12%;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         --grid-columns-count: 6;
         --grid-columns-width: 10.65%;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         --grid-columns-count: 8;
         --grid-columns-width: 8.06%;
     }
@@ -59,7 +59,7 @@ fieldset.technologies__tabs {
     display: block;
     margin-bottom: -2px;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         &:nth-child(3),
         &:nth-child(3n + 5) {
             transform: translateY(50%);
@@ -78,7 +78,7 @@ fieldset.technologies__tabs {
             }
         }
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         &:nth-child(-n + 6):nth-child(even),
         &:nth-child(n + 7):nth-child(-n + 18):nth-child(odd),
         &:nth-child(n + 19):nth-child(even) {
@@ -110,7 +110,7 @@ fieldset.technologies__tabs {
             }
         }
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         &:nth-child(-n + 6):nth-child(even),
         &:nth-child(7),
         &:nth-child(n + 7):nth-child(-n + 17):nth-child(even),
@@ -154,10 +154,10 @@ fieldset.technologies__tabs {
 }
 
 .technologies__empty {
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         display: none;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         &[data-number="1"] {
             grid-column: 1;
             grid-row: 4;
@@ -173,7 +173,7 @@ fieldset.technologies__tabs {
             grid-row: 4;
         }
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         &[data-number="1"] {
             grid-column: 6;
             grid-row: -1;

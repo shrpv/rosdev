@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .technologiesTabs {
     display: flex;
@@ -52,5 +52,5 @@
 
     cursor: pointer;
 
-    @include transition("color, transform");
+    @include mixins.transition("color, transform");
 }

@@ -1,9 +1,11 @@
+@use "@/styles/mixins";
+
 .container {
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         padding-right: 20px;
         padding-left: 20px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         max-width: var(--container-max-width);
         margin-right: auto;
         margin-left: auto;

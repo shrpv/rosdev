@@ -12,16 +12,21 @@ export const TechnologiesCard: FC<TechnologiesCardProps> = ({ className, technol
     return (
         <article className={classNames(className, styles.technologiesCard)}>
             <div className={styles.technologiesCard__content}>
-                <span
-                    className={styles.technologiesCard__logo}
-                    style={
-                        {
-                            "--technology-logo": technology.logo ? `url(${technology.logo})` : null
-                        } as CSSProperties
-                    }
-                />
+                {technology.logo && (
+                    <span
+                        className={styles.technologiesCard__logo}
+                        style={
+                            {
+                                "--technology-logo": `url(${technology.logo})`
+                            } as CSSProperties
+                        }
+                    />
+                )}
 
-                <h3 className={styles.technologiesCard__title}>{technology.title}</h3>
+                <h3
+                    className={styles.technologiesCard__title}
+                    dangerouslySetInnerHTML={{ __html: technology.title }}
+                />
             </div>
         </article>
     );

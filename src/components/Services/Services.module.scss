@@ -1,10 +1,10 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .services__title {
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         margin-bottom: 60px;
     }
 }
@@ -13,17 +13,17 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include media-down($breakpoint--sm) {
+    @include mixins.media-down(mixins.$breakpoint--sm) {
         column-gap: 8px;
 
         row-gap: 10px;
     }
-    @include media-between($breakpoint--sm, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--sm, mixins.$breakpoint--xl) {
         column-gap: 12px;
 
         row-gap: 10px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         gap: 12px;
     }
 }
@@ -32,10 +32,10 @@
     flex-grow: 1;
     flex-shrink: 0;
 
-    @include media-down($breakpoint--sm) {
+    @include mixins.media-down(mixins.$breakpoint--sm) {
         flex-basis: 162px;
     }
-    @include media-up($breakpoint--sm) {
+    @include mixins.media-up(mixins.$breakpoint--sm) {
         flex-basis: 216px;
     }
 }

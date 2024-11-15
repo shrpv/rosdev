@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .platforms__banner {
     position: relative;
@@ -8,14 +8,14 @@
     background-color: var(--color-bg--secondary);
     border-radius: 10px;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         padding: 24px 16px;
         padding-bottom: 245px;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         padding: 30px 20px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         padding: 60px 40px;
     }
 
@@ -31,42 +31,42 @@
         opacity: 0.8;
         filter: blur(var(--blur));
 
-        @include media-down($breakpoint--xl) {
+        @include mixins.media-down(mixins.$breakpoint--xl) {
             --blur: 77px;
         }
-        @include media-up($breakpoint--xl) {
+        @include mixins.media-up(mixins.$breakpoint--xl) {
             --blur: 144px;
         }
-        @include media-down($breakpoint--md) {
+        @include mixins.media-down(mixins.$breakpoint--md) {
             --size: 286px;
         }
-        @include media-between($breakpoint--md, $breakpoint--xl) {
+        @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
             --size: 422px;
         }
-        @include media-up($breakpoint--xl) {
+        @include mixins.media-up(mixins.$breakpoint--xl) {
             --size: 789px;
         }
-        @include media-down($breakpoint--sm) {
+        @include mixins.media-down(mixins.$breakpoint--sm) {
             right: 24px;
             bottom: -54px;
         }
-        @include media-between($breakpoint--sm, $breakpoint--md) {
+        @include mixins.media-between(mixins.$breakpoint--sm, mixins.$breakpoint--md) {
             right: 84px;
             bottom: -54px;
         }
-        @include media-between($breakpoint--md, $breakpoint--xl) {
+        @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
             top: 50%;
             right: -70px;
 
             transform: translateY(-50%);
         }
-        @include media-between($breakpoint--xl, $breakpoint--xxl) {
+        @include mixins.media-between(mixins.$breakpoint--xl, mixins.$breakpoint--xxl) {
             top: 50%;
             right: -192px;
 
             transform: translateY(-50%);
         }
-        @include media-up($breakpoint--xxl) {
+        @include mixins.media-up(mixins.$breakpoint--xxl) {
             top: 50%;
             right: -132px;
 
@@ -76,10 +76,10 @@
 }
 
 .platforms__content {
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         max-width: 360px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         max-width: 513px;
     }
 }
@@ -91,21 +91,21 @@
     font-weight: 700;
     color: var(--color-text--primary);
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         margin-bottom: 16px;
     }
-    @include media-up($breakpoint--md) {
+    @include mixins.media-up(mixins.$breakpoint--md) {
         margin-bottom: 20px;
     }
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         font-size: 24px;
         line-height: 1.25;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         font-size: 28px;
         line-height: 30px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         font-size: 40px;
         line-height: 1.25;
     }
@@ -118,7 +118,7 @@
 .platforms__description {
     margin: 0;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         font-size: 14px;
     }
 }
@@ -128,38 +128,38 @@
 
     transform: rotate(7.09deg);
 
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         height: auto;
     }
-    @include media-down($breakpoint--sm) {
+    @include mixins.media-down(mixins.$breakpoint--sm) {
         right: -90px;
         bottom: -45px;
 
         width: 449px;
     }
-    @include media-between($breakpoint--sm, $breakpoint--md) {
+    @include mixins.media-between(mixins.$breakpoint--sm, mixins.$breakpoint--md) {
         right: -30px;
         bottom: -45px;
 
         width: 480px;
     }
-    @include media-between($breakpoint--md, $breakpoint--lg) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--lg) {
         right: -88px;
         bottom: -5px;
 
         width: 449px;
     }
-    @include media-between($breakpoint--lg, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--lg, mixins.$breakpoint--xl) {
         right: -35px;
         bottom: -5px;
 
         width: 480px;
     }
-    @include media-between($breakpoint--xl, $breakpoint--xxl) {
+    @include mixins.media-between(mixins.$breakpoint--xl, mixins.$breakpoint--xxl) {
         right: -166px;
         bottom: -69px;
     }
-    @include media-up($breakpoint--xxl) {
+    @include mixins.media-up(mixins.$breakpoint--xxl) {
         right: -66px;
         bottom: -69px;
     }

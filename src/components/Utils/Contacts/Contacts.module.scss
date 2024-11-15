@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .contacts {
     color: var(--color-text--primary);
@@ -35,5 +35,5 @@
         color: var(--color-brand);
     }
 
-    @include transition("color");
+    @include mixins.transition("color");
 }

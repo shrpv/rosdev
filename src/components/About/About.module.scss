@@ -1,7 +1,7 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .about {
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         overflow: hidden;
     }
 }
@@ -20,21 +20,21 @@
         background-repeat: no-repeat;
         background-size: contain;
 
-        @include media-down($breakpoint--md) {
+        @include mixins.media-down(mixins.$breakpoint--md) {
             bottom: 42px;
             left: calc(50% - 98px);
 
             width: 333px;
             height: 499px;
         }
-        @include media-between($breakpoint--md, $breakpoint--xl) {
+        @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
             bottom: 89px;
             left: calc(50% - 133px);
 
             width: 522px;
             height: 780px;
         }
-        @include media-up($breakpoint--xl) {
+        @include mixins.media-up(mixins.$breakpoint--xl) {
             right: 0;
             bottom: 204px;
 
@@ -51,21 +51,21 @@
         background-repeat: no-repeat;
         background-size: contain;
 
-        @include media-down($breakpoint--md) {
+        @include mixins.media-down(mixins.$breakpoint--md) {
             bottom: 24px;
             left: calc(50% - 132px);
 
             width: 213px;
             height: 76px;
         }
-        @include media-between($breakpoint--md, $breakpoint--xl) {
+        @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
             bottom: 49px;
             left: calc(50% - 231px);
 
             width: 331px;
             height: 117px;
         }
-        @include media-up($breakpoint--xl) {
+        @include mixins.media-up(mixins.$breakpoint--xl) {
             right: 243px;
             bottom: 175px;
 
@@ -76,16 +76,16 @@
 }
 
 .about__title {
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         margin-bottom: 36px;
     }
 }
 
 .about__content {
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -95,17 +95,17 @@
 }
 
 .about__info {
-    @include media-down($breakpoint--xl) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         margin-bottom: 30px;
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         flex-basis: 555px;
         padding-top: 24px;
     }
 }
 
 .about__statistics {
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         padding-right: 75px;
         padding-bottom: 116px;
     }

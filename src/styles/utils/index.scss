@@ -1,11 +1,6 @@
-@import "./visuallyHidden";
-
-@import "./listReset";
-
-@import "./gradientText";
-
-@import "./container";
-
-@import "./title";
-
-@import "./button";
+@forward "./visuallyHidden";
+@forward "./listReset";
+@forward "./gradientText";
+@forward "./container";
+@forward "./title";
+@forward "./button";

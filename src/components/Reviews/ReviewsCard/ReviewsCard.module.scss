@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .reviewsCard {
     display: flex;
@@ -32,7 +32,7 @@
         margin: 0;
     }
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         font-size: 14px;
     }
 }

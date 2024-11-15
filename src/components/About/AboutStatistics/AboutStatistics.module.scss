@@ -1,16 +1,16 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .aboutStatistics {
     display: grid;
 
-    @include media-down($breakpoint--md) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         row-gap: 20px;
     }
-    @include media-between($breakpoint--md, $breakpoint--xl) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         gap: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         align-items: end;
 
         column-gap: 20px;
@@ -32,21 +32,21 @@
     background: var(--color-bg--overlay-80);
     border-radius: 10px;
 
-    @include media-down($breakpoint--md) {
+    backdrop-filter: blur(15px);
+    row-gap: 10px;
+
+    @include mixins.media-down(mixins.$breakpoint--md) {
         min-height: 166px;
 
         &:nth-child(3) {
             grid-row: 2;
         }
     }
-    @include media-up($breakpoint--xl) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         &:nth-child(odd) {
             transform: translateY(50px);
         }
     }
-
-    backdrop-filter: blur(15px);
-    row-gap: 10px;
 }
 
 .aboutStatistics__title {

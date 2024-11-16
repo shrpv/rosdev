@@ -2,9 +2,9 @@ import { FC } from "react";
 import classNames from "classnames";
 import styles from "./Footer.module.scss";
 import { ORGANIZER } from "@/consts/Organizer";
-import { Contacts } from "../Contacts/Contacts";
-import { Copyright } from "../Copyright/Copyright";
-import { Location } from "../Location/Location";
+import { Contacts } from "@/components/Utils/Contacts/Contacts";
+import { Copyright } from "@/components/Utils/Copyright/Copyright";
+import { Location } from "@/components/Utils/Location/Location";
 
 interface FooterProps {
     className?: string;

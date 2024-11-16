@@ -1,14 +1,15 @@
 "use client";
-import { FC, useEffect, useState } from "react";
+import { FC, RefObject, useEffect, useState } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 interface HeroProps {
     className?: string;
+    ref: RefObject<HTMLElement>;
 }
 
-export const Hero: FC<HeroProps> = ({ className }) => {
+export const Hero: FC<HeroProps> = ({ className, ref }) => {
     const [layers, setLayers] = useState([]);
 
     useEffect(() => {
@@ -18,7 +19,10 @@ export const Hero: FC<HeroProps> = ({ className }) => {
     }, []);
 
     return (
-        <section className={classNames(className, styles.hero)}>
+        <section
+            className={classNames(className, styles.hero)}
+            ref={ref}
+        >
             <Parallax
                 pages={1}
                 style={{ top: "0", left: "0" }}

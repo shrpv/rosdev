@@ -1,11 +1,16 @@
-import "../styles/app.scss";
+import "@/styles/app.scss";
+import { FC, ReactNode } from "react";
 import { ORGANIZER } from "@/consts/Organizer";
-import { Favicon } from "../components/Utils/Favicon/Favicon";
-import { Header } from "../components/Utils/Header/Header";
-import { Main } from "../components/Utils/Main/Main";
-import { Footer } from "../components/Utils/Footer/Footer";
+import { Favicon } from "@/components/Utils/Favicon/Favicon";
+import { Header } from "@/components/Utils/Header/Header";
+import { Main } from "@/components/Utils/Main/Main";
+import { Footer } from "@/components/Utils/Footer/Footer";
 
-export default function Layout({ children }) {
+interface LayoutProps {
+    children?: ReactNode;
+}
+
+const Layout: FC<LayoutProps> = ({ children }) => {
     return (
         <html
             className="page"
@@ -26,4 +31,6 @@ export default function Layout({ children }) {
             </body>
         </html>
     );
-}
+};
+
+export default Layout;

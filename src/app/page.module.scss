@@ -36,3 +36,15 @@
 .home__slogan {
     margin-bottom: var(--section-spacing);
 }
+
+.home__scrollToTopButton {
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        display: none;
+    }
+    @include mixins.media-up(mixins.$breakpoint--md) {
+        position: fixed;
+        right: 40px;
+        bottom: 420px;
+        z-index: 100;
+    }
+}

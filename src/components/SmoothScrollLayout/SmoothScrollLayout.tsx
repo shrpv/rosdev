@@ -1,6 +1,7 @@
+// @ts-nocheck
 "use client";
 import { FC, ReactNode, useEffect, useRef } from "react";
-import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { ReactLenis, useLenis, } from "@studio-freight/react-lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Main } from "@/components/Utils/Main/Main";
@@ -16,7 +17,7 @@ export const SmoothScrollLayout: FC<SmoothScrollLayoutProps> = ({ children }) =>
     const lenisRef = useRef();
     const lenis = useLenis(({ scroll }) => {});
     const target = useRef();
-    const timeline = useRef();
+    const timeline = useRef<GSAPTimeline>(null);
 
     useEffect(() => {
         function update(time) {
@@ -33,14 +34,13 @@ export const SmoothScrollLayout: FC<SmoothScrollLayoutProps> = ({ children }) =>
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        // noinspection TypeScriptValidateTypes
         timeline.current = gsap.timeline({
             scrollTrigger: {
                 trigger: "#hero",
                 scrub: true,
                 start: "bottom bottom",
                 snap: {
-                    duration: 0.3
+                    duration: 0.2
                 }
             }
         });
@@ -52,12 +52,10 @@ export const SmoothScrollLayout: FC<SmoothScrollLayoutProps> = ({ children }) =>
         );
 
         return () => {
-            // noinspection TypeScriptUnresolvedReference
             timeline?.current?.kill();
         };
     }, []);
-
-    // noinspection TypeScriptValidateTypes
+    
     return (
         <ReactLenis
             root

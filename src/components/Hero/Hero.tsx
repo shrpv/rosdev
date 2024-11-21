@@ -9,7 +9,7 @@ export const Hero = ({ className }) => {
     const [layers, setLayers] = useState([]);
     const trigger = useRef();
     const target = useRef();
-    const timeline = useRef();
+    const timeline = useRef<GSAPTimeline>(null);
 
     useEffect(() => {
         const LAYERS_COUNT = 17;
@@ -20,7 +20,6 @@ export const Hero = ({ className }) => {
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        // noinspection TypeScriptValidateTypes
         timeline.current = gsap.timeline({
             scrollTrigger: {
                 trigger: trigger.current,
@@ -61,7 +60,6 @@ export const Hero = ({ className }) => {
             .then(res => res.scrollTrigger.disable());
 
         return () => {
-            // noinspection TypeScriptUnresolvedReference
             timeline?.current?.kill();
         };
     }, [target, trigger, timeline]);

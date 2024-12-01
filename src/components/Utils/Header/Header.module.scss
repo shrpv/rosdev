@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .header {
     background-color: var(--color-bg--overlay-15);
@@ -7,7 +7,7 @@
 }
 
 .header__opened {
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         .header__login {
             display: none;
         }
@@ -23,34 +23,34 @@
 .header__logo {
     display: block;
 
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         margin-right: auto;
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--md) {
         margin-right: 40px;
     }
 }
 
 .header__navigation {
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         display: none;
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--md) {
         margin-right: auto;
     }
 }
 
 .header__login {
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         margin-right: 16px;
     }
 }
 
 .header__menu {
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         margin-right: -4px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--md) {
         display: none;
     }
 }

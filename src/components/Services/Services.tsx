@@ -12,7 +12,7 @@ export const Services: FC<ServicesProps> = ({ className }) => {
     if (!SERVICES?.length) return null;
 
     return (
-        <section className={className}>
+        <section className={className} id="skills">
             <div className="container">
                 <h2 className={classNames(styles.services__title, "title")}>Наши услуги</h2>
 

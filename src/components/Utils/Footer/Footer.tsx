@@ -12,7 +12,7 @@ interface FooterProps {
 
 export const Footer: FC<FooterProps> = ({ className }) => {
     return (
-        <footer className={classNames(className, styles.footer)}>
+        <footer className={classNames(className, styles.footer)} id="contact">
             <div className="container">
                 <div className={styles.footer__body}>
                     <div className={styles.footer__content}>

@@ -1,14 +1,14 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .home__hero {
     margin-bottom: 110px;
 }
 
 .home__advantages {
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         margin-bottom: var(--section-spacing);
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         margin-bottom: 120px;
     }
 }
@@ -35,4 +35,19 @@
 
 .home__slogan {
     margin-bottom: var(--section-spacing);
+}
+
+.home__scrollToTopButton {
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        right: 20px;
+        bottom: 20px;
+
+        width: 32px;
+        height: 32px;
+    }
+    @include mixins.media-up(mixins.$breakpoint--md) {
+        position: fixed;
+        right: 40px;
+        bottom: 40px;
+    }
 }

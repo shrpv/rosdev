@@ -1,12 +1,4 @@
-@import "@/styles/mixins";
-
-.headerMenu__toggle {
-    &[aria-expanded="true"] {
-        & + .headerMenu__content {
-            display: block;
-        }
-    }
-}
+@use "@/styles/mixins";
 
 .headerMenu__content {
     position: absolute;
@@ -14,17 +6,18 @@
     left: 0;
     z-index: -1;
 
-    display: none;
     width: 100%;
     padding: 78px 20px 40px;
 
     background-color: #0f0f0f;
     background-image: url("/img/header/menu_bg_2.png"), url("/img/header/menu_bg_1.svg");
     background-repeat: no-repeat, no-repeat;
-    background-position: center top, right -55px top 51px;
-    background-size: auto 100%, auto;
+    background-position: center, right -55px top 51px;
+    background-size: 100% auto, auto;
     border-bottom: 1px solid var(--color-bg--tertiary);
     border-radius: 0 0 24px 24px;
+
+    will-change: transform;
 }
 
 .headerMenu__navigation {

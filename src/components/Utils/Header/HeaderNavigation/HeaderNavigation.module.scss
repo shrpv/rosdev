@@ -1,13 +1,13 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .headerNavigation__list {
     display: flex;
 
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         flex-direction: column;
         row-gap: 20px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--md) {
         align-items: center;
     }
 }
@@ -24,9 +24,9 @@
         color: var(--color-brand);
     }
 
-    @include transition("color");
+    @include mixins.transition("color");
 
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--md) {
         padding-right: 12px;
         padding-left: 12px;
     }

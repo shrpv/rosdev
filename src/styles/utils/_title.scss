@@ -1,3 +1,5 @@
+@use "@/styles/mixins";
+
 .title {
     margin: 0;
     // font-weight: 550;
@@ -6,10 +8,10 @@
     line-height: 50px;
     color: var(--color-text--primary);
 
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         font-size: 32px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         font-size: 40px;
     }
 }

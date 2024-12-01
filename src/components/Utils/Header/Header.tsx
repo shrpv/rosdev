@@ -32,12 +32,12 @@ export const Header: FC<HeaderProps> = ({ className }) => {
 
                 <HeaderNavigation className={styles.header__navigation} />
 
-                <button
+                {/* <button
                     className={classNames(styles.header__login, "button")}
                     type="button"
                 >
                     Войти
-                </button>
+                </button> */}
 
                 <HeaderMenu
                     className={styles.header__menu}

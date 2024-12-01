@@ -1,14 +1,14 @@
 export const HEADER_NAVIGATION = [
     {
         text: "Что мы умеем",
-        link: ""
+        link: "skills"
     },
     {
         text: "О нас",
-        link: ""
+        link: "about"
     },
     {
         text: "Связаться с нами",
-        link: ""
+        link: "contact"
     }
 ];

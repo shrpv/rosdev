@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .clientsCard {
     display: flex;
@@ -11,11 +11,11 @@
     background-color: var(--color-bg--secondary);
     border-radius: 10px;
 
-    @include media-down($tablet-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--xl) {
         padding-right: 14px;
         padding-left: 14px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         padding-right: 28px;
         padding-left: 28px;
     }

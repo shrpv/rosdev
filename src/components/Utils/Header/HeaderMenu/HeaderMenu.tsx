@@ -1,5 +1,6 @@
 import { FC, MouseEventHandler } from "react";
 import styles from "./HeaderMenu.module.scss";
+import { motion } from "framer-motion";
 import { HeaderNavigation } from "../HeaderNavigation/HeaderNavigation";
 import { HeaderMenuToggle } from "./HeaderMenuToggle/HeaderMenuToggle";
 import { Contacts } from "@/components/Utils/Contacts/Contacts";
@@ -18,15 +19,30 @@ export const HeaderMenu: FC<HeaderMenuProps> = ({ className, opened, onClick }) 
     return (
         <div className={className}>
             <HeaderMenuToggle
-                className={styles.headerMenu__toggle}
                 onClick={onClick}
                 opened={opened}
                 controlsId={id}
             />
 
-            <div
+            <motion.div
                 className={styles.headerMenu__content}
                 id={id}
+                initial="closed"
+                animate={opened ? "open" : "closed"}
+                variants={{
+                    open: {
+                        display: "block",
+                        y: 0
+                    },
+                    closed: {
+                        display: "none",
+                        y: "-100%"
+                    }
+                }}
+                transition={{
+                    duration: 0.4,
+                    ease: "easeOut"
+                }}
             >
                 <HeaderNavigation className={styles.headerMenu__navigation} />
 
@@ -35,7 +51,7 @@ export const HeaderMenu: FC<HeaderMenuProps> = ({ className, opened, onClick }) 
                 <Copyright className={styles.headerMenu__copyright} />
 
                 <Location className={styles.headerMenu__location} />
-            </div>
+            </motion.div>
         </div>
     );
 };

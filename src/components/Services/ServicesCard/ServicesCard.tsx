@@ -18,20 +18,22 @@ export const ServicesCard: FC<ServicesCardProps> = ({ className, service }) => {
             whileHover="hover"
             animate="start"
         >
-            <h3 className={styles.servicesCard__title}>{service.title}</h3>
+            <div className={styles.servicesCard__pictures}>
+                {service.images?.map((image, index) => (
+                    <motion.span
+                        className={styles.servicesCard__image}
+                        key={index}
+                        style={image.style}
+                        variants={image.variants}
+                        transition={{
+                            duration: 0.2,
+                            ease: "easeOut"
+                        }}
+                    />
+                ))}
+            </div>
 
-            {service.images?.map((image, index) => (
-                <motion.span
-                    className={styles.servicesCard__image}
-                    key={index}
-                    style={image.style}
-                    variants={image.variants}
-                    transition={{
-                        duration: 0.2,
-                        ease: "easeOut"
-                    }}
-                />
-            ))}
+            <h3 className={styles.servicesCard__title}>{service.title}</h3>
         </motion.article>
     );
 };

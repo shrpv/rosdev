@@ -29,7 +29,7 @@ export const TECHNOLOGIES: Technologies = {
             title: "Frontend"
         },
         {
-            title: "CSS, SASS, SCSS, LESS"
+            title: "CSS, SASS,<br />SCSS, LESS"
         },
         {
             title: "PHP",
@@ -63,7 +63,8 @@ export const TECHNOLOGIES: Technologies = {
             title: "Backend"
         },
         {
-            title: "Express"
+            title: "Express",
+            logo: "/img/technologies/express.svg"
         },
         {
             title: "React",
@@ -88,52 +89,81 @@ export const TECHNOLOGIES: Technologies = {
     ],
     Mobile: [
         {
-            title: "Flask"
+            title: "Flask",
+            logo: "/img/technologies/flask.svg"
         },
         {
-            title: "PHP"
+            title: "Ruby",
+            logo: "/img/technologies/ruby.svg"
         },
         {
-            title: "Express"
+            title: "Koa.js2",
+            logo: "/img/technologies/koa.svg"
         },
         {
-            title: "Ruby"
+            title: "Socket.io",
+            logo: "/img/technologies/socket.svg"
         },
         {
-            title: "Redux + Redux Saga"
+            title: "Frontend"
         },
         {
-            title: "PHP"
+            title: "CSS, SASS,<br />SCSS, LESS"
         },
         {
-            title: "Express"
+            title: "PHP",
+            logo: "/img/technologies/php.svg"
         },
         {
-            title: "Ruby"
+            title: "Golang",
+            logo: "/img/technologies/golang.svg"
         },
         {
-            title: "Redux + Redux Saga"
+            title: "Redux + Redux Saga",
+            logo: "/img/technologies/redux.svg"
         },
         {
-            title: "Redux + Redux Saga"
+            title: "JS",
+            logo: "/img/technologies/javascript.svg"
         },
         {
-            title: "PHP"
+            title: "Python",
+            logo: "/img/technologies/python.svg"
         },
         {
-            title: "Express"
+            title: "Magento 2+",
+            logo: "/img/technologies/magento.svg"
         },
         {
-            title: "Ruby"
+            title: "HTML5",
+            logo: "/img/technologies/html5.svg"
         },
         {
-            title: "Redux + Redux Saga"
+            title: "Backend"
         },
         {
-            title: "Ruby"
+            title: "Express",
+            logo: "/img/technologies/express.svg"
         },
         {
-            title: "Redux + Redux Saga"
+            title: "React",
+            logo: "/img/technologies/react.svg"
+        },
+        {
+            title: "Laravel 5+",
+            logo: "/img/technologies/laravel.svg"
+        },
+        {
+            title: "D3.js",
+            logo: "/img/technologies/d3.svg"
+        },
+        {
+            title: "Angular 2+",
+            logo: "/img/technologies/angular.svg"
+        },
+        {
+            title: "Vue.js + Vuex",
+            logo: "/img/technologies/vue.svg"
         }
     ]
 };

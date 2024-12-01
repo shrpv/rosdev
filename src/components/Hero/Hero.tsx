@@ -1,16 +1,17 @@
 "use client";
-import { useEffect, useLayoutEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, forwardRef, useImperativeHandle } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export const Hero = ({ className }) => {
+export const Hero = forwardRef<HTMLDivElement>(({ className }, forwardedRef) => {
     const [layers] = useState([...Array(17)].map((_, i) => i + 1));
     const imageTargetRef = useRef(null);
     const textTargetRef = useRef(null);
     const triggerRef = useRef(null);
     const timeline = useRef(null);
+    useImperativeHandle(forwardedRef, () => triggerRef.current);
     
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +20,7 @@ export const Hero = ({ className }) => {
             scrollTrigger: {
                 trigger: triggerRef.current,
                 start: "1 top",
-                end: "+=200 top",
+                end: "center top",
                 pin: true,
                 scrub: false,
             }
@@ -222,4 +223,4 @@ export const Hero = ({ className }) => {
         
         </section>
     );
-};
+});

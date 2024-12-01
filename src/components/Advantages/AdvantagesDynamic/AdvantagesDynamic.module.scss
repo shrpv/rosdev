@@ -1,6 +1,6 @@
 @use "@/styles/mixins";
 
-.advantages {
+.advantagesDynamic {
     padding-top: var(--advantages-padding);
     padding-bottom: var(--advantages-padding);
 
@@ -33,25 +33,48 @@
     }
 }
 
-.advantages__text {
-    margin: 0;
+.advantagesDynamic__static {
+    display: block;
+
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        margin-bottom: 8px;
+    }
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
+        margin-bottom: 6px;
+    }
+    @include mixins.media-up(mixins.$breakpoint--xl) {
+        margin-bottom: 20px;
+    }
+}
+
+.advantagesDynamic__dynamic {
+    position: relative;
+
+    display: block;
 
     em {
+        position: absolute;
+        top: 0;
+        left: 0;
+
         display: block;
+        width: 100%;
         // font-weight: 550;
 
         font-weight: 700;
         text-align: center;
         font-style: normal;
 
-        @include mixins.media-down(mixins.$breakpoint--md) {
-            padding-top: 8px;
-        }
-        @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
-            padding-top: 6px;
-        }
-        @include mixins.media-up(mixins.$breakpoint--xl) {
-            padding-top: 20px;
-        }
+        will-change: transform, opacity;
+    }
+
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        min-height: 32px;
+    }
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
+        min-height: 52px;
+    }
+    @include mixins.media-up(mixins.$breakpoint--xl) {
+        min-height: 80px;
     }
 }

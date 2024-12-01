@@ -1,8 +1,6 @@
-@import "./fonts";
-
-@import "./mixins";
-
-@import "./utils";
+@use "./fonts";
+@use "./mixins";
+@use "./utils";
 
 @import "lenis";
 
@@ -26,13 +24,13 @@
     --font-family--text: "ALS Sirius VF", sans-serif;
     --font-size--normal: 16px;
 
-    @include media-down($mobile-breakpoint) {
+    @include mixins.media-down(mixins.$breakpoint--md) {
         --section-spacing: 60px;
     }
-    @include media-between($mobile-breakpoint, $tablet-breakpoint) {
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
         --section-spacing: 100px;
     }
-    @include media-up($tablet-breakpoint) {
+    @include mixins.media-up(mixins.$breakpoint--xl) {
         --section-spacing: 160px;
     }
 }

@@ -1,7 +1,15 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .technologies__title {
-    margin-bottom: 60px;
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        margin-bottom: 20px;
+    }
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
+        margin-bottom: 30px;
+    }
+    @include mixins.media-up(mixins.$breakpoint--xl) {
+        margin-bottom: 60px;
+    }
 }
 
 fieldset.technologies__tabs {
@@ -11,6 +19,7 @@ fieldset.technologies__tabs {
 .technologies__slider {
     overflow: hidden;
     display: flex;
+    align-items: flex-start;
 
     &[data-selected="Mobile"] {
         .technologies__list {
@@ -20,19 +29,28 @@ fieldset.technologies__tabs {
 }
 
 .technologies__list {
-    --grid-columns-count: 8;
-    --grid-columns-width: 8.06%;
-
     display: grid;
+    flex-shrink: 0;
+    flex-basis: 100%;
     justify-content: space-evenly;
     padding: 2px;
     padding-bottom: calc((var(--grid-columns-width) * 1.7 / 2) + 4px);
 
     grid-template-columns: repeat(var(--grid-columns-count), var(--grid-columns-width));
-    flex-basis: 100%;
-    flex-shrink: 0;
 
-    @include transition("transform");
+    @include mixins.transition("transform");
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        --grid-columns-count: 3;
+        --grid-columns-width: 20.12%;
+    }
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
+        --grid-columns-count: 6;
+        --grid-columns-width: 10.65%;
+    }
+    @include mixins.media-up(mixins.$breakpoint--xl) {
+        --grid-columns-count: 8;
+        --grid-columns-width: 8.06%;
+    }
 }
 
 .technologies__item {
@@ -41,60 +59,134 @@ fieldset.technologies__tabs {
     display: block;
     margin-bottom: -2px;
 
-    &:nth-child(-n + 6):nth-child(even),
-    &:nth-child(7),
-    &:nth-child(n + 7):nth-child(-n + 17):nth-child(even),
-    &:nth-child(20),
-    &:nth-child(n + 20):nth-child(even) {
-        transform: translateY(50%);
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        &:nth-child(3),
+        &:nth-child(3n + 5) {
+            transform: translateY(50%);
+        }
+
+        &[data-number="1"] {
+            article::before {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="15"],
+        &[data-number="18"] {
+            article::after {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
+        &:nth-child(-n + 6):nth-child(even),
+        &:nth-child(n + 7):nth-child(-n + 18):nth-child(odd),
+        &:nth-child(n + 19):nth-child(even) {
+            transform: translateY(50%);
+        }
+
+        &[data-number="2"] {
+            article {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="4"] {
+            article::before {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="6"],
+        &[data-number="12"] {
+            article::after {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &[data-number="19"] {
+            article::before {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+    @include mixins.media-up(mixins.$breakpoint--xl) {
+        &:nth-child(-n + 6):nth-child(even),
+        &:nth-child(7),
+        &:nth-child(n + 7):nth-child(-n + 17):nth-child(even),
+        &:nth-child(20),
+        &:nth-child(n + 20):nth-child(even) {
+            transform: translateY(50%);
+        }
+
+        &[data-number="2"] {
+            article {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="4"] {
+            article::before {
+                border-top-color: transparent;
+            }
+        }
+
+        &[data-number="7"],
+        &[data-number="15"],
+        &[data-number="17"] {
+            article::after {
+                border-bottom-color: transparent;
+            }
+        }
+
+        &[data-number="19"],
+        &[data-number="20"] {
+            article::before {
+                border-bottom-color: transparent;
+            }
+        }
     }
 
     &[data-number="0"] {
         grid-column: var(--grid-columns-count);
         grid-row: -1;
     }
-
-    &[data-number="2"] {
-        article {
-            border-top-color: transparent;
-        }
-    }
-
-    &[data-number="4"] {
-        article::before {
-            border-top-color: transparent;
-        }
-    }
-
-    &[data-number="7"],
-    &[data-number="15"],
-    &[data-number="17"] {
-        article::after {
-            border-bottom-color: transparent;
-        }
-    }
-
-    &[data-number="19"],
-    &[data-number="20"] {
-        article::before {
-            border-bottom-color: transparent;
-        }
-    }
 }
 
 .technologies__empty {
-    &[data-number="1"] {
-        grid-column: 6;
-        grid-row: -1;
+    @include mixins.media-down(mixins.$breakpoint--md) {
+        display: none;
     }
+    @include mixins.media-between(mixins.$breakpoint--md, mixins.$breakpoint--xl) {
+        &[data-number="1"] {
+            grid-column: 1;
+            grid-row: 4;
+        }
 
-    &[data-number="2"] {
-        grid-column: 3;
-        grid-row: 3;
+        &[data-number="2"] {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        &[data-number="3"] {
+            grid-column: 3;
+            grid-row: 4;
+        }
     }
+    @include mixins.media-up(mixins.$breakpoint--xl) {
+        &[data-number="1"] {
+            grid-column: 6;
+            grid-row: -1;
+        }
 
-    &[data-number="3"] {
-        grid-column: 5;
-        grid-row: 3;
+        &[data-number="2"] {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        &[data-number="3"] {
+            grid-column: 5;
+            grid-row: 3;
+        }
     }
 }

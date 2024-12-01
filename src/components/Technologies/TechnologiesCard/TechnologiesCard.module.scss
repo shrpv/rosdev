@@ -1,10 +1,9 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .technologiesCard {
     --border-width: 2px;
     --border-color: rgba(255, 82, 58, 0.4);
-    --logo-size: 54px;
-    --row-gap: 8px;
+    --row-gap: 10px;
 
     position: relative;
 
@@ -13,13 +12,20 @@
 
     color: var(--color-text--primary);
 
+    @include mixins.media-down(mixins.$breakpoint--lg) {
+        --logo-size: 32px;
+    }
+    @include mixins.media-up(mixins.$breakpoint--lg) {
+        --logo-size: 54px;
+    }
+
     &,
     &::before,
     &::after {
         border-top: var(--border-width) solid var(--border-color);
         border-bottom: var(--border-width) solid var(--border-color);
 
-        @include transition("border-color");
+        @include mixins.transition("border-color");
     }
 
     &::before,
@@ -84,9 +90,9 @@
 
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 
-        inset: calc(-1 * var(--border-width)) -50%;
+        @include mixins.transition($property: "opacity, transform", $duration: 0.4s);
 
-        @include transition($property: "opacity, transform", $duration: 0.4s);
+        inset: calc(-1 * var(--border-width)) -50%;
     }
 }
 
@@ -104,18 +110,28 @@
     transform: translateY(50%);
     opacity: 0;
 
-    @include transition("opacity, transform");
+    @include mixins.transition("opacity, transform");
+
+    & + .technologiesCard__title {
+        transform: translateY(calc(-1 * ((var(--logo-size) + var(--row-gap)) / 2)));
+
+        @include mixins.transition("transform");
+    }
 }
 
 .technologiesCard__title {
     margin: 0;
+    margin-right: -10%;
+    margin-left: -10%;
     // font-weight: 550;
 
     font-weight: 700;
-    font-size: 16px;
     text-align: center;
 
-    transform: translateY(calc(-1 * ((var(--logo-size) + var(--row-gap)) / 2)));
-
-    @include transition("transform");
+    @include mixins.media-down(mixins.$breakpoint--xl) {
+        font-size: 14px;
+    }
+    @include mixins.media-up(mixins.$breakpoint--xl) {
+        font-size: 16px;
+    }
 }

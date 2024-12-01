@@ -13,120 +13,6 @@
     position: absolute;
 }
 
-.hero__layer[data-number="1"] {
-    top: 107px;
-    right: 264px;
-}
-
-.hero__layer[data-number="2"] {
-    top: 233px;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="3"] {
-    top: 301px;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="4"] {
-    top: 71px;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="5"] {
-    top: 121px;
-    left: 50%;
-
-    transform: translateX(-60%);
-}
-
-.hero__layer[data-number="6"] {
-    top: 119px;
-    left: 181px;
-}
-
-.hero__layer[data-number="7"] {
-    top: 39px;
-    left: 67px;
-}
-
-.hero__layer[data-number="8"] {
-    bottom: 58px;
-    left: 50%;
-}
-
-.hero__layer[data-number="9"] {
-    bottom: 9px;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="10"] {
-    bottom: -19px;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="11"] {
-    bottom: -36px;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="12"] {
-    bottom: -36px;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="13"] {
-    bottom: 135px;
-    left: 50%;
-}
-
-.hero__layer[data-number="14"] {
-    bottom: 0;
-    left: 50%;
-
-    transform: translateX(-50%);
-}
-
-.hero__layer[data-number="15"] {
-    bottom: -27px;
-    left: 0;
-}
-
-.hero__layer[data-number="16"] {
-    bottom: -66px;
-    left: 0;
-}
-
-.hero__layer[data-number="17"] {
-    bottom: -2px;
-    left: 0;
-    z-index: 5;
-
-    width: 100%;
-    height: auto;
-}
-
 .hero__img.rocket {
     position: absolute;
     left: 50%;
@@ -137,7 +23,7 @@
 
 .hero__moto {
     position: absolute;
-    top: 64%;
+    top: 50%;
     left: 50%;
 
     color: #0e0e0e;
@@ -150,8 +36,421 @@
     transform: translate(-50%, 0);
 }
 
-@include mixins.media-down(mixins.$breakpoint--md) {
+.hero__layer[data-number="1"] {
+     top: 24%;
+     right: 15%;
+
+     width: 15%;
+ }
+
+.hero__layer[data-number="2"] {
+    top: 55%;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    transform: translate(0, -50%);
+}
+
+.hero__layer[data-number="3"] {
+    top: 72%;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    transform: translate(0, -50%);
+}
+
+.hero__layer[data-number="4"] {
+    top: 48%;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    transform: translate(0, -50%);
+}
+
+.hero__layer[data-number="5"] {
+    top: 52%;
+    left: 50%;
+
+    width: 40%;
+
+    transform: translate(-50%, -50%);
+}
+
+.hero__layer[data-number="6"] {
+    top: 61%;
+    left: 50%;
+
+    width: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.hero__layer[data-number="7"] {
+    top: 15%;
+
+    width: 100%;
+}
+
+.hero__layer[data-number="8"] {
+    bottom: 5%;
+    left: 61%;
+
+    width: 4%;
+
+    transform: translate(-50%, -50%);
+}
+
+.hero__layer[data-number="9"] {
+    bottom: 11%;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+
+    transform: translate(0, 50%);
+}
+
+.hero__layer[data-number="10"] {
+    bottom: 13%;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+
+    transform: translate(0, 50%);
+}
+
+.hero__layer[data-number="11"] {
+    bottom: 14%;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+
+    transform: translate(0, 50%);
+}
+
+.hero__layer[data-number="12"] {
+    bottom: 12%;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+
+    transform: translate(0, 50%);
+}
+
+.hero__layer[data-number="13"] {
+    bottom: 10%;
+    left: 50%;
+
+    width: 18%;
+}
+
+.hero__layer[data-number="14"] {
+    bottom: 2%;
+    left: 50%;
+    z-index: 1;
+
+    width: 20%;
+
+    transform: translateX(-50%);
+}
+
+.hero__layer[data-number="15"] {
+    bottom: 5%;
+    left: 0;
+    z-index: 1;
+
+    width: 40%;
+}
+
+.hero__layer[data-number="16"] {
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 55%;
+}
+
+.hero__layer[data-number="17"] {
+    bottom: -1px;
+    left: 0;
+    z-index: 5;
+
+    width: 100%;
+    height: auto;
+}
+
+@include mixins.media-up(mixins.$breakpoint--md) {
+    .hero__layer[data-number="1"] {
+        top: 12%;
+    }
+
+    .hero__layer[data-number="2"] {
+        top: 32%;
+    }
+
+    .hero__layer[data-number="3"] {
+        top: 68%;
+    }
+
+    .hero__layer[data-number="4"] {
+        top: 20%;
+    }
+
+    .hero__layer[data-number="5"] {
+        top: 32%;
+    }
+
+    .hero__layer[data-number="6"] {
+        top: 36%;
+    }
+
+    .hero__layer[data-number="7"] {
+        top: 12%;
+
+        width: 100%;
+    }
+
+    .hero__layer[data-number="8"] {
+        bottom: 1%;
+    }
+
+    .hero__layer[data-number="9"] {
+        bottom: 16%;
+    }
+
+    .hero__layer[data-number="10"] {
+        bottom: 20%;
+    }
+
+    .hero__layer[data-number="11"] {
+        bottom: 20%;
+    }
+
+    .hero__layer[data-number="12"] {
+        bottom: 18%;
+    }
+
+    .hero__layer[data-number="13"] {
+        left: 45%;
+        bottom: 14%;
+        z-index: 1;
+
+        width: 12%;
+    }
+
+    .hero__layer[data-number="14"] {
+        bottom: 3%;
+        left: 54%;
+
+        width: 12%;
+    }
+
+    .hero__layer[data-number="15"] {
+        width: 30%;
+    }
+}
+
+@include mixins.media-up(mixins.$breakpoint--lg) {
+    .hero__layer[data-number="1"] {
+        top: 7%;
+
+        width: 10%;
+    }
+
+    .hero__layer[data-number="2"] {
+        top: 28%;
+    }
+
+    .hero__layer[data-number="3"] {
+        top: 48%;
+    }
+
+    .hero__layer[data-number="4"] {
+        top: 16%;
+    }
+
+    .hero__layer[data-number="5"] {
+        top: 32%;
+
+        width: 30%;
+    }
+
+    .hero__layer[data-number="6"] {
+        top: 36%;
+    }
+
+    .hero__layer[data-number="7"] {
+        top: 8%;
+    }
+
+    .hero__layer[data-number="8"] {
+        left: 61%;
+        bottom: 1%;
+    }
+
+    .hero__layer[data-number="9"] {
+        bottom: 20%;
+    }
+
+    .hero__layer[data-number="10"] {
+        bottom: 24%;
+    }
+
+    .hero__layer[data-number="11"] {
+        bottom: 24%;
+    }
+
+    .hero__layer[data-number="12"] {
+        bottom: 24%;
+    }
+
+    .hero__layer[data-number="13"] {
+        left: 45%;
+        bottom: 14%;
+        z-index: 1;
+
+        width: 12%;
+    }
+
+    .hero__layer[data-number="14"] {
+        bottom: 3%;
+        left: 54%;
+
+        width: 12%;
+    }
+
+    .hero__layer[data-number="15"] {
+        width: 30%;
+    }
+
     .hero__moto {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@include mixins.media-up(mixins.$breakpoint--xl) {
+    .hero__layer[data-number="8"] {
+        left: 45%;
+        bottom: 1%;
+    }
+
+    .hero__layer[data-number="9"] {
+        bottom: 20%;
+    }
+
+    .hero__layer[data-number="10"] {
+        bottom: 28%;
+    }
+
+    .hero__layer[data-number="11"] {
+        bottom: 30%;
+    }
+
+    .hero__layer[data-number="12"] {
+        bottom: 28%;
+    }
+
+    .hero__moto {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@include mixins.media-up(mixins.$breakpoint--xxl) {
+    .hero__layer[data-number="1"] {
+        top: 10%;
+
+        width: 7%;
+    }
+
+    .hero__layer[data-number="2"] {
+        top: 36%;
+    }
+
+    .hero__layer[data-number="3"] {
+        top: 48%;
+    }
+
+    .hero__layer[data-number="4"] {
+        top: 6%;
+    }
+
+    .hero__layer[data-number="5"] {
+        top: 14%;
+
+        width: 24%;
+    }
+
+    .hero__layer[data-number="6"] {
+        top: 36%;
+    }
+
+    .hero__layer[data-number="8"] {
+        left: 43%;
+        bottom: 1%;
+    }
+
+    .hero__layer[data-number="9"] {
+        bottom: 32%;
+    }
+
+    .hero__layer[data-number="10"] {
+        bottom: 42%;
+    }
+
+    .hero__layer[data-number="11"] {
+        bottom: 46%;
+    }
+
+    .hero__layer[data-number="12"] {
+        bottom: 42%;
+    }
+
+    .hero__layer[data-number="13"] {
+        left: 48%;
+        bottom: 18%;
+        width: 10%;
+    }
+
+    .hero__layer[data-number="14"] {
+        bottom: 5%;
+        left: 48%;
+
+        width: 10%;
+    }
+
+    .hero__layer[data-number="15"] {
+        bottom: 12%;
+
+        width: 20%;
+    }
+
+    .hero__layer[data-number="16"] {
+        bottom: -1%;
+
+        width: 44%;
+    }
+
+    .hero__img.rocket {
+        z-index: 2;
+    }
+
+    .hero__moto {
+        z-index: 2;
+
         font-size: 40px;
         line-height: 50px;
     }

@@ -14,6 +14,7 @@ export const Hero = forwardRef<HTMLDivElement>(({ className }, forwardedRef) => 
     useImperativeHandle(forwardedRef, () => triggerRef.current);
     
     useEffect(() => {
+        let mm = gsap.matchMedia();
         gsap.registerPlugin(ScrollTrigger);
         
         timeline.current = gsap.timeline({
@@ -26,151 +27,158 @@ export const Hero = forwardRef<HTMLDivElement>(({ className }, forwardedRef) => 
             }
         });
         
-        timeline.current
-            .fromTo("#item1",
-                {
-                    scale: 1,
-                    yPercent: 0,
-                    xPercent: 0,
-                },
-                {
-                    scale: 0.6,
-                    yPercent: 20,
-                    xPercent: 40,
-                }, 0)
-            .fromTo("#item2",
-                {
-                    yPercent: 0,
-                },
-                {
-                    yPercent: -2,
-                }, 0)
-            .fromTo("#item3",
-                {
-                    yPercent: 0,
-                },
-                {
-                    yPercent: -3,
-                }, 0)
-            .fromTo("#item4",
-                {
-                    yPercent: 0,
-                },
-                {
-                    yPercent: -3,
-                }, 0)
-            .fromTo("#item5",
-                {
-                    yPercent: 0,
-                },
-                {
-                    yPercent: -15,
-                }, 0)
-            .fromTo("#item6",
-                {
-                    yPercent: 0,
-                },
-                {
-                    yPercent: -10,
-                }, 0)
-            .fromTo("#item7",
-                {
-                    yPercent: 0,
-                },
-                {
-                    yPercent: 10,
-                }, 0)
-            .fromTo("#item8",
-                {
-                    xPercent: 400,
-                    yPercent: -40,
-                },
-                {
-                    xPercent: 200,
-                    yPercent: -100,
-                }, 0)
-            .fromTo("#item9",
-                {
-                    scale: 1,
-                    xPercent: 0,
-                    yPercent: 0,
-                },
-                {
-                    scale: 1,
-                    xPercent: -5,
-                    yPercent: -10,
-                }, 0)
-            .fromTo("#item11",
-                {
-                    xPercent: 0,
-                    yPercent: 0,
-                    scale: 1,
-                },
-                {
-                    xPercent: 3,
-                    yPercent: 2,
-                    scale: 0.95,
-                }, 0)
-            .fromTo("#item12",
-                {
-                    xPercent: 0,
-                    yPercent: 0,
-                    scale: 1,
-                },
-                {
-                    xPercent: 5,
-                    yPercent: 1,
-                    scale: 0.95,
-                }, 0)
-            .fromTo("#item13",
-                {
-                    xPercent: 0,
-                    yPercent: 0,
-                    scale: 1.2,
-                },
-                {
-                    xPercent: 50,
-                    yPercent: 80,
-                    scale: 1,
-                }, 0)
-            .fromTo("#item14",
-                {
-                    xPercent: 0,
-                    yPercent: 0,
-                    scale: 1,
-                },
-                {
-                    xPercent: -100,
-                    yPercent: -220,
-                    scale: 1.4,
-                }, 0)
-            .fromTo("#item15",
-                {
-                    xPercent: 0,
-                    scale: 1,
-                },
-                {
-                    xPercent: -15,
-                    scale: 0.7,
-                }, 0)
-            .fromTo("#item16",
-                {
-                    xPercent: 0,
-                    scale: 1,
-                },
-                {
-                    xPercent: -15,
-                    scale: 0.7,
-                }, 0)
-            .fromTo("#item17",
-                {
-                    yPercent: 0,
-                    scale: 1,
-                },
-                {
-                    yPercent: -10,
-                    scale: 1.2,
-                }, 0);
+        mm.add("(min-width: 1200px)", () => {
+            timeline.current
+                .fromTo("#item1",
+                    {
+                        scale: 1,
+                        yPercent: 0,
+                        xPercent: 0,
+                    },
+                    {
+                        scale: 0.6,
+                        yPercent: 20,
+                        xPercent: 40,
+                    }, 0)
+                .fromTo("#item2",
+                    {
+                        yPercent: 0,
+                    },
+                    {
+                        yPercent: -2,
+                    }, 0)
+                .fromTo("#item3",
+                    {
+                        yPercent: 0,
+                    },
+                    {
+                        yPercent: -3,
+                    }, 0)
+                .fromTo("#item4",
+                    {
+                        yPercent: 0,
+                    },
+                    {
+                        yPercent: -3,
+                    }, 0)
+                .fromTo("#item5",
+                    {
+                        yPercent: 0,
+                    },
+                    {
+                        yPercent: -15,
+                    }, 0)
+                .fromTo("#item6",
+                    {
+                        yPercent: 0,
+                    },
+                    {
+                        yPercent: -10,
+                    }, 0)
+                .fromTo("#item7",
+                    {
+                        yPercent: 0,
+                    },
+                    {
+                        yPercent: 10,
+                    }, 0)
+                .fromTo("#item8",
+                    {
+                        xPercent: 400,
+                        yPercent: -40,
+                    },
+                    {
+                        xPercent: 280,
+                        yPercent: -100,
+                    }, 0)
+                .fromTo("#item9",
+                    {
+                        scale: 1,
+                        xPercent: 0,
+                        yPercent: 0,
+                    },
+                    {
+                        scale: 1,
+                        xPercent: -5,
+                        yPercent: -8,
+                    }, 0)
+                .fromTo("#item11",
+                    {
+                        xPercent: 0,
+                        yPercent: 0,
+                        scale: 1,
+                    },
+                    {
+                        xPercent: 3,
+                        yPercent: 3,
+                        scale: 0.95,
+                    }, 0)
+                .fromTo("#item12",
+                    {
+                        xPercent: 0,
+                        yPercent: 0,
+                        scale: 1,
+                    },
+                    {
+                        xPercent: 5,
+                        yPercent: 3,
+                        scale: 0.95,
+                    }, 0)
+                .fromTo("#item13",
+                    {
+                        xPercent: 0,
+                        yPercent: 0,
+                        scale: 1.2,
+                    },
+                    {
+                        xPercent: 50,
+                        yPercent: 80,
+                        scale: 1,
+                    }, 0)
+                .fromTo("#item14",
+                    {
+                        xPercent: 0,
+                        yPercent: 0,
+                        scale: 1,
+                    },
+                    {
+                        xPercent: -100,
+                        yPercent: -220,
+                        scale: 1.4,
+                    }, 0)
+                .fromTo("#item15",
+                    {
+                        xPercent: 0,
+                        scale: 1,
+                    },
+                    {
+                        xPercent: -15,
+                        scale: 0.7,
+                    }, 0)
+                .fromTo("#item16",
+                    {
+                        xPercent: 0,
+                        scale: 1,
+                    },
+                    {
+                        xPercent: -15,
+                        yPercent: 12,
+                        scale: 0.7,
+                    }, 0)
+                .fromTo("#item17",
+                    {
+                        yPercent: 0,
+                        scale: 1,
+                    },
+                    {
+                        yPercent: -10,
+                        scale: 1.2,
+                    }, 0);
+            
+            return () => { // optional
+                // custom cleanup code here (runs when it STOPS matching)
+            };
+        });
         
         timeline.current
             .fromTo(imageTargetRef.current,

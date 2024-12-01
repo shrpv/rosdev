@@ -1,74 +1,62 @@
 "use client";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const Hero = ({ className }) => {
     const [layers, setLayers] = useState([]);
-    const trigger = useRef();
-    const target = useRef();
-    const timeline = useRef<GSAPTimeline>(null);
-
-    useEffect(() => {
-        const LAYERS_COUNT = 17;
-
-        setLayers(Array.from({ length: LAYERS_COUNT }, (_, i) => i + 1));
-    }, []);
-
+    const imageTargetRef = useRef(null);
+    const textTargetRef = useRef(null);
+    const triggerRef = useRef(null);
+    const timeline = useRef(null);
+    
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-
+        
         timeline.current = gsap.timeline({
             scrollTrigger: {
-                trigger: trigger.current,
+                trigger: triggerRef.current,
                 start: "1 top",
-                pin: true,
-                anticipatePin: 1
+                end: "center top",
+                pin: true
             }
         });
-
-        timeline?.current
-            .fromTo(
-                "#item1",
-                {
-                    x: 200,
-                    opacity: 1
-                },
-                {
-                    x: 400,
-                    opacity: 1
-                }
-            )
-            .fromTo(
-                target?.current,
+        
+        timeline.current
+            .fromTo(imageTargetRef.current,
                 {
                     yPercent: 50,
-                    x: "random(-300, 300, 5)",
-                    rotate: "random(-5, 5)",
                     opacity: 1
                 },
                 {
-                    yPercent: -110,
-                    x: 0,
-                    duration: 5,
+                    yPercent: -50,
+                    duration: 1,
                     opacity: 1
-                }
-            )
-
-            .then(res => res.scrollTrigger.disable());
-
-        return () => {
-            timeline?.current?.kill();
-        };
-    }, [target, trigger, timeline]);
-
+                })
+            .fromTo(textTargetRef.current,
+                {
+                    yPercent: -10,
+                    opacity: 0,
+                },
+                {
+                    yPercent: 0,
+                    opacity: 1,
+                });
+    }, []);
+    
+    useEffect(() => {
+        const LAYERS_COUNT = 17;
+        
+        setLayers(Array.from({ length: LAYERS_COUNT }, (_, i) => i + 1));
+    }, []);
+    
     return (
         <section
             className={classNames(className, styles.hero)}
-            ref={trigger}
             id="hero"
+            ref={triggerRef}
         >
             {layers.map(number => (
                 <img
@@ -79,14 +67,17 @@ export const Hero = ({ className }) => {
                     id={`item${number}`}
                 />
             ))}
-
+            
             <img
                 className={classNames(styles.hero__img, styles.rocket)}
                 src="/img/hero/rocket.svg"
                 alt="Взлетающая ракета"
                 loading="lazy"
-                ref={target}
+                ref={imageTargetRef}
             />
+            
+            <b className={styles.hero__moto} ref={textTargetRef}>Качество. Технологии. Скорость</b>
+        
         </section>
     );
 };

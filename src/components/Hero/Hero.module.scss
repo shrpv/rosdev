@@ -119,6 +119,7 @@
 .hero__layer[data-number="17"] {
     bottom: -76px;
     left: 0;
+    z-index: 5;
 
     width: 100%;
     height: auto;
@@ -130,4 +131,19 @@
     transform: translate(-50%, 0);
 
     opacity: 0;
+}
+
+.hero__moto {
+    position: absolute;
+    top: 64%;
+    left: 50%;
+
+    color: #0e0e0e;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+
+
+    transform: translate(-50%, 0);
 }

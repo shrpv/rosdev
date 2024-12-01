@@ -5,7 +5,11 @@ import styles from "./Hero.module.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export const Hero = forwardRef<HTMLDivElement>(({ className }, forwardedRef) => {
+interface HeroProps {
+    className?: string;
+}
+
+export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwardedRef) => {
     const [layers] = useState([...Array(17)].map((_, i) => i + 1));
     const imageTargetRef = useRef(null);
     const textTargetRef = useRef(null);

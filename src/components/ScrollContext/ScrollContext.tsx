@@ -3,7 +3,7 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import Lenis from 'lenis';
 
-const SmoothScrollerContext = createContext();
+const SmoothScrollerContext = createContext(null);
 
 export const useSmoothScroller = () => useContext(SmoothScrollerContext);
 

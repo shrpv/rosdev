@@ -14,8 +14,7 @@ import { About } from "@/components/About/About";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { ScrollToTopButton } from "@/components/Utils/ScrollToTopButton/ScrollToTopButton";
 
-
-export const Page = () => {
+export default function Page() {
     const [showTopButton, setShowTopButton] = useState<boolean>(false);
 
     const heroRef = useRef(null);
@@ -69,5 +68,3 @@ export const Page = () => {
         </ScrollContext>
     );
 };
-
-export default Page;

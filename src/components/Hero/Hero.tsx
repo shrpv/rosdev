@@ -194,11 +194,11 @@ export const Hero = forwardRef<HTMLDivElement>(({ className }, forwardedRef) => 
                 })
             .fromTo(textTargetRef.current,
                 {
-                    yPercent: -10,
+                    yPercent: -20,
                     opacity: 0
                 },
                 {
-                    yPercent: 0,
+                    yPercent: 70,
                     opacity: 1
                 });
     }, []);

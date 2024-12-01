@@ -1,9 +1,6 @@
 'use client';
 import ScrollContext from "@/components/ScrollContext/ScrollContext";
-import { Footer } from "@/components/Utils/Footer/Footer";
-import { Header } from "@/components/Utils/Header/Header";
-import { Main } from "@/components/Utils/Main/Main";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import styles from "./page.module.scss";
 import { Hero } from "@/components/Hero/Hero";
 import { Advantages } from "@/components/Advantages/Advantages";
@@ -16,6 +13,10 @@ import { About } from "@/components/About/About";
 import { Slogan } from "@/components/Slogan/Slogan";
 
 export default function Page() {
+    useLayoutEffect(() => {
+        document.documentElement.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }, []);
+    
     useEffect(() => {
         const controller = new AbortController();
         
@@ -31,10 +32,6 @@ export default function Page() {
     
     return (
         <ScrollContext>
-            
-            <Header className="page__header" />
-            
-            <Main className="page__main">
                 <Hero className={styles.home__hero} />
                 
                 <Advantages className={styles.home__advantages} />
@@ -52,9 +49,6 @@ export default function Page() {
                 <About />
                 
                 <Slogan className={styles.home__slogan} />
-            </Main>
-            
-            <Footer className="page__footer" />
         </ScrollContext>
     );
 }

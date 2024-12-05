@@ -25,7 +25,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
             scrollTrigger: {
                 trigger: triggerRef.current,
                 start: "1 top",
-                end: "center top",
+                end: "+=200 top",
                 pin: true,
                 scrub: false,
             }

@@ -13,4 +13,4 @@ export const ORGANIZER_CONTACTS = [
     }
 ];
 
-export const ORGANIZER_LOCATION = "Санкт-Петербург, Невский проспект, д. 28 офис 312";
+export const ORGANIZER_LOCATION = "Санкт-Петербург, ул. Якубовича, д. 24";

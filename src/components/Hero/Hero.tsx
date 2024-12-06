@@ -179,32 +179,69 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                         scale: 1.2,
                     }, 0);
             
-            return () => { // optional
-                // custom cleanup code here (runs when it STOPS matching)
+            return () => {
+                const controller = new AbortController();
+                controller.abort();
             };
         });
         
-        timeline.current
-            .fromTo(imageTargetRef.current,
-                {
-                    yPercent: 50,
-                    delay: 0.3,
-                    opacity: 1
-                },
-                {
-                    yPercent: -50,
-                    duration: 1,
-                    opacity: 1
-                })
-            .fromTo(textTargetRef.current,
-                {
-                    yPercent: -20,
-                    opacity: 0
-                },
-                {
-                    yPercent: 70,
-                    opacity: 1
-                });
+        mm.add("(max-width: 1599px)",() => {
+            timeline.current
+                .fromTo(imageTargetRef.current,
+                    {
+                        yPercent: 50,
+                        delay: 0.3,
+                        opacity: 1
+                    },
+                    {
+                        yPercent: -50,
+                        duration: 2,
+                        opacity: 1
+                    })
+                .fromTo(textTargetRef.current,
+                    {
+                        yPercent: -20,
+                        opacity: 0
+                    },
+                    {
+                        yPercent: 70,
+                        opacity: 1
+                    });
+            
+            return () => {
+                const controller = new AbortController();
+                controller.abort();
+            };
+        });
+        
+        mm.add("(min-width: 1600px)",() => {
+            timeline.current
+                .fromTo(imageTargetRef.current,
+                    {
+                        yPercent: 100,
+                        delay: 0.3,
+                        opacity: 1
+                    },
+                    {
+                        yPercent: -34,
+                        duration: 2,
+                        opacity: 1
+                    })
+                .fromTo(textTargetRef.current,
+                    {
+                        yPercent: -20,
+                        opacity: 0
+                    },
+                    {
+                        yPercent: 70,
+                        opacity: 1
+                    });
+            
+            return () => {
+                const controller = new AbortController();
+                controller.abort();
+            };
+        });
     }, []);
     
     return (
@@ -231,7 +268,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                 ref={imageTargetRef}
             />
             
-            <b className={styles.hero__moto} ref={textTargetRef}>Качество. Технологии. Скорость</b>
+            <b className={styles.hero__moto} ref={textTargetRef}>Качество. Технологии. <br />Скорость</b>
         
         </section>
     );

@@ -214,7 +214,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
             };
         });
         
-        mm.add("(min-width: 1600px)",() => {
+        mm.add("(max-width: 1920px)",() => {
             timeline.current
                 .fromTo(imageTargetRef.current,
                     {
@@ -223,7 +223,36 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                         opacity: 1
                     },
                     {
-                        yPercent: -34,
+                        yPercent: -44,
+                        duration: 2,
+                        opacity: 1
+                    })
+                .fromTo(textTargetRef.current,
+                    {
+                        yPercent: -20,
+                        opacity: 0
+                    },
+                    {
+                        yPercent: 70,
+                        opacity: 1
+                    });
+            
+            return () => {
+                const controller = new AbortController();
+                controller.abort();
+            };
+        });
+        
+        mm.add("(min-width: 2000px)",() => {
+            timeline.current
+                .fromTo(imageTargetRef.current,
+                    {
+                        yPercent: 100,
+                        delay: 0.3,
+                        opacity: 1
+                    },
+                    {
+                        yPercent: -35,
                         duration: 2,
                         opacity: 1
                     })

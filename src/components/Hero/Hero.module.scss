@@ -106,47 +106,39 @@
 }
 
 .hero__layer[data-number="9"] {
-    bottom: 11%;
+    bottom: 0;
     left: 0;
     z-index: 1;
 
     width: 100%;
     height: auto;
-
-    transform: translate(0, 50%);
 }
 
 .hero__layer[data-number="10"] {
-    bottom: 13%;
+    bottom: 0;
     left: 0;
     z-index: 1;
 
     width: 100%;
     height: auto;
-
-    transform: translate(0, 50%);
 }
 
 .hero__layer[data-number="11"] {
-    bottom: 14%;
+    bottom: 0;
     left: 0;
     z-index: 1;
 
     width: 100%;
     height: auto;
-
-    transform: translate(0, 50%);
 }
 
 .hero__layer[data-number="12"] {
-    bottom: 12%;
+    bottom: 0;
     left: 0;
     z-index: 1;
 
     width: 100%;
     height: auto;
-
-    transform: translate(0, 50%);
 }
 
 .hero__layer[data-number="13"] {
@@ -226,7 +218,7 @@
         bottom: 1%;
     }
 
-    .hero__layer[data-number="9"] {
+    /*.hero__layer[data-number="9"] {
         bottom: 16%;
     }
 
@@ -240,7 +232,7 @@
 
     .hero__layer[data-number="12"] {
         bottom: 18%;
-    }
+    }*/
 
     .hero__layer[data-number="13"] {
         left: 45%;
@@ -300,7 +292,7 @@
         bottom: 1%;
     }
 
-    .hero__layer[data-number="9"] {
+    /*.hero__layer[data-number="9"] {
         bottom: 20%;
     }
 
@@ -314,7 +306,7 @@
 
     .hero__layer[data-number="12"] {
         bottom: 24%;
-    }
+    }*/
 
     .hero__layer[data-number="13"] {
         left: 45%;
@@ -347,7 +339,7 @@
         bottom: 1%;
     }
 
-    .hero__layer[data-number="9"] {
+    /*.hero__layer[data-number="9"] {
         bottom: 20%;
     }
 
@@ -361,7 +353,7 @@
 
     .hero__layer[data-number="12"] {
         bottom: 28%;
-    }
+    }*/
 
     .hero__moto {
         font-size: 40px;
@@ -407,7 +399,7 @@
         bottom: 1%;
     }
 
-    .hero__layer[data-number="9"] {
+    /*.hero__layer[data-number="9"] {
         bottom: 32%;
     }
 
@@ -421,7 +413,7 @@
 
     .hero__layer[data-number="12"] {
         bottom: 42%;
-    }
+    }*/
 
     .hero__layer[data-number="13"] {
         left: 48%;

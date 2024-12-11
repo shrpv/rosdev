@@ -13,7 +13,7 @@ export const ReviewsCard: FC<ReviewsCardProps> = ({ className, review }) => {
     return (
         <article className={classNames(className, styles.reviewsCard)}>
             <blockquote className={styles.reviewsCard__quote}>
-                <p>{review.text}</p>
+                <p dangerouslySetInnerHTML={{__html: review.text}} />
             </blockquote>
 
             <div className={styles.reviewsCard__author}>

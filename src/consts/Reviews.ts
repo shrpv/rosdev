@@ -10,57 +10,36 @@ export type Review = {
 
 export const REVIEWS: Review[] = [
     {
-        text: "Высокий уровень обслуживания и экспертизы. Решили все наши задачи по разработке и поддержке. Очень довольны результатом!",
+        text: "Сотрудничаем с&nbsp;РусДев уже более трех лет, совместно было выпущено в&nbsp;производство уже несколько " +
+            "проектов, которые продолжают свое развитие и&nbsp;по&nbsp;сей день. РусДев&nbsp;&mdash; команда " +
+            "профессионалов на&nbsp;которых действительно можно положиться. Качество поставок, соблюдение " +
+            "сроков&nbsp;&mdash; все на&nbsp;высоте.",
         author: {
-            src: "/img/reviews/maslov.jpg",
-            srcSet: "/img/reviews/maslov@2x.jpg 2x",
-            name: "Маслов Владимир",
-            position: "CEO"
+            src: "/img/reviews/isaev.jpg",
+            srcSet: "/img/reviews/isaev@2x.jpg 2x",
+            name: "Исаев Андрей",
+            // position: "CEO"
         }
     },
     {
-        text: "Работаем с ними уже не первый проект — всегда стабильно хороший результат и внимательное отношение к деталям.",
+        text: "Хорошая оценка и&nbsp;реализация проекта. " +
+            "Разработанное приложение и&nbsp;его интеграция с&nbsp;приложением АЗС ГПН на&nbsp;высочайшем уровне.",
         author: {
-            src: "/img/reviews/maslov.jpg",
-            srcSet: "/img/reviews/maslov@2x.jpg 2x",
-            name: "Маслов Владимир",
-            position: "CEO"
+            src: "/img/reviews/kuimov.jpg",
+            srcSet: "/img/reviews/kuimov@2x.jpg 2x",
+            name: "Алексей Куимов",
+            position: "COO"
         }
     },
     {
-        text: "Понравился индивидуальный подход и гибкость. Решения адаптированы под наши потребности, что даёт ощутимые результаты.",
+        text: "Сайт получился очень удобным и&nbsp;информативным, а&nbsp;благодаря использованию блокчейн-технологии " +
+            "можно быть уверенным в&nbsp;безопасности своих данных. Подрядчик выполнил работу качественно " +
+            "и&nbsp;в&nbsp;срок.",
         author: {
-            src: "/img/reviews/maslov.jpg",
-            srcSet: "/img/reviews/maslov@2x.jpg 2x",
-            name: "Маслов Владимир",
-            position: "CEO"
+            src: "/img/reviews/dergaev.jpg",
+            srcSet: "/img/reviews/dergaev@2x.jpg 2x",
+            name: "Андрей Дергаев",
+            position: "co-founder"
         }
     },
-    {
-        text: "Команда обладает глубокими техническими знаниями, и это чувствуется в каждом этапе работы. Очень довольны качеством и сроками.",
-        author: {
-            src: "/img/reviews/maslov.jpg",
-            srcSet: "/img/reviews/maslov@2x.jpg 2x",
-            name: "Маслов Владимир",
-            position: "CEO"
-        }
-    },
-    {
-        text: "Команда обладает глубокими техническими знаниями, и это чувствуется в каждом этапе работы. Очень довольны качеством и сроками.2",
-        author: {
-            src: "/img/reviews/maslov.jpg",
-            srcSet: "/img/reviews/maslov@2x.jpg 2x",
-            name: "Маслов Владимир",
-            position: "CEO"
-        }
-    },
-    {
-        text: "Команда обладает глубокими техническими знаниями, и это чувствуется в каждом этапе работы. Очень довольны качеством и сроками.3",
-        author: {
-            src: "/img/reviews/maslov.jpg",
-            srcSet: "/img/reviews/maslov@2x.jpg 2x",
-            name: "Маслов Владимир",
-            position: "CEO"
-        }
-    }
 ];

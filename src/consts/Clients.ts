@@ -32,14 +32,14 @@ export const CLIENTS: Client[] = [
             height: "34"
         }
     },
-    {
+    /*{
         title: "Газпром межрегионгаз Санкт-Петербург",
         logo: {
             url: "/img/clients/peterburgregiongaz.svg",
             width: "120",
             height: "66"
         }
-    },
+    },*/
     {
         title: "Храм Воин",
         logo: {
@@ -64,14 +64,14 @@ export const CLIENTS: Client[] = [
             height: "80"
         }
     },
-    {
+    /*{
         title: "Газпромнефть",
         logo: {
             url: "/img/clients/gazprom_neft.svg",
             width: "200",
             height: "37"
         }
-    },
+    },*/
     {
         title: "СИТИЛАБ",
         logo: {

@@ -153,7 +153,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
             };
         });
         
-        mm.add("(max-width: 1920px)",() => {
+        mm.add("(max-width: 1200px)",() => {
             timeline.current
                 .fromTo(imageTargetRef.current,
                     {},
@@ -165,7 +165,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                 .fromTo(textTargetRef.current,
                     {},
                     {
-                        yPercent: 70,
+                        yPercent: 30,
                         opacity: 1
                     });
             
@@ -175,19 +175,19 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
             };
         });
         
-        /*mm.add("(min-width: 1921px) and (max-width: 1999px)",() => {
+        mm.add("(min-width: 1201px)",() => {
             timeline.current
                 .fromTo(imageTargetRef.current,
                     {},
                     {
-                        yPercent: -44,
+                        yPercent: -96,
                         duration: 1,
                         opacity: 1,
                     })
                 .fromTo(textTargetRef.current,
                     {},
                     {
-                        yPercent: 70,
+                        yPercent: 280,
                         opacity: 1
                     });
             
@@ -196,28 +196,6 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                 controller.abort();
             };
         });
-        
-        mm.add("(min-width: 2000px)",() => {
-            timeline.current
-                .fromTo(imageTargetRef.current,
-                    {},
-                    {
-                        yPercent: -35,
-                        duration: 1,
-                        opacity: 1,
-                    })
-                .fromTo(textTargetRef.current,
-                    {},
-                    {
-                        yPercent: 70,
-                        opacity: 1
-                    });
-            
-            return () => {
-                const controller = new AbortController();
-                controller.abort();
-            };
-        }); */
         
     }, []);
     

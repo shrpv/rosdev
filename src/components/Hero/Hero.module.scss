@@ -22,7 +22,7 @@
 
 .hero__moto {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
 
     color: #0e0e0e;
@@ -32,7 +32,7 @@
     text-align: center;
 
     opacity: 0;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
 }
 
 .hero__img.rocket,

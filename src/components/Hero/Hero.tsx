@@ -25,7 +25,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
             scrollTrigger: {
                 trigger: triggerRef.current,
                 start: "1 top",
-                end: "+=200 top",
+                end: "+=150 top",
                 pin: true,
                 scrub: false,
             }
@@ -34,72 +34,51 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
         mm.add("(min-width: 1200px)", () => {
             timeline.current
                 .fromTo("#item1",
-                    {
-                        scale: 1,
-                        yPercent: 0,
-                        xPercent: 0,
-                    },
+                    {},
                     {
                         scale: 0.6,
                         yPercent: 20,
                         xPercent: 40,
                     }, 0)
                 .fromTo("#item2",
+                    {},
                     {
-                        yPercent: 0,
-                    },
-                    {
-                        yPercent: -2,
+                        yPercent: -60,
                     }, 0)
                 .fromTo("#item3",
-                    {
-                        yPercent: 0,
-                    },
+                    {},
                     {
                         yPercent: -3,
                     }, 0)
                 .fromTo("#item4",
+                    {},
                     {
-                        yPercent: 0,
-                    },
-                    {
-                        yPercent: -3,
+                        yPercent: -20,
                     }, 0)
                 .fromTo("#item5",
+                    {},
                     {
-                        yPercent: 0,
-                    },
-                    {
-                        yPercent: -15,
+                        yPercent: -60,
                     }, 0)
                 .fromTo("#item6",
+                    {},
                     {
-                        yPercent: 0,
-                    },
+                        yPercent: -56,
+                    }, 0)
+                .fromTo("#item7",
+                    {},
                     {
                         yPercent: -10,
                     }, 0)
-                .fromTo("#item7",
-                    {
-                        yPercent: 0,
-                    },
-                    {
-                        yPercent: 10,
-                    }, 0)
                 .fromTo("#item8",
+                    {},
                     {
-                        xPercent: 400,
-                        yPercent: -40,
-                    },
-                    {
-                        xPercent: 280,
+                        xPercent: -170,
                         yPercent: -100,
                     }, 0)
                 .fromTo("#item9",
                     {
                         scale: 1,
-                        xPercent: 0,
-                        yPercent: 0,
                     },
                     {
                         scale: 1,
@@ -129,22 +108,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                         scale: 0.95,
                     }, 0)
                 .fromTo("#item13",
-                    {
-                        xPercent: 0,
-                        yPercent: 0,
-                        scale: 1.2,
-                    },
+                    {},
                     {
                         xPercent: 50,
                         yPercent: 80,
                         scale: 1,
                     }, 0)
                 .fromTo("#item14",
-                    {
-                        xPercent: 0,
-                        yPercent: 0,
-                        scale: 1,
-                    },
+                    {},
                     {
                         xPercent: -100,
                         yPercent: -220,
@@ -160,10 +131,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                         scale: 0.7,
                     }, 0)
                 .fromTo("#item16",
-                    {
-                        xPercent: 0,
-                        scale: 1,
-                    },
+                    {},
                     {
                         xPercent: -15,
                         yPercent: 12,
@@ -185,24 +153,17 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
             };
         });
         
-        mm.add("(max-width: 1599px)",() => {
+        mm.add("(max-width: 1920px)",() => {
             timeline.current
                 .fromTo(imageTargetRef.current,
+                    {},
                     {
-                        yPercent: 50,
-                        delay: 0.3,
-                        opacity: 1
-                    },
-                    {
-                        yPercent: -50,
-                        duration: 2,
-                        opacity: 1
+                        yPercent: -96,
+                        duration: 1,
+                        opacity: 1,
                     })
                 .fromTo(textTargetRef.current,
-                    {
-                        yPercent: -20,
-                        opacity: 0
-                    },
+                    {},
                     {
                         yPercent: 70,
                         opacity: 1
@@ -214,24 +175,17 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
             };
         });
         
-        mm.add("(max-width: 1920px)",() => {
+        /*mm.add("(min-width: 1921px) and (max-width: 1999px)",() => {
             timeline.current
                 .fromTo(imageTargetRef.current,
-                    {
-                        yPercent: 100,
-                        delay: 0.3,
-                        opacity: 1
-                    },
+                    {},
                     {
                         yPercent: -44,
-                        duration: 2,
-                        opacity: 1
+                        duration: 1,
+                        opacity: 1,
                     })
                 .fromTo(textTargetRef.current,
-                    {
-                        yPercent: -20,
-                        opacity: 0
-                    },
+                    {},
                     {
                         yPercent: 70,
                         opacity: 1
@@ -246,21 +200,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
         mm.add("(min-width: 2000px)",() => {
             timeline.current
                 .fromTo(imageTargetRef.current,
-                    {
-                        yPercent: 100,
-                        delay: 0.3,
-                        opacity: 1
-                    },
+                    {},
                     {
                         yPercent: -35,
-                        duration: 2,
-                        opacity: 1
+                        duration: 1,
+                        opacity: 1,
                     })
                 .fromTo(textTargetRef.current,
-                    {
-                        yPercent: -20,
-                        opacity: 0
-                    },
+                    {},
                     {
                         yPercent: 70,
                         opacity: 1
@@ -270,7 +217,8 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                 const controller = new AbortController();
                 controller.abort();
             };
-        });
+        }); */
+        
     }, []);
     
     return (

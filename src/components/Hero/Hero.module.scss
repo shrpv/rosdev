@@ -15,10 +15,9 @@
 
 .hero__img.rocket {
     position: absolute;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-
-    opacity: 0;
 }
 
 .hero__moto {
@@ -34,6 +33,12 @@
 
     opacity: 0;
     transform: translate(-50%, 0);
+}
+
+.hero__img.rocket,
+.hero__layer,
+.hero__moto {
+    will-change: transform;
 }
 
 .hero__layer[data-number="1"] {
@@ -369,25 +374,25 @@
     }
 
     .hero__layer[data-number="2"] {
-        top: 36%;
-    }
-
-    .hero__layer[data-number="3"] {
         top: 48%;
     }
 
+    .hero__layer[data-number="3"] {
+        top: 56%;
+    }
+
     .hero__layer[data-number="4"] {
-        top: 6%;
+        top: 15%;
     }
 
     .hero__layer[data-number="5"] {
-        top: 14%;
+        top: 32%;
 
         width: 24%;
     }
 
     .hero__layer[data-number="6"] {
-        top: 4%;
+        top: 48%;
     }
 
     .hero__layer[data-number="7"] {
@@ -395,7 +400,7 @@
     }
 
     .hero__layer[data-number="8"] {
-        left: 43%;
+        left: 60.75%;
         bottom: 1%;
     }
 
@@ -418,12 +423,15 @@
     .hero__layer[data-number="13"] {
         left: 48%;
         bottom: 18%;
+
         width: 10%;
+
+        transform: scale(1.2);
     }
 
     .hero__layer[data-number="14"] {
         bottom: 5%;
-        left: 48%;
+        left: 42%;
 
         width: 10%;
     }

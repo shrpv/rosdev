@@ -18,7 +18,7 @@ export const REVIEWS: Review[] = [
             src: "/img/reviews/isaev.jpg",
             srcSet: "/img/reviews/isaev@2x.jpg 2x",
             name: "Исаев Андрей",
-            // position: "CEO"
+            position: "CTO"
         }
     },
     {

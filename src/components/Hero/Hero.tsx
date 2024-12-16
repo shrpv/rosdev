@@ -1,6 +1,6 @@
 "use client";
 import Loading from "@/components/Loading/Loading";
-import { useEffect, useState, useRef, forwardRef, useImperativeHandle, useLayoutEffect } from "react";
+import { useEffect, useState, useRef, forwardRef, useImperativeHandle, useLayoutEffect, ReactNode } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 import gsap from "gsap";
@@ -20,13 +20,14 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
     useImperativeHandle(forwardedRef, () => triggerRef.current);
     
     useLayoutEffect(() => {
-        const images = triggerRef?.current?.querySelectorAll("img");
+        const images = (triggerRef?.current as HTMLDivElement)?.querySelectorAll("img");
         if (images) {
-            const imagesPromises = Array.from(images).map((image) => image.addEventListener("load", () => new Promise((res) => res())));
+            const imagesPromises = Array.from(images).map((image) =>
+                (image as HTMLImageElement).addEventListener("load", () => new Promise<void>((res) => res())));
             
             Promise.all(imagesPromises).then(() => {
                 document.documentElement.style.overflowY = 'scroll';
-                setIsLoading();
+                setIsLoading(false);
             });
         }
     }, []);

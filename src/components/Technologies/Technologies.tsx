@@ -19,11 +19,11 @@ export const Technologies: FC<TechnologiesProps> = ({ className }) => {
             <div className="container">
                 <h2 className={classNames(styles.technologies__title, "title")}>Технологии</h2>
 
-                <TechnologiesTabs
+                {/*<TechnologiesTabs
                     className={styles.technologies__tabs}
                     currentTab={currentTab}
                     onChange={setCurrentTab}
-                />
+                />*/}
 
                 <div
                     className={styles.technologies__slider}

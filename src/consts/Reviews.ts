@@ -39,7 +39,7 @@ export const REVIEWS: Review[] = [
             src: "/img/reviews/dergaev.jpg",
             srcSet: "/img/reviews/dergaev@2x.jpg 2x",
             name: "Андрей Дергаев",
-            position: "co-founder"
+            position: "Сo-founder"
         }
     },
 ];

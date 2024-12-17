@@ -1,7 +1,7 @@
 export type TechnologyCategory = "Web" | "Mobile";
 
 export type Technology = {
-    title: string;
+    title?: string;
     logo?: string;
 };
 

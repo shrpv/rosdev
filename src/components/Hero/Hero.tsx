@@ -1,9 +1,8 @@
 "use client";
+import Image from "next/image";
 import { useState, useRef, forwardRef, useImperativeHandle, useLayoutEffect, useEffect } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface HeroProps {
     isLoading: boolean;
@@ -13,10 +12,7 @@ interface HeroProps {
 
 export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingSetter, className }, forwardedRef) => {
     const [layers] = useState([...Array(17)].map((_, i) => i + 1));
-    const imageTargetRef = useRef(null);
-    const textTargetRef = useRef(null);
     const triggerRef = useRef(null);
-    const timeline = useRef(null);
     useImperativeHandle(forwardedRef, () => triggerRef.current);
     
     useLayoutEffect(() => {
@@ -34,129 +30,9 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
         }
     }, []);
     
-    useEffect(() => {
-        if (!isLoading) {
-            
-            let mm = gsap.matchMedia();
-            gsap.registerPlugin(ScrollTrigger);
-            
-            timeline.current = gsap.timeline({
-                scrollTrigger: {
-                    trigger: triggerRef.current,
-                    start: "1 top",
-                    end: "+=1",
-                    pin: true,
-                    scrub: false
-                }
-            });
-            
-            mm.add("(min-width: 1200px)", () => {
-                timeline.current
-                    .fromTo("#item1",
-                        {},
-                        {
-                            scale: 0.6,
-                            yPercent: 20,
-                            xPercent: 40
-                        }, 0)
-                    .fromTo("#item2",
-                        {},
-                        {
-                            yPercent: -60
-                        }, 0)
-                    .fromTo("#item3",
-                        {},
-                        {
-                            yPercent: -3
-                        }, 0)
-                    .fromTo("#item4",
-                        {},
-                        {
-                            yPercent: -20
-                        }, 0)
-                    .fromTo("#item5",
-                        {},
-                        {
-                            yPercent: -30
-                        }, 0)
-                    .fromTo("#item6",
-                        {},
-                        {
-                            yPercent: -56
-                        }, 0)
-                    .fromTo("#item7",
-                        {},
-                        {
-                            yPercent: -10
-                        }, 0)
-                    .fromTo("#item8",
-                        {},
-                        {
-                            xPercent: -170,
-                            yPercent: -100
-                        }, 0)
-                    .fromTo("#item9",
-                        {},
-                        {
-                            scale: 1,
-                            xPercent: -5,
-                            yPercent: -8
-                        }, 0)
-                    .fromTo("#item11",
-                        {},
-                        {
-                            xPercent: 3,
-                            yPercent: 3,
-                            scale: 0.95
-                        }, 0)
-                    .fromTo("#item12",
-                        {},
-                        {
-                            xPercent: 5,
-                            yPercent: 3,
-                            scale: 0.95
-                        }, 0)
-                    .fromTo("#item13",
-                        {},
-                        {
-                            xPercent: 50,
-                            yPercent: 80,
-                            scale: 1
-                        }, 0)
-                    .fromTo("#item14",
-                        {},
-                        {
-                            xPercent: -100,
-                            yPercent: -220,
-                            scale: 1.4
-                        }, 0)
-                    .fromTo("#item15",
-                        {},
-                        {
-                            xPercent: -15,
-                            scale: 0.7
-                        }, 0)
-                    .fromTo("#item16",
-                        {},
-                        {
-                            xPercent: -15,
-                            yPercent: 12,
-                            scale: 0.7
-                        }, 0)
-                    .fromTo("#item17",
-                        {},
-                        {
-                            yPercent: -10,
-                            scale: 1.2
-                        }, 0);
-                
-                return () => {
-                    const controller = new AbortController();
-                    controller.abort();
-                };
-            });
-        }
-    }, [isLoading]);
+    
+    function endAnimation() {
+    }
     
     return (
         <section
@@ -164,17 +40,46 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
             id="hero"
             ref={triggerRef}
         >
-            {layers.map(number => (
-                <img
-                    className={styles.hero__layer}
-                    data-number={number}
-                    src={`/img/hero/layer_${number}.svg`}
-                    key={number}
-                    id={`item${number}`}
-                />
-            ))}
             
-            <img
+            <Image
+                width={100}
+                height={100}
+                className={classNames(styles.hero__img, styles.rocketSmall)}
+                src="/img/hero/layer_8.svg"
+                alt="Ракета малая"
+                loading="lazy"
+            />
+            
+            <Image
+                width={100}
+                height={100}
+                className={classNames(styles.hero__img, styles.spaceshipRight)}
+                src="/img/hero/layer_14.svg"
+                alt="Летательный аппарат"
+                loading="lazy"
+            />
+            
+            <Image
+                width={100}
+                height={100}
+                className={classNames(styles.hero__img, styles.spaceshipLeft)}
+                src="/img/hero/layer_13.svg"
+                alt="Летательный аппарат"
+                loading="lazy"
+            />
+            
+            <Image
+                width={100}
+                height={100}
+                className={classNames(styles.hero__img, styles.logo)}
+                src="/img/hero/layer_5.svg"
+                alt="Логотип компаниия"
+                loading="lazy"
+            />
+            
+            <Image
+                width={100}
+                height={100}
                 className={classNames(
                     styles.hero__img,
                     styles.rocket, {
@@ -183,17 +88,25 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
                 src="/img/hero/rocket.svg"
                 alt="Взлетающая ракета"
                 loading="lazy"
-                ref={imageTargetRef}
+                onAnimationEnd={endAnimation}
             />
             
             <b className={classNames(
                 styles.hero__moto, {
                     [styles.slideText]: !isLoading
                 })}
-               ref={textTargetRef}
             >
                 Качество. Технологии. <br />Скорость
             </b>
+            
+            <Image
+                width={100}
+                height={100}
+                className={classNames(styles.hero__img, styles.overlay)}
+                src="/img/hero/layer_17.svg"
+                alt="Перекрытие"
+                loading="lazy"
+            />
         </section>
     );
 });

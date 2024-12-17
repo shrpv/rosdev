@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1435" height="260" fill="none">
-  <path fill="#FFB96D" fill-opacity=".05" d="M-33.8481.4786C459.609 156.188 899.856 195.267 1434.36 114.114v115.474s-403.42 40.286-595.379 28.124C647.018 245.55 203.605 159.927-33.8481 29.7427c-12.1925-6.6846-13.8838-33.645 0-29.264Z"/>
-  <path fill="url(#a)" fill-opacity=".1" d="M-33.8481.4786C459.609 156.188 899.856 195.267 1434.36 114.114v115.474s-403.42 40.286-595.379 28.124C647.018 245.55 203.605 159.927-33.8481 29.7427c-12.1925-6.6846-13.8838-33.645 0-29.264Z" style="mix-blend-mode:overlay"/>
-  <defs>
-    <pattern id="a" width="1.3857" height="7.8769" patternContentUnits="objectBoundingBox">
-      <use xlink:href="#b" transform="scale(0 .004)"/>
-    </pattern>
-  </defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1435" height="260" fill="none"><path fill="#FFB96D" fill-opacity=".05" d="M-33.848.479C459.609 156.188 899.856 195.267 1434.36 114.114v115.474s-403.42 40.286-595.379 28.124c-191.963-12.162-635.376-97.785-872.83-227.97-12.192-6.684-13.883-33.644 0-29.263Z"/><path fill="url(#a)" fill-opacity=".1" d="M-33.848.479C459.609 156.188 899.856 195.267 1434.36 114.114v115.474s-403.42 40.286-595.379 28.124c-191.963-12.162-635.376-97.785-872.83-227.97-12.192-6.684-13.883-33.644 0-29.263Z" style="mix-blend-mode:overlay"/><defs><pattern id="a" width="1.386" height="7.877" patternContentUnits="objectBoundingBox"><use xlink:href="#b" transform="scale(0 .004)"/></pattern></defs></svg>

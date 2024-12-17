@@ -1,441 +1,273 @@
 @use "@/styles/mixins";
 
 @keyframes slide {
-    0% {
-        transform: translate(-50%, 0) scale(0.8);
-    }
-    100% {
-        transform: translate(-50%, -96%) scale(1);
-    }
+  0% {
+    transform: translate(-50%, 0) scale(0.8);
+  }
+  100% {
+    transform: translate(-50%, -96%) scale(1);
+  }
 }
 
 @keyframes slideTextMobile {
-    0% {
-        transform: translate(-50%, 40%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, 20%);
-        opacity: 1;
-    }
+  0% {
+    transform: translate(-50%, 40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 20%);
+    opacity: 1;
+  }
 }
 
 @keyframes slideTextDesktop {
-    0% {
-        transform: translate(-50%, 250%);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, 400%);
-        opacity: 1;
-    }
+  0% {
+    transform: translate(-50%, 250%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 400%);
+    opacity: 1;
+  }
 }
 
 .hero {
-    position: relative;
+  position: relative;
 
-    height: 100vh;
-    overflow: hidden;
-
-    background: linear-gradient(177.81deg, #131313 27.14%, #f28660 91.53%);
+  height: 100vh;
+  padding-right: 8px;
+  overflow: hidden;
+  background-image:
+  url("/img/hero/layer_15.svg"),
+  url("/img/hero/layer_16.svg"),
+  url("/img/hero/layer_12.svg"),
+  url("/img/hero/layer_11.svg"),
+  url("/img/hero/layer_9.svg"),
+  url("/img/hero/layer_10.svg"),
+  url("/img/hero/layer_7.svg"),
+  url("/img/hero/layer_6.svg"),
+  url("/img/hero/layer_4.svg"),
+  url("/img/hero/layer_3.svg"),
+  url("/img/hero/layer_2.svg"),
+  linear-gradient(177.81deg, #131313 27.14%, #f28660 91.53%);
+  background-position:
+  0 100%, // 15 — селфи
+  0 100%, // 16 — облако
+  0 100%, // 12 — кремль + город
+  100% 100%, // 11 — серп и молот
+  70% 100%, // 9 — ракетная установка
+  30% 100%, // 10 — останкино
+  50% 40%, // 7 — звезды
+  50% 10%, // 6 — звезды
+  50% 3%, // 4 — полоса верхняя
+  50% 48%, // 3 — полоса нижняя
+  50% 28%, // 2 — полоса средняя
+  50% 50%;
+  background-repeat:
+  no-repeat, // 15 — селфи
+  no-repeat, // 16 — облако
+  no-repeat, // 12 — кремль + город
+  no-repeat, // 11 — серп и молот
+  no-repeat, // 9 — ракетная установка
+  no-repeat, // 10 — останкино
+  repeat, // 7 — звезды
+  repeat-x, // 6 — звезды
+  no-repeat, // 4 — полоса верхняя
+  no-repeat, // 3 — полоса нижняя
+  no-repeat, // 2 — полоса средняя
+  no-repeat;
+  background-size:
+  20%, // 15 — селфи
+  45%, // 16 — облако
+  100%, // 12 — кремль + город
+  100%, // 11 — серп и молот
+  100%, // 9 — ракетная установка
+  100%, // 10 — останкино
+  80%, // 7 — звезды
+  25%,  // 6 — звезды
+  100% 30%, // 4 — полоса верхняя
+  100% 30%, // 3 — полоса нижняя
+  100%, // 2 — полоса средняя
+  100%;
 }
 
-
 .hero__layer {
-    position: absolute;
+  position: absolute;
 }
 
 .hero__img.rocket {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: auto;
+  height: 200%;
 }
 
 .slide {
-    animation: slide 3.7s cubic-bezier(0.62, 0.04, 0.73, 0.37) forwards 0.5s;
+  animation: slide 3.7s cubic-bezier(0.62, 0.04, 0.73, 0.37) forwards 0.2s;
 }
 
 .hero__moto {
-    position: absolute;
-    top: 30%;
-    left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    color: #0e0e0e;
-    font-size: 28px;
-    line-height: 42px;
-    font-weight: 600;
-    text-align: center;
+  color: #0e0e0e;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+  text-align: center;
 
-    opacity: 0;
-    transform: translate(-50%, -50%);
+  opacity: 0;
+  transform: translate(-50%, -50%);
 }
 
 .slideText {
-    animation: slideTextMobile 1.2s ease forwards 2.5s;
+  animation: slideTextMobile 1.2s ease forwards 4s;
 }
 
 .hero__img.rocket,
 .hero__layer,
 .hero__moto {
-    will-change: transform;
+  will-change: transform;
 }
 
-.hero__layer[data-number="1"] {
-     top: 24%;
-     right: 15%;
+.hero__img.overlay,
+.hero__img.logo,
+.hero__img.spaceshipLeft,
+.hero__img.spaceshipRight,
+.hero__img.rocketSmall {
+  position: absolute;
 
-     width: 15%;
- }
-
-.hero__layer[data-number="2"] {
-    top: 55%;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-
-    transform: translate(0, -50%);
+  height: auto;
+  object-fit: cover;
 }
 
-.hero__layer[data-number="3"] {
-    top: 72%;
-    left: 0;
+.hero__img.overlay {
+  bottom: -1px;
+  left: 50%;
+  z-index: 2;
 
-    width: 100%;
-    height: auto;
+  width: 100%;
 
-    transform: translate(0, -50%);
+  transform: translate(-50%, 0);
 }
 
-.hero__layer[data-number="4"] {
-    top: 48%;
-    left: 0;
+.hero__img.logo {
+  top: 30%;
+  left: 50%;
 
-    width: 100%;
-    height: auto;
+  width: 70%;
 
-    transform: translate(0, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.hero__layer[data-number="5"] {
-    top: 52%;
-    left: 50%;
+.hero__img.spaceshipLeft {
+  bottom: 7%;
+  left: 52%;
 
-    width: 40%;
+  width: 10%;
 
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 }
 
-.hero__layer[data-number="6"] {
-    top: 61%;
-    left: 50%;
+.hero__img.spaceshipRight {
+  bottom: 5%;
+  left: 42%;
 
-    width: 90%;
-    transform: translate(-50%, -50%);
+  width: 12%;
+
+  transform: translate(-50%, 50%);
 }
 
-.hero__layer[data-number="7"] {
-    top: 15%;
+.hero__img.rocketSmall {
+  bottom: 7%;
+  left: 60.75%;
 
-    width: 100%;
+  width: 3.5%;
+
+  transform: translate(-50%, 50%);
 }
 
-.hero__layer[data-number="8"] {
-    bottom: 5%;
-    left: 61%;
+@include mixins.media-up(mixins.$breakpoint--sm) {
+  .hero__img.logo {
+    width: 50%;
+  }
 
-    width: 4%;
-
-    transform: translate(-50%, -50%);
-}
-
-.hero__layer[data-number="9"] {
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="10"] {
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="11"] {
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="12"] {
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: auto;
-}
-
-.hero__layer[data-number="13"] {
+  .hero__img.spaceshipLeft {
     bottom: 10%;
-    left: 50%;
+  }
 
-    width: 18%;
-}
+  .hero__img.spaceshipRight {
+    bottom: 7%;
+  }
 
-.hero__layer[data-number="14"] {
-    bottom: 2%;
-    left: 50%;
-    z-index: 1;
-
-    width: 20%;
-
-    transform: translateX(-50%);
-}
-
-.hero__layer[data-number="15"] {
-    bottom: 5%;
-    left: 0;
-    z-index: 1;
-
-    width: 40%;
-}
-
-.hero__layer[data-number="16"] {
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    width: 55%;
-}
-
-.hero__layer[data-number="17"] {
-    bottom: -1px;
-    left: 0;
-    z-index: 5;
-
-    width: 100%;
-    height: auto;
+  .hero__img.rocketSmall {
+    bottom: 15%;
+  }
 }
 
 @include mixins.media-up(mixins.$breakpoint--md) {
-    .hero__layer[data-number="1"] {
-        top: 12%;
-    }
+  .hero__moto {
+    top: 60%;
+  }
 
-    .hero__layer[data-number="2"] {
-        top: 32%;
-    }
-
-    .hero__layer[data-number="3"] {
-        top: 68%;
-    }
-
-    .hero__layer[data-number="4"] {
-        top: 20%;
-    }
-
-    .hero__layer[data-number="5"] {
-        top: 32%;
-    }
-
-    .hero__layer[data-number="6"] {
-        top: 36%;
-    }
-
-    .hero__layer[data-number="7"] {
-        top: 12%;
-
-        width: 100%;
-    }
-
-    .hero__layer[data-number="8"] {
-        bottom: 1%;
-    }
-
-    .hero__layer[data-number="13"] {
-        left: 45%;
-        bottom: 14%;
-        z-index: 1;
-
-        width: 12%;
-    }
-
-    .hero__layer[data-number="14"] {
-        bottom: 3%;
-        left: 54%;
-
-        width: 12%;
-    }
-
-    .hero__layer[data-number="15"] {
-        width: 30%;
-    }
+  .hero__img.logo {
+    width: 30%;
+  }
 }
 
 @include mixins.media-up(mixins.$breakpoint--lg) {
-    .hero__layer[data-number="1"] {
-        top: 7%;
+  .hero__moto {
+    font-size: 40px;
+    line-height: 50px;
+  }
 
-        width: 10%;
-    }
+  .hero__img.spaceshipLeft {
+    bottom: 12%;
+  }
 
-    .hero__layer[data-number="2"] {
-        top: 28%;
-    }
+  .hero__img.spaceshipRight {
+    bottom: 9%;
+  }
 
-    .hero__layer[data-number="3"] {
-        top: 48%;
-    }
-
-    .hero__layer[data-number="4"] {
-        top: 16%;
-    }
-
-    .hero__layer[data-number="5"] {
-        top: 32%;
-
-        width: 30%;
-    }
-
-    .hero__layer[data-number="6"] {
-        top: 36%;
-    }
-
-    .hero__layer[data-number="7"] {
-        top: 8%;
-    }
-
-    .hero__layer[data-number="8"] {
-        left: 61%;
-        bottom: 1%;
-    }
-
-    .hero__layer[data-number="13"] {
-        left: 45%;
-        bottom: 14%;
-        z-index: 1;
-
-        width: 12%;
-    }
-
-    .hero__layer[data-number="14"] {
-        bottom: 3%;
-        left: 54%;
-
-        width: 12%;
-    }
-
-    .hero__layer[data-number="15"] {
-        width: 30%;
-    }
-
-    .hero__moto {
-        font-size: 40px;
-        line-height: 50px;
-    }
+  .hero__img.rocketSmall {
+    bottom: 24%;
+  }
 }
 
 @include mixins.media-up(mixins.$breakpoint--xl) {
-    .hero__layer[data-number="8"] {
-        left: 45%;
-        bottom: 1%;
-    }
+  .hero__moto {
+    font-size: 40px;
+    line-height: 50px;
+  }
 
-    .hero__moto {
-        font-size: 40px;
-        line-height: 50px;
-    }
+  .hero__img.spaceshipLeft {
+    bottom: 15%;
+  }
+
+  .hero__img.spaceshipRight {
+    bottom: 12%;
+  }
+
+  .hero__img.rocketSmall {
+    bottom: 30%;
+  }
 }
 
 @include mixins.media-up(mixins.$breakpoint--xxl) {
-    .hero__layer[data-number="1"] {
-        top: 10%;
+  .hero__moto {
+    top: 30%;
+  }
 
-        width: 7%;
-    }
+  .hero__moto {
+    font-size: 40px;
+    line-height: 50px;
+  }
 
-    .hero__layer[data-number="2"] {
-        top: 48%;
-    }
-
-    .hero__layer[data-number="3"] {
-        top: 56%;
-    }
-
-    .hero__layer[data-number="4"] {
-        top: 15%;
-    }
-
-    .hero__layer[data-number="5"] {
-        top: 16%;
-
-        width: 24%;
-    }
-
-    .hero__layer[data-number="6"] {
-        top: 48%;
-    }
-
-    .hero__layer[data-number="7"] {
-        top: 7%;
-    }
-
-    .hero__layer[data-number="8"] {
-        left: 60.75%;
-        bottom: 1%;
-    }
-
-    .hero__layer[data-number="13"] {
-        left: 48%;
-        bottom: 18%;
-
-        width: 10%;
-
-        transform: scale(1.2);
-    }
-
-    .hero__layer[data-number="14"] {
-        bottom: 5%;
-        left: 42%;
-
-        width: 10%;
-    }
-
-    .hero__layer[data-number="15"] {
-        bottom: 12%;
-
-        width: 20%;
-    }
-
-    .hero__layer[data-number="16"] {
-        bottom: -1%;
-
-        width: 44%;
-    }
-
-    .hero__img.rocket {
-        z-index: 2;
-    }
-
-    .hero__moto {
-        z-index: 2;
-
-        font-size: 40px;
-        line-height: 50px;
-    }
-
-    .slideText {
-        animation: slideTextDesktop 1.2s ease forwards 4.5s;
-    }
+  .slideText {
+    animation: slideTextDesktop 1.2s ease forwards 4.5s;
+  }
 }

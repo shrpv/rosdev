@@ -30,36 +30,35 @@ export default function Page() {
     }, [heroInView]);
 
     return (
-                <>
-                    
-                    ? <Loading isLoading={isLoading} />
-                    <Hero
-                        className={styles.home__hero}
-                        ref={heroRef}
-                        loadingSetter={setIsLoading}
-                        isLoading={isLoading}
-                    />
-                    
-                    <Advantages className={styles.home__advantages} />
-                    
-                    <Platforms className={styles.home__platforms} />
-                    
-                    <Services className={styles.home__services} />
-                    
-                    <Technologies className={styles.home__technologies} />
-                    
-                    <Clients className={styles.home__clients} />
-                    
-                    <Reviews className={styles.home__reviews} />
-                    
-                    <About />
-                    
-                    <Slogan className={styles.home__slogan} />
-                    
-                    {
-                        showTopButton &&
-                        <ScrollToTopButton className={styles.home__scrollToTopButton} />
-                    }
-                </>
+        <>
+            <Loading isLoading={isLoading} />
+            <Hero
+                className={styles.home__hero}
+                ref={heroRef}
+                loadingSetter={setIsLoading}
+                isLoading={isLoading}
+            />
+            
+            <Advantages className={styles.home__advantages} />
+            
+            <Platforms className={styles.home__platforms} />
+            
+            <Services className={styles.home__services} />
+            
+            <Technologies className={styles.home__technologies} />
+            
+            <Clients className={styles.home__clients} />
+            
+            <Reviews className={styles.home__reviews} />
+            
+            <About />
+            
+            <Slogan className={styles.home__slogan} />
+            
+            {
+                showTopButton &&
+                <ScrollToTopButton className={styles.home__scrollToTopButton} />
+            }
+        </>
     );
 };

@@ -1,5 +1,5 @@
 "use client";
-import ScrollContext from "@/components/ScrollContext/ScrollContext";
+import Loading from "@/components/Loading/Loading";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./page.module.scss";
 import { useInView } from "framer-motion";
@@ -16,6 +16,7 @@ import { ScrollToTopButton } from "@/components/Utils/ScrollToTopButton/ScrollTo
 
 export default function Page() {
     const [showTopButton, setShowTopButton] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const heroRef = useRef(null);
     const heroInView = useInView(heroRef);
@@ -23,48 +24,42 @@ export default function Page() {
     useLayoutEffect(() => {
         document.documentElement.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }, []);
-    
-    useEffect(() => {
-        const controller = new AbortController();
-        
-        (
-            async () => {
-                const LocomotiveScroll = (await import('locomotive-scroll')).default;
-                const locomotiveScroll = new LocomotiveScroll();
-            }
-        )();
-        
-        return () => controller.abort();
-    }, []);
 
     useEffect(() => {
         setShowTopButton(!heroInView);
     }, [heroInView]);
 
     return (
-        <ScrollContext>
-            <Hero className={styles.home__hero} ref={heroRef} />
-            
-            <Advantages className={styles.home__advantages} />
-            
-            <Platforms className={styles.home__platforms} />
-            
-            <Services className={styles.home__services} />
-            
-            <Technologies className={styles.home__technologies} />
-            
-            <Clients className={styles.home__clients} />
-            
-            <Reviews className={styles.home__reviews} />
-            
-            <About />
-            
-            <Slogan className={styles.home__slogan} />
-            
-            {
-                showTopButton &&
-                    <ScrollToTopButton className={styles.home__scrollToTopButton} />
-            }
-        </ScrollContext>
+                <>
+                    
+                    ? <Loading isLoading={isLoading} />
+                    <Hero
+                        className={styles.home__hero}
+                        ref={heroRef}
+                        loadingSetter={setIsLoading}
+                        isLoading={isLoading}
+                    />
+                    
+                    <Advantages className={styles.home__advantages} />
+                    
+                    <Platforms className={styles.home__platforms} />
+                    
+                    <Services className={styles.home__services} />
+                    
+                    <Technologies className={styles.home__technologies} />
+                    
+                    <Clients className={styles.home__clients} />
+                    
+                    <Reviews className={styles.home__reviews} />
+                    
+                    <About />
+                    
+                    <Slogan className={styles.home__slogan} />
+                    
+                    {
+                        showTopButton &&
+                        <ScrollToTopButton className={styles.home__scrollToTopButton} />
+                    }
+                </>
     );
 };

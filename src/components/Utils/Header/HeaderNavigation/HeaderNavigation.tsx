@@ -1,5 +1,5 @@
 import { MenuContext } from "@/shared/contexts/MenuContext";
-import { MouseEvent, FC, useContext } from "react";
+import { MouseEvent, FC, useContext, useEffect } from "react";
 import classNames from "classnames";
 import styles from "./HeaderNavigation.module.scss";
 import { HEADER_NAVIGATION } from "@/consts/HeaderNavigation";
@@ -11,16 +11,27 @@ interface HeaderNavigationProps {
 export const HeaderNavigation: FC<HeaderNavigationProps> = ({ className }) => {
     const { setIsMenuOpened } = useContext(MenuContext);
     
+    function closeMenu() {
+        
+        setIsMenuOpened(() => false);
+    }
+    
     function linkClickHandler(evt: MouseEvent<HTMLAnchorElement>, elementId: string) {
         evt.preventDefault();
         const element = document.getElementById(elementId);
         if (!element) return;
-        setIsMenuOpened(() => false);
+        closeMenu();
         return window.scroll({
             top: element.offsetTop - 80,
             behavior: 'smooth'
         });
     }
+    
+    useEffect(() => {
+        window.addEventListener('scroll', closeMenu);
+        
+        return () => window.removeEventListener('scroll', closeMenu);
+    }, []);
     
     return (
         <nav className={className}>

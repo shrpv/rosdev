@@ -1,18 +1,18 @@
 "use client";
-import Loading from "@/components/Loading/Loading";
-import { useEffect, useState, useRef, forwardRef, useImperativeHandle, useLayoutEffect, ReactNode } from "react";
+import { useState, useRef, forwardRef, useImperativeHandle, useLayoutEffect, useEffect } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface HeroProps {
+    isLoading: boolean;
+    loadingSetter(): void;
     className?: string;
 }
 
-export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwardedRef) => {
+export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingSetter, className }, forwardedRef) => {
     const [layers] = useState([...Array(17)].map((_, i) => i + 1));
-    const [isLoading, setIsLoading] = useState(true);
     const imageTargetRef = useRef(null);
     const textTargetRef = useRef(null);
     const triggerRef = useRef(null);
@@ -26,8 +26,10 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                 (image as HTMLImageElement).addEventListener("load", () => new Promise<void>((res) => res())));
             
             Promise.all(imagesPromises).then(() => {
-                document.documentElement.style.overflowY = 'scroll';
-                setIsLoading(false);
+                setTimeout(() => {
+                    document.body.style.overflowY = "scroll";
+                    loadingSetter(false);
+                }, 1000);
             });
         }
     }, []);
@@ -157,50 +159,41 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
     }, [isLoading]);
     
     return (
-        
         <section
             className={classNames(className, styles.hero)}
             id="hero"
             ref={triggerRef}
         >
-            {
-                isLoading
-                    ? <Loading />
-                    : (
-                        <>
-                            {layers.map(number => (
-                                <img
-                                    className={styles.hero__layer}
-                                    data-number={number}
-                                    src={`/img/hero/layer_${number}.svg`}
-                                    key={number}
-                                    id={`item${number}`}
-                                />
-                            ))}
-                            
-                            <img
-                                className={classNames(
-                                    styles.hero__img,
-                                    styles.rocket, {
-                                    [styles.slide]: !isLoading
-                                })}
-                                src="/img/hero/rocket.svg"
-                                alt="Взлетающая ракета"
-                                loading="lazy"
-                                ref={imageTargetRef}
-                            />
-                            
-                            <b className={classNames(
-                                styles.hero__moto, {
-                                    [styles.slideText]: !isLoading
-                                })}
-                               ref={textTargetRef}
-                            >
-                                Качество. Технологии. <br />Скорость
-                            </b>
-                        </>
-                    )
-            }
+            {layers.map(number => (
+                <img
+                    className={styles.hero__layer}
+                    data-number={number}
+                    src={`/img/hero/layer_${number}.svg`}
+                    key={number}
+                    id={`item${number}`}
+                />
+            ))}
+            
+            <img
+                className={classNames(
+                    styles.hero__img,
+                    styles.rocket, {
+                        [styles.slide]: !isLoading
+                    })}
+                src="/img/hero/rocket.svg"
+                alt="Взлетающая ракета"
+                loading="lazy"
+                ref={imageTargetRef}
+            />
+            
+            <b className={classNames(
+                styles.hero__moto, {
+                    [styles.slideText]: !isLoading
+                })}
+               ref={textTargetRef}
+            >
+                Качество. Технологии. <br />Скорость
+            </b>
         </section>
     );
 });

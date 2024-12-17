@@ -1,5 +1,4 @@
 "use client";
-import Loading from "@/components/Loading/Loading";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./page.module.scss";
 import { useInView } from "framer-motion";
@@ -16,7 +15,6 @@ import { ScrollToTopButton } from "@/components/Utils/ScrollToTopButton/ScrollTo
 
 export default function Page() {
     const [showTopButton, setShowTopButton] = useState<boolean>(false);
-    const [isLoading, setIsLoading] = useState(true);
 
     const heroRef = useRef(null);
     const heroInView = useInView(heroRef);
@@ -34,8 +32,6 @@ export default function Page() {
                     <Hero
                         className={styles.home__hero}
                         ref={heroRef}
-                        loadingSetter={setIsLoading}
-                        isLoading={isLoading}
                     />
                     
                     <Advantages className={styles.home__advantages} />

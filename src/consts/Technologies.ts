@@ -88,82 +88,43 @@ export const TECHNOLOGIES: Technologies = {
         }
     ],
     Mobile: [
+        {},
+        {},
+        {},
+        {},
         {
-            title: "Flask",
-            logo: "/img/technologies/flask.svg"
+            title: "Swift",
+            logo: "/img/technologies/swift.svg",
         },
         {
-            title: "Ruby",
-            logo: "/img/technologies/ruby.svg"
+            title: "Mobile Games"
+        },
+        {},
+        {
+            title: "React Native",
+            logo: "/img/technologies/reactNative.svg",
         },
         {
-            title: "Koa.js2",
-            logo: "/img/technologies/koa.svg"
+            title: "Web Site Mobile",
         },
         {
-            title: "Socket.io",
-            logo: "/img/technologies/socket.svg"
+            title: "Native Applications"
         },
         {
-            title: "Frontend"
+            title: "Applications SmartTV"
         },
         {
-            title: "CSS, SASS,<br />SCSS, LESS"
+            title: "Cross-platform Application"
         },
         {
-            title: "PHP",
-            logo: "/img/technologies/php.svg"
+            title: "Kotlin",
+            logo: "/img/technologies/kotlin.svg",
         },
+        {},
+        {},
         {
-            title: "Golang",
-            logo: "/img/technologies/golang.svg"
+            title: "Web Progressive Application"
         },
-        {
-            title: "Redux + Redux Saga",
-            logo: "/img/technologies/redux.svg"
-        },
-        {
-            title: "JS",
-            logo: "/img/technologies/javascript.svg"
-        },
-        {
-            title: "Python",
-            logo: "/img/technologies/python.svg"
-        },
-        {
-            title: "Magento 2+",
-            logo: "/img/technologies/magento.svg"
-        },
-        {
-            title: "HTML5",
-            logo: "/img/technologies/html5.svg"
-        },
-        {
-            title: "Backend"
-        },
-        {
-            title: "Express",
-            logo: "/img/technologies/express.svg"
-        },
-        {
-            title: "React",
-            logo: "/img/technologies/react.svg"
-        },
-        {
-            title: "Laravel 5+",
-            logo: "/img/technologies/laravel.svg"
-        },
-        {
-            title: "D3.js",
-            logo: "/img/technologies/d3.svg"
-        },
-        {
-            title: "Angular 2+",
-            logo: "/img/technologies/angular.svg"
-        },
-        {
-            title: "Vue.js + Vuex",
-            logo: "/img/technologies/vue.svg"
-        }
+        {},
     ]
 };

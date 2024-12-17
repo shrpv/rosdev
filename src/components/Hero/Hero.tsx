@@ -1,6 +1,6 @@
 "use client";
 import Loading from "@/components/Loading/Loading";
-import { useEffect, useState, useRef, forwardRef, useImperativeHandle, useLayoutEffect, ReactNode } from "react";
+import { useEffect, useState, useRef, forwardRef, useImperativeHandle } from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 import gsap from "gsap";
@@ -13,13 +13,11 @@ interface HeroProps {
 export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwardedRef) => {
     const [layers] = useState([...Array(17)].map((_, i) => i + 1));
     const [isLoading, setIsLoading] = useState(true);
-    const imageTargetRef = useRef(null);
-    const textTargetRef = useRef(null);
     const triggerRef = useRef(null);
     const timeline = useRef(null);
     useImperativeHandle(forwardedRef, () => triggerRef.current);
     
-    useLayoutEffect(() => {
+    useEffect(() => {
         const images = (triggerRef?.current as HTMLDivElement)?.querySelectorAll("img");
         if (images) {
             const imagesPromises = Array.from(images).map((image) =>
@@ -157,7 +155,6 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
     }, [isLoading]);
     
     return (
-        
         <section
             className={classNames(className, styles.hero)}
             id="hero"
@@ -177,27 +174,6 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ className }, forwar
                                     id={`item${number}`}
                                 />
                             ))}
-                            
-                            <img
-                                className={classNames(
-                                    styles.hero__img,
-                                    styles.rocket, {
-                                    [styles.slide]: !isLoading
-                                })}
-                                src="/img/hero/rocket.svg"
-                                alt="Взлетающая ракета"
-                                loading="lazy"
-                                ref={imageTargetRef}
-                            />
-                            
-                            <b className={classNames(
-                                styles.hero__moto, {
-                                    [styles.slideText]: !isLoading
-                                })}
-                               ref={textTargetRef}
-                            >
-                                Качество. Технологии. <br />Скорость
-                            </b>
                         </>
                     )
             }

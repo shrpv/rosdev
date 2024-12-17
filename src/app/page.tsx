@@ -31,8 +31,6 @@ export default function Page() {
 
     return (
                 <>
-                    
-                    ? <Loading isLoading={isLoading} />
                     <Hero
                         className={styles.home__hero}
                         ref={heroRef}

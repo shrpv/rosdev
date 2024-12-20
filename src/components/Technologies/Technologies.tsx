@@ -19,11 +19,11 @@ export const Technologies: FC<TechnologiesProps> = ({ className }) => {
             <div className="container">
                 <h2 className={classNames(styles.technologies__title, "title")}>Технологии</h2>
 
-                {/*<TechnologiesTabs
+                <TechnologiesTabs
                     className={styles.technologies__tabs}
                     currentTab={currentTab}
                     onChange={setCurrentTab}
-                />*/}
+                />
 
                 <div
                     className={styles.technologies__slider}
@@ -42,15 +42,20 @@ export const Technologies: FC<TechnologiesProps> = ({ className }) => {
                                     <TechnologiesCategory category={category} />
                                 </li>
 
-                                {technologies.map((technology, index) => (
-                                    <li
-                                        className={styles.technologies__item}
-                                        key={index}
-                                        data-number={index + 1}
-                                    >
-                                        <TechnologiesCard technology={technology} />
-                                    </li>
-                                ))}
+                                {technologies.map((technology, index) => {
+                                    if (technology.title) {
+                                        return (
+                                            <li
+                                                className={styles.technologies__item}
+                                                key={index}
+                                                data-number={index + 1}
+                                            >
+                                                <TechnologiesCard technology={technology} />
+                                            </li>
+                                        );
+                                    }
+                                    return <li></li>;
+                                })}
 
                                 {[1, 2, 3].map(item => (
                                     <li

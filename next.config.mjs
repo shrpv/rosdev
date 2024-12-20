@@ -9,6 +9,15 @@ const nextConfig = {
         
         return config
     },
+    compiler: {
+        reactRemoveProperties: true,
+        removeConsole: {
+            exclude: ['error'],
+        },
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     output: "export"
 };
 

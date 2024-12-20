@@ -53,7 +53,8 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
                 className={classNames(styles.hero__img, styles.rocketSmall)}
                 src="/img/hero/layer_8.svg"
                 alt="Ракета малая"
-                loading="lazy"
+                priority
+                unoptimized
             />
             
             <Image
@@ -62,7 +63,8 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
                 className={classNames(styles.hero__img, styles.spaceshipRight)}
                 src="/img/hero/layer_14.svg"
                 alt="Летательный аппарат"
-                loading="lazy"
+                priority
+                unoptimized
             />
             
             <Image
@@ -71,7 +73,8 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
                 className={classNames(styles.hero__img, styles.spaceshipLeft)}
                 src="/img/hero/layer_13.svg"
                 alt="Летательный аппарат"
-                loading="lazy"
+                priority
+                unoptimized
             />
             
             <Image
@@ -80,7 +83,8 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
                 className={classNames(styles.hero__img, styles.logo)}
                 src="/img/hero/layer_5.svg"
                 alt="Логотип компаниия"
-                loading="lazy"
+                priority
+                unoptimized
             />
             
             <Image
@@ -89,7 +93,8 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
                 className={classNames(styles.hero__img, styles.overlay)}
                 src="/img/hero/layer_17.svg"
                 alt="Перекрытие"
-                loading="lazy"
+                priority
+                unoptimized
             />
         </section>
     );

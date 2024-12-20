@@ -1,12 +1,21 @@
 "use client";
 import Image from "next/image";
-import { useState, useRef, forwardRef, useImperativeHandle, useLayoutEffect, useEffect } from "react";
+import {
+    useState,
+    useRef,
+    forwardRef,
+    useImperativeHandle,
+    useLayoutEffect,
+    useEffect,
+    Dispatch,
+    SetStateAction
+} from "react";
 import classNames from "classnames";
 import styles from "./Hero.module.scss";
 
 interface HeroProps {
     isLoading: boolean;
-    loadingSetter(): void;
+    loadingSetter: Dispatch<SetStateAction<boolean>>;
     className?: string;
 }
 

@@ -18,7 +18,7 @@ export const REVIEWS: Review[] = [
             src: "/img/reviews/isaev.jpg",
             srcSet: "/img/reviews/isaev@2x.jpg 2x",
             name: "Исаев Андрей",
-            position: "CTO"
+            position: "CTO «Ситилаб»",
         }
     },
     {
@@ -28,7 +28,7 @@ export const REVIEWS: Review[] = [
             src: "/img/reviews/kuimov.jpg",
             srcSet: "/img/reviews/kuimov@2x.jpg 2x",
             name: "Алексей Куимов",
-            position: "COO"
+            position: "СОО «ДрайверТех»"
         }
     },
     {
@@ -39,7 +39,7 @@ export const REVIEWS: Review[] = [
             src: "/img/reviews/dergaev.jpg",
             srcSet: "/img/reviews/dergaev@2x.jpg 2x",
             name: "Андрей Дергаев",
-            position: "Сo-founder"
+            position: "Co-founder «Aeron»"
         }
     },
 ];

@@ -13,7 +13,6 @@ import { Reviews } from "@/components/Reviews/Reviews";
 import { About } from "@/components/About/About";
 import { Slogan } from "@/components/Slogan/Slogan";
 import { ScrollToTopButton } from "@/components/Utils/ScrollToTopButton/ScrollToTopButton";
-import dynamic from 'next/dynamic';
 
 export default function Page() {
     const [showTopButton, setShowTopButton] = useState<boolean>(false);
@@ -30,8 +29,6 @@ export default function Page() {
         setShowTopButton(!heroInView);
     }, [heroInView]);
     
-    const placeholder = { loading: () => <p>Loading...</p>};
-    const DynamicTechnologies = dynamic(() => import('Technologies'), placeholder);
 
     return (
         <>
@@ -49,7 +46,7 @@ export default function Page() {
             
             <Services className={styles.home__services} />
             
-            <DynamicTechnologies className={styles.home__technologies} />
+            <Technologies className={styles.home__technologies} />
             
             <Clients className={styles.home__clients} />
             

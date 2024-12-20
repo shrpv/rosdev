@@ -1,12 +1,10 @@
 "use client";
 import Image from "next/image";
 import {
-    useState,
     useRef,
     forwardRef,
     useImperativeHandle,
     useLayoutEffect,
-    useEffect,
     Dispatch,
     SetStateAction
 } from "react";
@@ -20,7 +18,6 @@ interface HeroProps {
 }
 
 export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingSetter, className }, forwardedRef) => {
-    const [layers] = useState([...Array(17)].map((_, i) => i + 1));
     const triggerRef = useRef(null);
     useImperativeHandle(forwardedRef, () => triggerRef.current);
     
@@ -85,28 +82,6 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(({ isLoading, loadingS
                 alt="Логотип компаниия"
                 loading="lazy"
             />
-            
-            <Image
-                width={100}
-                height={100}
-                className={classNames(
-                    styles.hero__img,
-                    styles.rocket, {
-                        [styles.slide]: !isLoading
-                    })}
-                src="/img/hero/rocket.svg"
-                alt="Взлетающая ракета"
-                loading="lazy"
-                onAnimationEnd={endAnimation}
-            />
-            
-            <b className={classNames(
-                styles.hero__moto, {
-                    [styles.slideText]: !isLoading
-                })}
-            >
-                Качество. Технологии. <br />Скорость
-            </b>
             
             <Image
                 width={100}

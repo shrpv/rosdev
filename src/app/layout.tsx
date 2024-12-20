@@ -18,6 +18,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         >
             <head>
                 <title>{ORGANIZER}</title>
+                <meta name="viewport" content="height=device-height,
+                      width=device-width, initial-scale=1.0,
+                      minimum-scale=1.0, maximum-scale=1.0,
+                      user-scalable=no, target-densitydpi=device-dpi" />
 
                 <Favicon />
             </head>

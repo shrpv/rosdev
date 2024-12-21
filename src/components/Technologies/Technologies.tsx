@@ -13,7 +13,9 @@ interface TechnologiesProps {
 
 export const Technologies: FC<TechnologiesProps> = ({ className }) => {
     const [currentTab, setCurrentTab] = useState<TechnologyCategory>("Web");
-
+    
+    console.log(Object.entries(TECHNOLOGIES));
+    
     return (
         <section className={className}>
             <div className="container">
@@ -47,14 +49,14 @@ export const Technologies: FC<TechnologiesProps> = ({ className }) => {
                                         return (
                                             <li
                                                 className={styles.technologies__item}
-                                                key={index}
+                                                key={technology.title}
                                                 data-number={index + 1}
                                             >
                                                 <TechnologiesCard technology={technology} />
                                             </li>
                                         );
                                     }
-                                    return <li></li>;
+                                    return <li key={index}></li>;
                                 })}
 
                                 {[1, 2, 3].map(item => (

@@ -4,15 +4,23 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./page.module.scss";
 import { useInView } from "framer-motion";
 import { Hero } from "@/components/Hero/Hero";
-import { Advantages } from "@/components/Advantages/Advantages";
-import { Platforms } from "@/components/Platforms/Platforms";
-import { Services } from "@/components/Services/Services";
-import { Technologies } from "@/components/Technologies/Technologies";
-import { Clients } from "@/components/Clients/Clients";
-import { Reviews } from "@/components/Reviews/Reviews";
-import { About } from "@/components/About/About";
-import { Slogan } from "@/components/Slogan/Slogan";
 import { ScrollToTopButton } from "@/components/Utils/ScrollToTopButton/ScrollToTopButton";
+import dynamic from 'next/dynamic';
+
+const options = {
+    loading: () => <p>Loading...</p>,
+    ssr: false,
+    suspense: true,
+};
+
+const DynamicAdvantages = dynamic(() => import('@/components/Advantages/Advantages').then((mod) => mod.Advantages), { ...options });
+const DynamicPlatforms = dynamic(() => import('@/components/Platforms/Platforms').then((mod) => mod.Platforms), { ...options });
+const DynamicServices = dynamic(() => import('@/components/Services/Services').then((mod) => mod.Services), { ...options });
+const DynamicTechnologies = dynamic(() => import('@/components/Technologies/Technologies').then((mod) => mod.Technologies), { ...options });
+const DynamicClients = dynamic(() => import('@/components/Clients/Clients').then((mod) => mod.Clients), { ...options });
+const DynamicReviews = dynamic(() => import('@/components/Reviews/Reviews').then((mod) => mod.Reviews), { ...options });
+const DynamicAbout = dynamic(() => import('@/components/About/About').then((mod) => mod.About), { ...options });
+const DynamicSlogan = dynamic(() => import('@/components/Slogan/Slogan').then((mod) => mod.Slogan), { ...options });
 
 export default function Page() {
     const [showTopButton, setShowTopButton] = useState<boolean>(false);
@@ -28,7 +36,6 @@ export default function Page() {
     useEffect(() => {
         setShowTopButton(!heroInView);
     }, [heroInView]);
-    
 
     return (
         <>
@@ -40,21 +47,21 @@ export default function Page() {
                 isLoading={isLoading}
             />
             
-            <Advantages className={styles.home__advantages} />
+            <DynamicAdvantages className={styles.home__advantages} />
             
-            <Platforms className={styles.home__platforms} />
+            <DynamicPlatforms className={styles.home__platforms} />
             
-            <Services className={styles.home__services} />
+            <DynamicServices className={styles.home__services} />
             
-            <Technologies className={styles.home__technologies} />
+            <DynamicTechnologies className={styles.home__technologies} />
             
-            <Clients className={styles.home__clients} />
+            <DynamicClients className={styles.home__clients} />
             
-            <Reviews className={styles.home__reviews} />
+            <DynamicReviews className={styles.home__reviews} />
             
-            <About />
+            <DynamicAbout />
             
-            <Slogan className={styles.home__slogan} />
+            <DynamicSlogan className={styles.home__slogan} />
             
             {
                 showTopButton &&

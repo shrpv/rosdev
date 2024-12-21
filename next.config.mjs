@@ -11,9 +11,9 @@ const nextConfig = {
     },
     compiler: {
         reactRemoveProperties: true,
-        removeConsole: {
+        /* removeConsole: {
             exclude: ['error'],
-        },
+        }, */
     },
     eslint: {
         ignoreDuringBuilds: true,
